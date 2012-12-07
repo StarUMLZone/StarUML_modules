@@ -1,0 +1,72 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+		(set nc (mofref view 'NameCompartment'))
+		(mofsetattr (mofref nc 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref nc 'StereotypeLabel') 'Visible' false)
+		(arrangeObject view)
+		(set minWidth (mofattr nc 'MinWidth'))
+		(if (< minWidth 50)  (set minWidth 50))
+		(set minHeight (+ (mofattr nc 'MinHeight') 15 2))
+		(if (< minHeight 40)  (set minHeight 40))
+
+		(set width (mofattr view 'Width'))
+		(set height (mofattr view 'Height'))
+		(set right (+ (mofattr view 'Left') width) )
+		(set bottom (+ (mofattr view 'Top') height) )
+
+		(mofsetattr nc 'Top' (+ Top 15))
+		(set sitState (tagval model 'AML' 'Context' 'situation'))
+		(if (< 0 (length sitState))
+			(sequence
+				(set sistState (concat '  [' sitState ']  '))
+				(set space (- bottom  (+ (mofattr nc 'Top') (mofattr nc 'Height'))))
+				(if (< (+ space 0) (+ (textheight  sitState) 8))
+					(set Height (+ Height (- (+ (textheight  sitState) 8) space)))
+				)
+				(mofsetattr view 'Height' Height)
+				(if (> (+ (textwidth sitState) 10) width)
+					(sequence
+						(set width (+ (textwidth sitState) 10))
+						(mofsetattr view 'MinWidth' (+ (textwidth sitState) 10))
+					)
+				)
+
+				(mofsetattr view 'Width' width)
+				(mofsetattr view 'MinHeight' (+ (mofattr nc 'MinHeight') (+ (textheight  sitState) 8) 15 ))
+				(set right (+ left width))
+				(set bottom (+ top height))
+				//(mofsetattr nc 'Width' width)
+			)
+		)
+	)
+
+	(ondraw	    
+		(setdefaultstyle)
+		(set TabRightX (+ Left  (/ (* (- Right Left) 2)  5) 8))
+		(set TabBottomY (+ Top 15))
+		(rect (+ Left 4) Top TabRightX TabBottomY)
+		(setpenstyle 'psDash')
+		(roundrect Left (- TabBottomY 1) Right Bottom 8 8)
+		(setdefaultstyle)
+		(mofsetattr nc 'Width' width)
+		(drawobject nc)
+		(set sitState (tagval model 'AML' 'Context' 'situation'))
+		(if (< 0 (length sitState))
+			(sequence
+				(set sitState (concat '  [' sitState ']  '))
+				(set x (+ left (/ width 2) (* -1   (/ (textwidth sitState) 2) )))
+				(set y (+ (mofattr nc 'Top') (mofattr nc 'Height') 4))
+				(textout x y sitState)
+			)
+		)
+		(for i 0 (-  (mofColCount view 'ContainedViews') 1)
+			(drawObject (mofColAt view 'ContainedViews' i))
+		)
+	)
+)

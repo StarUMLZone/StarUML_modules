@@ -1,0 +1,59 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+
+	)
+
+	(ondraw
+		(set nc (mofref view 'NameCompartment'))
+		(set multi (mofattr model 'Multiplicity'))
+		(set multi1 (concat ' ['  multi ']'))
+		(set nl (mofref nc 'NameLabel'))
+		(set text (mofattr nl 'Text'))
+		(set text2 text)
+		(if (< 0 (textwidth multi))
+		    (sequence
+				(set text2 (concat text2 multi1))
+			)
+		)
+		(mofsetattr nl 'Text' text2)
+		(arrangeObject view)
+		(drawobject view)
+		(set left (mofattr view 'Left'))
+		(set top (mofattr view 'Top'))
+		(set width (mofattr view 'Width'))
+		(set height (mofattr view 'Height'))
+		(set bottom (+ height top))
+		(set right (+ width left))
+		(mofsetattr nl 'Text' text)
+		(for i 0 (-  (mofColCount view 'ContainedViews') 1)
+			(drawObject (mofColAt view 'ContainedViews' i))
+		)
+		
+		(set isDestroyed (tagval model 'AML' 'MultiLifeline' 'isDestroyed'))
+				
+		
+		(if (= isDestroyed true)
+			(sequence
+				(set diagType (mofattr (mofref (mofref view 'OwnerDiagramView') 'Diagram') 'DiagramType'))
+				(if (or (= diagType 'CommunicativeSequenceDiagram') (= diagType 'CommunicativeSequenceRoleDiagram'))
+					(sequence
+						(setdefaultstyle)
+						(setpenstyle 'psSolid')
+						(set middle (/ (+ left right) 2))
+						
+						(rect (- middle 10) bottom (+ middle 10) (+ bottom 3))
+						(line (- middle 10) (+ bottom 1) (+ middle 10) (+ bottom 1))
+						(line (- middle 10) (+ bottom 2) (+ middle 10) (+ bottom 2))
+						(setdefaultstyle)
+					)
+				)
+			)			
+		)
+	)
+)

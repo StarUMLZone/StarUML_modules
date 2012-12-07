@@ -1,0 +1,1195 @@
+<html>
+	<head>
+		<title>AML Profile for StarUML</title>
+		<style type="text/css">
+			body { 
+				margin-left: 2%; 
+				margin-right: 2%;
+				font-family: sans-serif;
+				text-align: justify
+			}
+			h2,h3,h4,h5,h6 { margin-left: -2% }
+			table {
+				margin: 1em 0 0 0;
+				background: #f9f9f9;
+				border: 2px solid #aaa;
+				border-collapse: collapse
+			}
+			th {
+				background: #f0f0f0;
+				border-right: 1px solid #aaa;
+				border-bottom: 3px double  #aaa;
+				text-align: left;
+				padding: 4px
+			}
+			td {
+				border: 1px solid #aaa;
+				text-align: left;
+				padding: 4px;
+				vertical-align: top
+			}
+			li { margin-top: 6pt }
+		</style>
+	</head>
+	<body>
+		<h1 align="center">AML Profile for StarUML</h1>
+		<h3 align="center">Version 0.9, December 2006</h3>
+		<h3 align="center">Copyright &copy; 2006 <a href="http://www.whitestein.com">Whitestein Technologies</a>
+			<br />All rights reserved.</h3>
+		<h2>Product Overview</h2>
+		<p>
+			<b>AML</b> (<b>Agent Modeling Language</b>) <b>Profile for StarUML</b> is an implementation of the <em>UML 2.0 Profile for AML</em> in the <a href="http://staruml.sourceforge.net">StarUML&trade;</a> CASE tool. This profile allows users of StarUML to create and edit AML models supporting the analysis and design of software applications that draw on multi-agent systems theory and engineering practice. For more information relating to AML see:</p>
+		<p style="margin-left:20px">R. Cervenka and I. Trencansky. <em>Agent Modeling Language. Language Specification.Version 0.9</em>. Technical report, Whitestein Technologies, December 2004. (<a href="wt_AMLSpecification_v0.9.pdf">PDF</a>)</p>
+		<p>or visit <a href="http://www.whitestein.com/pages/solutions/meth.html">http://www.whitestein.com/pages/solutions/meth.html</a>.</p>
+		<h2>Support</h2>
+		<p>Please send support queries to the Whitestein administered AML mailing list. To subscribe, send an e-mail to <a href="mailto:sympa@lists.whitestein.com?subject=subscribe aml-forum">sympa@lists.whitestein.com</a> with 'subscribe aml-forum' (without the quotes) in the subject or the message body. If you have problems subscribing, please send an e-mail to <a href="mailto:listmaster@whitestein.com">listmaster@whitestein.com</a>.</p>
+
+Requests for product information should be directed to the <a href="mailto:info@whitestein.com">general information contact</a>.
+
+		<h2>Table of Contents</h2>
+		<ul style="list-style-type: none">
+			<li>
+				<a href="#requirements">1. Software Requirements</a>
+			</li>
+			<li>
+				<a href="#features">2. Implemented AML Features</a>
+				<ul style="list-style-type: none; margin-left:1.2em">
+					<li>
+						<a href="#stereotypes">2.1 Supported Stereotypes</a>
+					</li>
+					<li>
+						<a href="#tags">2.2 Supported Tags</a>
+					</li>
+					<li>
+						<a href="#notations">2.3 Supported Extended Notations</a>
+					</li>
+					<li>
+						<a href="#diagrams">2.4 Supported Diagram Types</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#deviations">3. Deviations from AML Specification</a>
+			</li>
+			<li>
+				<a href="#issues">4. Known Issues</a>
+			</li>
+			<li>
+				<a href="#improvements">5. Further Improvements</a>
+			</li>
+		</ul>
+		<h2 id="requirements">1. Software Requirements</h2>
+		<ul>
+			<li>StarUML&trade; 5.0.</li>
+			<li>A PDF reader (e.g., <a href="http://www.adobe.com/acrobat/">Adobe Acrobat</a>).</li>
+		</ul>
+		<h2 id="features">2. Implemented AML Features</h2>
+		<p>The AML Profile for StarUML provides stereotypes, including their iconic notation and specific extended notation (if applicable), for most AML modeling elements. Furthermore, it defines sets of tagged values, new types of diagrams and element pallets placed in the StarUML Pallet Toolbar.</p>
+		<h3 id="stereotypes">2.1 Supported Stereotypes</h3>
+		<p>The following table summarizes the implemented stereotypes:</p>
+		<table>
+			<tr>
+				<th>Stereotype</th>
+				<th>Base element(s)<a href="#footnote1">*</a>
+				</th>
+				<th>AML element</th>
+				<th>Tag value set</th>
+				<th>Description</th>
+			</tr>
+			<tr id="agent">
+				<td>agent</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Agent Type</td>
+				<td>
+					<a href="#SocializedSemiEntityTypeTag">Socialized Semi Entity Type</a>
+				</td>
+				<td>Agent type or instance.</td>
+			</tr>
+			<tr>
+				<td>ag</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Agent as a property.</td>
+			</tr>
+			<tr id="resource">
+				<td>resource</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Resource Type</td>
+				<td>
+					<a href="#SocializedSemiEntityTypeTag">Socialized Semi Entity Type</a>
+				</td>
+				<td>Resource type or instance.</td>
+			</tr>
+			<tr>
+				<td>re</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Resource as a property.</td>
+			</tr>
+			<tr id="environment">
+				<td>environment</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Environment Type</td>
+				<td>
+					<a href="#SocializedSemiEntityTypeTag">Socialized Semi Entity Type</a>
+				</td>
+				<td>Environment type or instance.</td>
+			</tr>
+			<tr>
+				<td>en</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Environment as a property.</td>
+			</tr>
+			<tr id="organization unit">
+				<td>organization unit</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Organization Unit Type</td>
+				<td>
+					<a href="#SocializedSemiEntityTypeTag">Socialized Semi Entity Type</a>
+				</td>
+				<td>Organization unit type or instance.</td>
+			</tr>
+			<tr>
+				<td>ou</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Organization unit as a property.</td>
+			</tr>
+			<tr>
+				<td>peer</td>
+				<td>Attribute</td>
+				<td>Social Property Peer</td>
+				<td />
+				<td>Social property of kind peer.</td>
+			</tr>
+			<tr>
+				<td>super</td>
+				<td>Attribute</td>
+				<td>Social Property Superordinate</td>
+				<td />
+				<td>Social property of kind superordinate.</td>
+			</tr>
+			<tr>
+				<td>sub</td>
+				<td>Attribute</td>
+				<td>Social Property Subordinate</td>
+				<td />
+				<td>Social property of kind subordinate.</td>
+			</tr>
+			<tr id="social">
+				<td>social</td>
+				<td>Association, Link, Connector</td>
+				<td>Social Association</td>
+				<td>
+					<a href="#SocialRoleKindTag">Social Role Kind</a>
+				</td>
+				<td>Social association, link, or connector.</td>
+			</tr>
+			<tr id="entity role">
+				<td>entity role</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Entity Role Type</td>
+				<td>
+					<a href="#SocializedSemiEntityTypeTag">Socialized Semi Entity Type</a>
+				</td>
+				<td>Entity role type or instance.</td>
+			</tr>
+			<tr>
+				<td>er</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Entity role as a property.</td>
+			</tr>
+			<tr>
+				<td>role</td>
+				<td>Property</td>
+				<td>Role Property</td>
+				<td />
+				<td>Role property.</td>
+			</tr>
+			<tr id="play">
+				<td>play</td>
+				<td>Association, Link</td>
+				<td>Play Association</td>
+				<td />
+				<td>Play association or link.</td>
+			</tr>
+			<tr id="create role">
+				<td>create role</td>
+				<td>ActionState</td>
+				<td>Create Role Action</td>
+				<td />
+				<td>Create role action.</td>
+			</tr>
+			<tr id="dispose role">
+				<td>dispose role</td>
+				<td>ActionState</td>
+				<td>Dispose Role Action</td>
+				<td />
+				<td>Dispose role action.</td>
+			</tr>
+			<tr>
+				<td>agent execution environment</td>
+				<td>Node, NodeInstance, ClassifierRole</td>
+				<td>Agent Execution Environment</td>
+				<td />
+				<td>Agent execution environment.</td>
+			</tr>
+			<tr>
+				<td>aee</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Agent execution environment as a property.</td>
+			</tr>
+			<tr id="hosting">
+				<td>hosting</td>
+				<td>Attribute</td>
+				<td>Hosting Property</td>
+				<td>
+					<a href="#HostingKindTag">Hosting Kind</a>
+				</td>
+				<td>Generic hosting property.</td>
+			</tr>
+			<tr id="agent hosting">
+				<td>agent hosting</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#HostingKindTag">Hosting Kind</a>
+				</td>
+				<td>Hosting of an agent.</td>
+			</tr>
+			<tr id="resource hosting">
+				<td>resource hosting</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#HostingKindTag">Hosting Kind</a>
+				</td>
+				<td>Hosting of a resource.</td>
+			</tr>
+			<tr id="environment hosting">
+				<td>environment hosting</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#HostingKindTag">Hosting Kind</a>
+				</td>
+				<td>Hosting of an environment.</td>
+			</tr>
+			<tr id="organization unit hosting">
+				<td>organization unit hosting</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#HostingKindTag">Hosting Kind</a>
+				</td>
+				<td>Hosting of an organization unit.</td>
+			</tr>
+			<tr id="host">
+				<td>host</td>
+				<td>Association</td>
+				<td>Hosting Association</td>
+				<td>
+					<a href="#HostingAssociationKindTag">Hosting Association Kind</a>
+				</td>
+				<td>Hosting association.</td>
+			</tr>
+			<tr id="ontology">
+				<td>ontology</td>
+				<td>Package</td>
+				<td>Ontology</td>
+				<td />
+				<td>Ontology package.</td>
+			</tr>
+			<tr>
+				<td>oclass</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Ontology Class</td>
+				<td />
+				<td>Ontology class.</td>
+			</tr>
+			<tr>
+				<td>opredicate</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td />
+				<td />
+				<td>Ontology predicate.</td>
+			</tr>
+			<tr>
+				<td>oaction</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td />
+				<td />
+				<td>Ontology action.</td>
+			</tr>
+			<tr>
+				<td>outility</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Ontology Utility</td>
+				<td />
+				<td>Ontology utility.</td>
+			</tr>
+			<tr>
+				<td>behavior fragment</td>
+				<td>Class, ClassifierRole, Object</td>
+				<td>Behavior Fragment</td>
+				<td />
+				<td>Behavior fragment.</td>
+			</tr>
+			<tr>
+				<td>bf</td>
+				<td>Attribute</td>
+				<td />
+				<td />
+				<td>Behavior fragment as a property.</td>
+			</tr>
+			<tr id="multi lifeline">
+				<td>multi</td>
+				<td>ClassifierRole</td>
+				<td>Multi Lifeline</td>
+				<td>
+					<a href="#MultiLifelineTag">Multi Lifeline</a>
+				</td>
+				<td>Multi lifeline.</td>
+			</tr>
+			<tr id="multi message">
+				<td>multi</td>
+				<td>Message, Stimulus</td>
+				<td>Multi Message</td>
+				<td>
+					<a href="#MultiMessageTag">Multi Message</a>
+				</td>
+				<td>Multi message.</td>
+			</tr>
+			<tr id="decoupled">
+				<td>decoupled</td>
+				<td>Message, Stimulus</td>
+				<td>Decoupled Message</td>
+				<td>
+					<a href="#MultiMessageTag">Multi Message</a>
+				</td>
+				<td>Decoupled message.</td>
+			</tr>
+			<tr>
+				<td>dm payload</td>
+				<td>Class, Object</td>
+				<td>Decoupled Message Payload</td>
+				<td />
+				<td>Decoupled message payload.</td>
+			</tr>
+			<tr id="sub">
+				<td>sub</td>
+				<td>Message, Stimulus</td>
+				<td>Subset</td>
+				<td />
+				<td>Subset.</td>
+			</tr>
+			<tr id="join">
+				<td>join</td>
+				<td>Message, Stimulus</td>
+				<td>Join</td>
+				<td />
+				<td>Join.</td>
+			</tr>
+			<tr id="create attribute">
+				<td>create attribute</td>
+				<td>Message, Stimulus</td>
+				<td>Create Attribute</td>
+				<td />
+				<td>Create attribute.</td>
+			</tr>
+			<tr id="destroy attribute">
+				<td>destroy attribute</td>
+				<td>Message, Stimulus</td>
+				<td>Destroy Attribute</td>
+				<td />
+				<td>Destroy attribute.</td>
+			</tr>
+			<tr id="communication">
+				<td>communication</td>
+				<td>Message, Stimulus</td>
+				<td>Communication Message</td>
+				<td>
+					<a href="#CommunicationMessageTag">Communication Message</a>
+				</td>
+				<td>Communication message.</td>
+			</tr>
+			<tr id="cm payload">
+				<td>cm payload</td>
+				<td>Class, Object</td>
+				<td>Communication Message Payload</td>
+				<td>
+					<a href="#CommunicationMessagePayloadTag">Communication Message Payload</a>
+				</td>
+				<td>Communication message payload.</td>
+			</tr>
+			<tr id="communicative">
+				<td>communicative</td>
+				<td>Interaction, InteractionInstanceSet</td>
+				<td>Communicative Interaction</td>
+				<td>
+					<a href="#CommunicativeInteractionTag">Communicative Interaction</a>
+				</td>
+				<td>Communicative interaction.</td>
+			</tr>
+			<tr id="x">
+				<td>x</td>
+				<td>Frame</td>
+				<td />
+				<td />
+				<td>Extended diagram frame able to display template parameters of the owning collaboration. Also called AML frame.</td>
+			</tr>
+			<tr id="send decoupled message">
+				<td>send decoupled message</td>
+				<td>ActionState</td>
+				<td>Send Decoupled Message Action</td>
+				<td />
+				<td>Send decoupled message action.</td>
+			</tr>
+			<tr id="send communication message">
+				<td>send communication message</td>
+				<td>ActionState</td>
+				<td>Send Communication Message Action</td>
+				<td>
+					<a href="#SendCommunicationMessageActionTag">Send Communication Message Action</a>
+				</td>
+				<td>Send communication message action.</td>
+			</tr>
+			<tr id="accept decoupled message">
+				<td>accept decoupled message</td>
+				<td>ActionState</td>
+				<td>Accept Decoupled Message Action</td>
+				<td />
+				<td>Accept decoupled message action.</td>
+			</tr>
+			<tr id="accept communication message">
+				<td>accept communication message</td>
+				<td>ActionState</td>
+				<td>Accept Communication Message Action</td>
+				<td />
+				<td>Accept communication message action.</td>
+			</tr>
+			<tr id="service specification">
+				<td>service specification</td>
+				<td>Collaboration</td>
+				<td>Service Specification</td>
+				<td>
+					<a href="#ServiceSpecificationTag">Service Specification</a>
+				</td>
+				<td>Service specification.</td>
+			</tr>
+			<tr id="sp">
+				<td>sp</td>
+				<td>Interaction</td>
+				<td>Service Protocol</td>
+				<td>
+					<a href="#CommunicativeInteractionTag">Communicative Interaction</a>
+				</td>
+				<td>Service protocol.</td>
+			</tr>
+			<tr id="provides">
+				<td>provides</td>
+				<td>Dependency</td>
+				<td>Service Provision</td>
+				<td />
+				<td>Service provision.</td>
+			</tr>
+			<tr id="uses">
+				<td>uses</td>
+				<td>Dependency</td>
+				<td>Service Usage</td>
+				<td />
+				<td>Service usage.</td>
+			</tr>
+			<tr>
+				<td>pa</td>
+				<td>Operation</td>
+				<td>Perceiving Act</td>
+				<td />
+				<td>Perceiving act.</td>
+			</tr>
+			<tr>
+				<td>perceptor type</td>
+				<td>Class, Object</td>
+				<td>Perceptor Type</td>
+				<td />
+				<td>Perceptor type or instance.</td>
+			</tr>
+			<tr id="perceptor">
+				<td>perceptor</td>
+				<td>Port</td>
+				<td>Perceptor</td>
+				<td />
+				<td>Perceptor.</td>
+			</tr>
+			<tr id="percept">
+				<td>percept</td>
+				<td>ActionState</td>
+				<td>Percept Action</td>
+				<td />
+				<td>Percept action.</td>
+			</tr>
+			<tr id="perceives">
+				<td>perceives</td>
+				<td>Dependency</td>
+				<td>Perceives</td>
+				<td />
+				<td>Perceives.</td>
+			</tr>
+			<tr>
+				<td>ea</td>
+				<td>Operation</td>
+				<td>Effecting Act</td>
+				<td />
+				<td>Effecting act.</td>
+			</tr>
+			<tr>
+				<td>effector type</td>
+				<td>Class, Object</td>
+				<td>Effector Type</td>
+				<td />
+				<td>Effector type or instance.</td>
+			</tr>
+			<tr id="effector">
+				<td>effector</td>
+				<td>Port</td>
+				<td>Effector</td>
+				<td />
+				<td>Effector.</td>
+			</tr>
+			<tr id="effect">
+				<td>effect</td>
+				<td>ActionState</td>
+				<td>Effect Action</td>
+				<td />
+				<td>Effect action.</td>
+			</tr>
+			<tr id="effects">
+				<td>effects</td>
+				<td>Dependency</td>
+				<td>Effects</td>
+				<td />
+				<td>Effects.</td>
+			</tr>
+			<tr>
+				<td>move</td>
+				<td>Dependency</td>
+				<td>Move</td>
+				<td />
+				<td>Move.</td>
+			</tr>
+			<tr>
+				<td>clone</td>
+				<td>Dependency</td>
+				<td>Clone</td>
+				<td />
+				<td>Clone.</td>
+			</tr>
+			<tr id="move">
+				<td>move</td>
+				<td>ActionState</td>
+				<td>Move Action</td>
+				<td />
+				<td>Move action.</td>
+			</tr>
+			<tr id="clone">
+				<td>clone</td>
+				<td>ActionState</td>
+				<td>Clone Action</td>
+				<td />
+				<td>Clone action.</td>
+			</tr>
+			<tr id="mental">
+				<td>mental</td>
+				<td>Attribute</td>
+				<td>Mental Property</td>
+				<td>
+					<a href="#MentalPropertyTag">Mental Property</a>
+				</td>
+				<td>Mental property.</td>
+			</tr>
+			<tr id="mental ae">
+				<td>mental ae</td>
+				<td>AssociationEnd</td>
+				<td />
+				<td>
+					<a href="#MentalAssociationEndTag">Mental Association End</a>
+				</td>
+				<td>Mental property specified as an association end.</td>
+			</tr>
+			<tr>
+				<td>responsible</td>
+				<td>Dependency</td>
+				<td>Responsibility</td>
+				<td />
+				<td>Responsibility.</td>
+			</tr>
+			<tr id="belief">
+				<td>belief</td>
+				<td>Class, Object</td>
+				<td>Belief</td>
+				<td>
+					<a href="#MentalStateTag">Mental State</a>
+				</td>
+				<td>Belief type or instance.</td>
+			</tr>
+			<tr id="be">
+				<td>be</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#MentalPropertyTag">Mental Property</a>
+				</td>
+				<td>Belief as a mental property.</td>
+			</tr>
+			<tr id="dgoal">
+				<td>dgoal</td>
+				<td>Class, Object</td>
+				<td>Decidable Goal</td>
+				<td>
+					<a href="#MentalStateTag">Mental State</a>
+				</td>
+				<td>Decidable goal type or instance.</td>
+			</tr>
+			<tr id="dg">
+				<td>dg</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#MentalPropertyTag">Mental Property</a>
+				</td>
+				<td>Decidable goal as a mental property.</td>
+			</tr>
+			<tr id="ugoal">
+				<td>ugoal</td>
+				<td>Class, Object</td>
+				<td>Undecidable Goal</td>
+				<td>
+					<a href="#MentalStateTag">Mental State</a>
+				</td>
+				<td>Undecidable goal type or instance.</td>
+			</tr>
+			<tr id="ug">
+				<td>ug</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#MentalPropertyTag">Mental Property</a>
+				</td>
+				<td>Undecidable goal as a mental property.</td>
+			</tr>
+			<tr id="plan">
+				<td>plan</td>
+				<td>Class</td>
+				<td>Plan</td>
+				<td>
+					<a href="#MentalStateTag">Mental State</a>
+				</td>
+				<td>Plan.</td>
+			</tr>
+			<tr id="pl">
+				<td>pl</td>
+				<td>Attribute</td>
+				<td />
+				<td>
+					<a href="#MentalPropertyTag">Mental Property</a>
+				</td>
+				<td>Plan as a mental property.</td>
+			</tr>
+			<tr id="commit goal">
+				<td>commit goal</td>
+				<td>ActionState</td>
+				<td>Commit Goal Action</td>
+				<td />
+				<td>Commit goal action.</td>
+			</tr>
+			<tr id="cancel goal">
+				<td>cancel goal</td>
+				<td>ActionState</td>
+				<td>Cancel Goal Action</td>
+				<td />
+				<td>Cancel goal action.</td>
+			</tr>
+			<tr id="contribution">
+				<td>contribution</td>
+				<td>Dependency</td>
+				<td>Contribution</td>
+				<td>
+					<a href="#ContributionTag">Contribution</a>
+				</td>
+				<td>Contribution.</td>
+			</tr>
+			<tr id="context">
+				<td>context</td>
+				<td>Package</td>
+				<td>Context</td>
+				<td>
+					<a href="#ContextTag">Context</a>
+				</td>
+				<td>Context.</td>
+			</tr>
+		</table>
+		<a id="footnote1">
+			<font size="-1">* StarUML names of element types are used instead of UML standard names.</font>
+		</a>
+		<h3 id="tags">2.2 Supported Tags</h3>
+		<p>The following table summarizes the implemented sets of tag definitions:</p>
+		<table>
+			<tr>
+				<th>Tag Definition Set</th>
+				<th>Used for</th>
+				<th>Tags</th>
+				<th>Description</th>
+			</tr>
+			<tr id="SocializedSemiEntityTypeTag">
+				<td rowspan="4">Socialized Semi Entity Type</td>
+				<td rowspan="4">
+					<a href="#agent">agent</a>, <a href="#resource">resource</a>, <a href="#environment">environment</a>, <a href="#organization unit">organization unit</a>, <a href="#entity role">entity role</a>
+				</td>
+				<td>supportedAcl: String</td>
+				<td>Comma-separated list of identifiers of supported agent communication languages.</td>
+			</tr>
+			<tr>
+				<td>supportedCl: String</td>
+				<td>Comma-separated list of identifiers of supported content languages.</td>
+			</tr>
+			<tr>
+				<td>supportedEncoding: String</td>
+				<td>Comma-separated list of identifiers of supported message content encodings.</td>
+			</tr>
+			<tr>
+				<td>supportedOntology: String</td>
+				<td>Comma-separated list of identifiers of supported ontologies.</td>
+			</tr>
+			<tr id="SocializedActorTag">
+				<td rowspan="4">Socialized Actor</td>
+				<td rowspan="4">applies for ordinary Actor</td>
+				<td>supportedAcl: String</td>
+				<td>Comma-separated list of identifiers of supported agent communication languages.</td>
+			</tr>
+			<tr>
+				<td>supportedCl: String</td>
+				<td>Comma-separated list of identifiers of supported content languages.</td>
+			</tr>
+			<tr>
+				<td>supportedEncoding: String</td>
+				<td>Comma-separated list of identifiers of supported message content encodings.</td>
+			</tr>
+			<tr>
+				<td>supportedOntology: String</td>
+				<td>Comma-separated list of identifiers of supported ontologies.</td>
+			</tr>
+			<tr id="SocialRoleKindTag">
+				<td>Social Role Kind</td>
+				<td>
+					<a href="#social">social (relationship)</a>
+				</td>
+				<td>socialRoleKind: enum{peer-peer, super-sub, sub-super} = peer-peer</td>
+				<td>The kind of a social relationship.</td>
+			</tr>
+			<tr id="HostingKindTag">
+				<td>Hosting Kind</td>
+				<td>
+					<a href="#hosting">hosting</a>, <a href="#agent hosting">agent hosting</a>, <a href="#resource hosting">resource hosting</a>, <a href="#environment hosting">environment hosting</a>, <a href="#organization unit hosting">organization unit hosting</a>
+				</td>
+				<td>hostedAs: enum{resident, visitor, resident+visitor}</td>
+				<td>Hosting kind that the owning agent execution environment provides to the hosting property’s type.</td>
+			</tr>
+			<tr id="HostingAssociationKindTag">
+				<td>Hosting Association Kind</td>
+				<td>
+					<a href="#host">host</a>
+				</td>
+				<td>hostedAs: enum{resident, visitor, resident+visitor}</td>
+				<td>Hosting kind that the attached agent execution environment provides to the entity at the other association end.</td>
+			</tr>
+			<tr id="MultiLifelineTag">
+				<td>Multi Lifeline</td>
+				<td>
+					<a href="#multi lifeline">multi (lifeline)</a>
+				</td>
+				<td>isDestroyed: Bolean</td>
+				<td>Setting this tagged value to True represents a single destroyed multi lifeline. This provides the simplified notation of a multi-lifeline destroyed in an atribute change (see Fig. 5-39 in the AML specification for more details).</td>
+			</tr>
+			<tr id="MultiMessageTag">
+				<td rowspan="3">Multi Message</td>
+				<td rowspan="3">
+					<a href="#multi message">multi (message)</a>, <a href="#decoupled">decoupled (message)</a>
+				</td>
+				<td>sendDiscriminator: String</td>
+				<td>Specification of the multi message senders.</td>
+			</tr>
+			<tr>
+				<td>receiveDiscriminator: String</td>
+				<td>Specification of the multi message receivers.</td>
+			</tr>
+			<tr>
+				<td>toItself: Boolean</td>
+				<td>If true, the multi message is also sent to its sender when the sender belongs to the group of receivers. If false, the sender is excluded from the group of receivers.</td>
+			</tr>
+			<tr id="CommunicationMessageTag">
+				<td rowspan="7">Communication Message</td>
+				<td rowspan="7">
+					<a href="#communication">communication (message)</a>
+				</td>
+				<td>sendDiscriminator: String</td>
+				<td>Specification of the multi message senders.</td>
+			</tr>
+			<tr>
+				<td>receiveDiscriminator: String</td>
+				<td>Specification of the multi message receivers.</td>
+			</tr>
+			<tr>
+				<td>toItself: Boolean</td>
+				<td>If true, the multi message is also sent to its sender when the sender belongs to the group of receivers. If false, the sender is excluded from the group of receivers.</td>
+			</tr>
+			<tr>
+				<td>acl: String</td>
+				<td>Denotes the agent communication language.</td>
+			</tr>
+			<tr>
+				<td>cl: String</td>
+				<td>Denotes the language in which the message content is expressed, also called the content language.</td>
+			</tr>
+			<tr>
+				<td>encoding: String</td>
+				<td>Denotes the specific encoding of the message content.</td>
+			</tr>
+			<tr>
+				<td>ontology: String</td>
+				<td>Comma-separated list of identifiers of ontologies used to give a meaning to the symbols in the message content.</td>
+			</tr>
+			<tr id="CommunicationMessagePayloadTag">
+				<td>Communication Message Payload</td>
+				<td>
+					<a href="#cm payload">cm payload</a>
+				</td>
+				<td>performative: String</td>
+				<td>Performative.</td>
+			</tr>
+			<tr id="CommunicativeInteractionTag">
+				<td rowspan="4">Communicative Interaction</td>
+				<td rowspan="4">
+					<a href="#communicative">communicative (interaction)</a>, <a href="#sp">sp</a>
+				</td>
+				<td>acl: String</td>
+				<td>Denotes the agent communication language.</td>
+			</tr>
+			<tr>
+				<td>cl: String</td>
+				<td>Denotes the language in which the message content is expressed, also called the content language.</td>
+			</tr>
+			<tr>
+				<td>encoding: String</td>
+				<td>Denotes the specific encoding of the message content.</td>
+			</tr>
+			<tr>
+				<td>ontology: String</td>
+				<td>Comma-separated list of identifiers of ontologies used to give a meaning to the symbols in the message content.</td>
+			</tr>
+			<tr id="SendCommunicationMessageActionTag">
+				<td rowspan="4">Send Communication Message Action</td>
+				<td rowspan="4">
+					<a href="#send communication message">send communication message (action)</a>
+				</td>
+				<td>acl: String</td>
+				<td>Denotes the agent communication language.</td>
+			</tr>
+			<tr>
+				<td>cl: String</td>
+				<td>Denotes the language in which the message content is expressed, also called the content language.</td>
+			</tr>
+			<tr>
+				<td>encoding: String</td>
+				<td>Denotes the specific encoding of the message content.</td>
+			</tr>
+			<tr>
+				<td>ontology: String</td>
+				<td>Comma-separated list of identifiers of ontologies used to give a meaning to the symbols in the message content.</td>
+			</tr>
+			<tr id="ServiceSpecificationTag">
+				<td rowspan="4">Service Specification</td>
+				<td rowspan="4">
+					<a href="#service specification">service specification</a>
+				</td>
+				<td>acl: String</td>
+				<td>Denotes the agent communication language.</td>
+			</tr>
+			<tr>
+				<td>cl: String</td>
+				<td>Denotes the language in which the message content is expressed, also called the content language.</td>
+			</tr>
+			<tr>
+				<td>encoding: String</td>
+				<td>Denotes the specific encoding of the message content.</td>
+			</tr>
+			<tr>
+				<td>ontology: String</td>
+				<td>Comma-separated list of identifiers of ontologies used to give a meaning to the symbols in the message content.</td>
+			</tr>
+			<tr id="MentalPropertyTag">
+				<td>Mental Property</td>
+				<td>
+					<a href="#mental">mental (property)</a>, <a href="#be">be</a>, <a href="#dg">dg</a>, <a href="#ug">ug</a>, <a href="#pl">pl</a>
+				</td>
+				<td>degree: String</td>
+				<td>The degree of the type of a mental property.</td>
+			</tr>
+			<tr id="MentalAssociationEndTag">
+				<td>Mental Association End</td>
+				<td>
+					<a href="#mental ae">mental ae</a>
+				</td>
+				<td>degree: String</td>
+				<td>The degree of the mental association end's type.</td>
+			</tr>
+			<tr id="MentalStateTag">
+				<td>Mental State</td>
+				<td>
+					<a href="#belief">belief</a>, <a href="#dgoal">dgoal</a>, <a href="#ugoal">ugoal</a>, <a href="#plan">plan</a>
+				</td>
+				<td>degree: String</td>
+				<td>The degree of the type of a mental property.</td>
+			</tr>
+			<tr id="ContributionTag">
+				<td rowspan="3">Contribution</td>
+				<td rowspan="3">
+					<a href="#contribution">contribution</a>
+				</td>
+				<td>kind: enum{sufficient, necessary, iff} = sufficient</td>
+				<td>Contribution kind.</td>
+			</tr>
+			<tr>
+				<td>contributorConstraintKind: enum{none, commit, pre, commpre, inv, cancel, post} = none</td>
+				<td>Contributor constraint kind.</td>
+			</tr>
+			<tr>
+				<td>beneficiaryConstraintKind: enum{none, commit, pre, commpre, inv, cancel, post} = none</td>
+				<td>Beneficiary constraint kind.</td>
+			</tr>
+			<tr id="ContextTag">
+				<td>Context</td>
+				<td>
+					<a href="#context">context</a>
+				</td>
+				<td>situation: String</td>
+				<td>Specification of the context's situation.</td>
+			</tr>
+		</table>
+		<h3 id="notations">2.3 Supported Extended Notations</h3>
+		<p>AML Profile for StarUML provides extended notations for the following stereotypes:</p>
+		<ul>
+			<li>
+				<a href="#play">play (association)</a>
+			</li>
+			<li>
+				<a href="#social">social (relationship)</a>
+			</li>
+			<li>
+				<a href="#host">host (hosting association)</a>
+			</li>
+			<li>
+				<a href="#ontology">ontology</a>
+			</li>
+			<li>
+				<a href="#x">x (frame)</a>
+			</li>
+			<li>
+				<a href="#multi lifeline">multi (lifeline)</a>
+			</li>
+			<li>
+				<a href="#multi message">multi (message)</a>
+			</li>
+			<li>
+				<a href="#decoupled">decoupled (message)</a>
+			</li>
+			<li>
+				<a href="#communication">communication (message)</a>
+			</li>
+			<li>
+				<a href="#sub">sub (subset)</a>
+			</li>
+			<li>
+				<a href="#join">join</a>
+			</li>
+			<li>
+				<a href="#create attribute">create attribute</a>
+			</li>
+			<li>
+				<a href="#destroy attribute">destroy attribute</a>
+			</li>
+			<li>
+				<a href="#service specification">service specification</a>
+			</li>
+			<li>
+				<a href="#provides">provides</a>
+			</li>
+			<li>
+				<a href="#uses">uses</a>
+			</li>
+			<li>
+				<a href="#perceptor">perceptor</a>
+			</li>
+			<li>
+				<a href="#effector">effector</a>
+			</li>
+			<li>
+				<a href="#perceives">perceives</a>
+			</li>
+			<li>
+				<a href="#effects">effects</a>
+			</li>
+			<li>
+				<a href="#belief">belief</a>
+			</li>
+			<li>
+				<a href="#dgoal">dgoal</a>
+			</li>
+			<li>
+				<a href="#ugoal">ugoal</a>
+			</li>
+			<li>
+				<a href="#plan">plan</a>
+			</li>
+			<li>
+				<a href="#contribution">contribution</a>
+			</li>
+			<li>
+				<a href="#create role">create role (action)</a>
+			</li>
+			<li>
+				<a href="#dispose role">dispose role (action)</a>
+			</li>
+			<li>
+				<a href="#send decoupled message">send decoupled message (action)</a>
+			</li>
+			<li>
+				<a href="#send communication message">send communication message (action)</a>
+			</li>
+			<li>
+				<a href="#accept decoupled message">accept decoupled message (action)</a>
+			</li>
+			<li>
+				<a href="#accept communication message">accept communication message (action)</a>
+			</li>
+			<li>
+				<a href="#percept">percept (action)</a>
+			</li>
+			<li>
+				<a href="#effect">effect (action)</a>
+			</li>
+			<li>
+				<a href="#move">move (action)</a>
+			</li>
+			<li>
+				<a href="#clone">clone (action)</a>
+			</li>
+			<li>
+				<a href="#commit goal">commit goal (action)</a>
+			</li>
+			<li>
+				<a href="#cancel goal">cancel goal (action)</a>
+			</li>
+			<li>
+				<a href="#context">context</a>
+			</li>
+		</ul>
+		<h3 id="diagrams">2.4 Supported Diagram Types</h3>
+		<p>The following table summarizes the implemented diagram types and their mapping to the standard AML diagram types:</p>
+		<table>
+			<tr>
+				<th>Implemented Diagram Type</th>
+				<th>Standard AML Diagram Type(s)</th>
+			</tr>
+			<tr>
+				<td>Ontology Diagram</td>
+				<td>Ontology Diagram</td>
+			</tr>
+			<tr>
+				<td>Agent Diagram</td>
+				<td>Society Diagram + Entity Diagram + Behavior Decomposition Diagram</td>
+			</tr>
+			<tr>
+				<td>MAS Deployment Diagram<a href="#footnote2">*</a>
+				</td>
+				<td />
+			</tr>
+			<tr>
+				<td>Mental Diagram</td>
+				<td>Mental Diagram or Goal-Based Requirements Diagram</td>
+			</tr>
+			<tr>
+				<td>Communicative Sequence Diagram</td>
+				<td>Protocol Sequence Diagram or Service Protocol Sequence Diagram</td>
+			</tr>
+			<tr>
+				<td>Communicative Sequence Diagram (Role)</td>
+				<td>Protocol Sequence Diagram or Service Protocol Sequence Diagram</td>
+			</tr>
+			<tr>
+				<td>Communicative Collaboration Diagram</td>
+				<td>Protocol Communication Diagram or Service Protocol Communication Diagram</td>
+			</tr>
+			<tr>
+				<td>Communicative Collaboration Diagram (Role)</td>
+				<td>Protocol Communication Diagram or Service Protocol Communication Diagram</td>
+			</tr>
+			<tr>
+				<td>AML Activity Diagram<a href="#footnote2">*</a>
+				</td>
+				<td />
+			</tr>
+		</table>
+		<a id="footnote2">
+			<font size="-1">* AML does not define a specific diagram type for this purpose, standard UML diagram type (i.e. a Deployment Diagram or an Activity Diagram) is used instead.</font>
+		</a>
+		<h2 id="deviations">3. Deviations from the AML Specification</h2>
+		<p>To resolve some problems with StarUML and particularly with its implementation of UML 2.0, and also to provide some late improvements for AML v1.0, the implementation of the AML profile does not completely adhere to the AML v0.9 language specification. The following list is a summary of all implemented deviations:</p>
+		<ul>
+			<li>Serviced Property is not explicitly supported. Each property (Part or Port) connected to a Service Provision or a Service Usage is considered to be a Serviced Property implicitly.</li>
+			<li>The icon for the Decidable Goal has been changed to differentiate it from UML Activity Final or Final State.</li>
+			<li>Stereotypes &laquo;sub&raquo;, &laquo;join&raquo;, &laquo;create attribute&raquo;, and &laquo;destroy attribute&raquo; are based on Messages and Stimuli as Dependencies cannot be used in StarUML interaction diagrams.</li>
+			<li>Join specifies the selector by means of the Branch property instead of a tagged value.</li>
+			<li>Interaction Protocol is modeled as a parametric Collaboration instead of parametric Interaction which is not supported by StarUML. Roles and template parameters of a Collaboration are used to specify formal template parameters of an Interaction Protocol. The specified template parameters can, but need not, also explicitly contain the Collaboration roles. The usage of an Interaction Protocol is therefore modeled by means of a Template Binding combined with a Collaboration Use.</li>
+			<li>Service Specification is modeled as a stereotyped Collaboration. The service parameters are extracted from the Service Protocols into their comprised Service Specification which commonly specify parameters for all comprised Service Protocols. Therefore, parameter names of all Service Protocols within one Service Specification should be harmonized, i.e., one parameter name should represent the same value in all Service Protocols. Both the provider parameters and the client parameters are specified as Template Parameters within a Service Specification. These two sets are delimited by the '-' special-purpose parameter. The provider parameters are specified first, then the '-' parameter, and finally the client parameters.</li>
+			<li>Service Specification shows the comprised Service Protocols only in the textual notation. See Fig. 5-73 in the AML specification for more details.</li>
+			<li>Hosting Association has the stereotype &laquo;host&raquo;, instead of &laquo;hosting&raquo; as defined in the AML specification, because the keyword must be different from the the stereotype of Hosting Property.</li>
+			<li>The stereotypes &laquo;attribute hosting&raquo;, &laquo;resource hosting&raquo;, &laquo;environment hosting&raquo;, and &laquo;organization unit hosting&raquo; were added to provide specific icons for the hosting of entities of these particular types.</li>
+			<li>The stereotype &laquo;x&raquo; was added to a Frame in order to model the AML diagram frame. This is a normal Frame extended by the possibility to show the formal parameters of Interaction Protocols and Service Protocols.</li>
+			<li>Mental Constraints of Mental Properties and Constrained Mental Elements, defined in AML as tags, are specified as constraints with the corresponding name, i.e., commit, pre, commpre, inv, cancel, and post.</li>
+			<li>New stereotypes applied to Attribute were added to allow extended notation for Parts of specific types (see Sect. 2.2. in the AML specification). The following stereotypes were added: &laquo;ag&raquo; for Agent Type, &laquo;re&raquo; for Resource Type, &laquo;en&raquo; for Environment Type, &laquo;ou&raquo; for Organization Unit Type, &laquo;er&raquo; for Entity Role Property, and &laquo;bf&raquo; for Behavior Fragment.</li>
+			<li>The implemented Context supports just one tag to represent situation, instead of AML's situationState and situationConstraint tags. An implemented situation tag is a string which specifies either the state name or the constraint text.</li>
+			<li>Iconic notation for Subset and Join is provided. Labels may be used for these stereotypes by switching the extended notation off.</li>
+			<li>Join selector is specified by means of the Branch property in StarUML. </li>
+			<li>Stereotypes &laquo;opredicate&raquo; and &laquo;oaction&raquo; were added to explicitly support modeling of the ontology concepts representing predicates and actions.</li>
+			<li>The player, roleProperty and roleType tags of the Create Role Action from AML are specified as one value of the DynamicArgument property in the textual format defined by AML.</li>
+			<li>Since multiplicity can be specified for a Classifier Role in StarUML, the multiplicity tag need not to be defined for Multi Lifeline.</li>
+			<li>As the payload of a Decoupled Message is specified by the message name, the payload tag is not supported by the implemented Decoupled Message. The same also applies for Communication Message.</li>
+			<li>Serviced Property is not explicitly supported. A property connected by Service Provisions or Service Usages is implicitly considered to be a Serviced Property. The same is true for Serviced Port.</li>
+			<li>Instead of a Mental Association, which is not explicitly supported, the AML profile for StarUML specifies the &laquo;mental ae&raquo; stereotype attached to a particular Association End that represents a Mental Property in association. The stereotype defines the same tags as Mental Property.</li>
+		</ul>
+		<h2 id="issues">4. Known Issues</h2>
+		<ul>
+			<li>The AML diagram frame (called the Extended Frame in this implementation) can only be placed in sequence or collaboration diagrams. This is a restriction of StarUML.</li>
+			<li>Moving a stereotyped message or stimulus (Multi Message, Decoupled Message, Communication Stimulus, Join, etc.) may result in its incorrect placement in a Collaboration (Role) Diagram. The final position can be different than the position of dropping. This is caused by StarUML's positioning of the messages and stimuli drawn with extended notation. Workaround resides in switching the extended notation off, moving the message or stimulus at the desired position, and switching the extended notation on.</li>
+			<li>The AML profile should be included in a newly created model manually (by means of the <em>Profile Manager</em> dialog) in order to be used also after re-opening the model. Even if a new model has the AML profile included initially, the profile should be either (1) manually excluded and included again, or (2) included after next model opening. This problem is caused by StarUML which ignores inclusion of a "non-auto including" profile in newly created and saved models.</li>
+			<li>There may occur the problem of opening a StarUML model under the Windows system with the regional options set differently from the regional options used by the system during saving the file. This problem is identified by the error message "Could not convert variant of type (OleStr) into type (Double)" occurred during opening the model file. In order to fix this problem, a value of the <em>Number</em> format (or all <em>Standards and formats</em> settings) in the <em>Regional and Language Options</em> system dialog should be changed to the value used at the model saving time.</li>
+		</ul>
+		<h2 id="improvements">5. Further Improvements</h2>
+		<p>The following improvements are foreseen:</p>
+		<ul>
+			<li>
+				<b>On-line help</b> providing information about AML elements and how to model them in StarUML.</li>
+			<li>
+				<b>Model checker</b> to check the AML model for completeness and consistency as defined by the UML and AML specifications.</li>
+		</ul>
+	</body>
+</html>

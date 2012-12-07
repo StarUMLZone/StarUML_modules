@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<APPROACH version="1.0">
+	<HEADER>
+		<NAME>AML</NAME>
+		<DISPLAYNAME>AML Approach</DISPLAYNAME>
+		<DESCRIPTION>Approach for Agent Modeling Language</DESCRIPTION>
+	</HEADER>
+	<BODY>
+		<IMPORTPROFILES>
+			<PROFILE>AML</PROFILE>
+		</IMPORTPROFILES>
+		<MODELSTRUCTURE>
+			<PACKAGE name="Common">
+				<DIAGRAM name="Main" defaultDiagram="True"/>
+			</PACKAGE>
+			<MODEL name="Requirements View">
+				<DIAGRAM name="Requirements View"/>
+				<PACKAGE name="Goal-based Requirements Model">
+					<DIAGRAM diagramTypeProfile="AML" diagramTypeName="MentalDiagram" name="GBR Model"/>
+				</PACKAGE>
+				<PACKAGE name="Use Case Model">
+					<DIAGRAM type="UseCase" name="Use Case Model"/>
+				</PACKAGE>
+			</MODEL>
+			<MODEL name="Logical View">
+				<DIAGRAM name="Logical View"/>
+				<PACKAGE stereotypeProfile="AML" stereotypeName="ontology" name="Ontology Model">
+					<DIAGRAM diagramTypeProfile="AML" diagramTypeName="OntologyDiagram" name="Ontology Model"/>
+				</PACKAGE>
+				<PACKAGE name="Data Model">
+					<DIAGRAM type="Class" name="Data Model"/>
+				</PACKAGE>
+				<PACKAGE name="Social Model">
+					<DIAGRAM diagramTypeProfile="AML" diagramTypeName="AgentDiagram" name="Social Model"/>
+				</PACKAGE>
+				<PACKAGE name="Behavior Decomposition  Model">
+					<DIAGRAM diagramTypeProfile="AML" diagramTypeName="AgentDiagram" name="Behavior Decomposition Model"/>
+				</PACKAGE>
+				<PACKAGE name="Perceptor/Effector Model">
+					<DIAGRAM type="Class" name="Perceptor/Effector Model"/>
+				</PACKAGE>
+				<PACKAGE name="Mental Model">
+					<DIAGRAM diagramTypeProfile="AML" diagramTypeName="MentalDiagram" name="Mental Model"/>
+				</PACKAGE>
+			</MODEL>
+			<MODEL name="Dynamic View">
+				<DIAGRAM name="Dynamic View"/>
+				<PACKAGE name="Interaction Protocols">
+					<DIAGRAM name="Interaction Protocols"/>
+				</PACKAGE>
+				<PACKAGE name="Interactions">
+					<DIAGRAM name="Interactions"/>
+				</PACKAGE>
+				<PACKAGE name="Services">
+					<DIAGRAM diagramTypeProfile="AML" diagramTypeName="AgentDiagram" name="Services"/>
+				</PACKAGE>
+			</MODEL>
+			<MODEL name="Component View">
+				<DIAGRAM type="Component" name="Component View"/>
+			</MODEL>
+			<MODEL name="Deployment View">
+				<DIAGRAM diagramTypeProfile="AML" diagramTypeName="MASDeploymentDiagram" name="Deployment View"/>
+			</MODEL>
+		</MODELSTRUCTURE>
+	</BODY>
+</APPROACH>

@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+		(mofsetattr (mofref view 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+		(mofsetattr (mofref view 'PropertyLabel') 'Visible' false)
+		(arrangeObject view)
+	)
+	(ondraw
+		(set nl (mofref view 'NameLabel'))
+		(drawobject nl)	
+		(if (= true (mofattr (mofref view 'PropertyLabel') 'Visible'))
+			(drawobject (mofref view 'PropertyLabel'))
+		)		
+		(setpenstyle 'psSoild')	
+		(polyline points)	
+	)
+)

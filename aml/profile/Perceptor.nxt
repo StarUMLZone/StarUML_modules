@@ -1,0 +1,66 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+		
+		(arrangeObject view)
+		(mofsetattr (mofref  view 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+	)
+
+	(ondraw
+		(drawObject view)
+		(set parent (mofref view 'ContainerView'))
+		(arrangeObject view)	
+		
+		(set left (mofattr view 'Left'))
+		(set top (mofattr view 'Top'))
+		(set right (+ (mofattr view 'Left') (mofattr view 'Width') -2))
+		(set bottom (+ (mofattr view 'Top') (mofattr view 'Height') -2))
+		(set cx (/ (+ left right) 2))
+		(set cy (/ (+ bottom top) 2))
+		
+		(setbrushcolor 'clBlack')
+		
+		(set pleft (mofattr parent 'Left'))
+		(set pright (+ (mofattr parent 'Left') (mofattr parent 'Width')))
+		(set ptop (mofattr parent 'Top'))
+		(set pbottom (+ (mofattr parent 'Top') (mofattr parent 'Height')))
+		
+		(set dl (- pleft left))
+		(set dt (- ptop top))
+		(set dr (- right pright))
+		(set db (- bottom pbottom))
+		
+		(if (>= dl 0)
+			(sequence //left			
+				(polygon (pt left bottom) (pt cx cy) (pt left top))
+			)
+			(if (>= dr 0)
+				(sequence //right
+					(polygon (pt right top) (pt cx cy) (pt right bottom))
+				)
+				(if (>= dt 0)
+					(sequence //top
+						(polygon (pt left top) (pt cx cy) (pt right top))
+					)
+					(sequence //bottom
+						(polygon (pt left bottom) (pt cx cy) (pt right bottom))
+					)					
+				)
+			)
+		)
+		
+		(set left (mofattr view 'Left'))
+		(set top (mofattr view 'Top'))
+		(set right (+(mofattr view 'Left') (mofattr view 'Width') ))
+		(set bottom (+(mofattr view 'Top') (mofattr view 'Height')))
+		(set width (mofattr view 'Width') )
+		(set height (mofattr view 'Height') )		
+		(setdefaultstyle)		
+	)
+)

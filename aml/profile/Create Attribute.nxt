@@ -1,0 +1,40 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+	  (arrangeObject view)
+	)
+
+	(ondraw
+		(mofsetattr (mofref view 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+		(set NL (mofref view 'NameLabel') )
+		(set diagType (mofattr (mofref (mofref view 'OwnerDiagramView') 'Diagram') 'DiagramType'))
+		(if (or (= diagType 'CommunicativeSequenceDiagram') (= diagType 'CommunicativeSequenceRoleDiagram'))
+			(sequence
+				(setpenstyle 'psSolid')
+				(polyline points)
+				(setdefaultstyle)
+				(setpenstyle 'psSolid')
+				(drawEdge 'tail' 'esFilledCircle')
+				(drawEdge 'head' 'esStickArrow')
+				(setdefaultstyle)
+				(drawObject NL)
+			)
+			(sequence
+				(drawObject view)
+				(set iTop (- (mofattr NL 'Top') 2))
+				(set iLeft (+ 2 (mofattr NL 'Left') (mofattr NL 'Width') ) )
+				(set iSize (+ (mofattr NL 'Height') 4) )
+				(set iRight (+ iLeft iSize))
+				(set iBottom (+ iTop iSize))
+				(drawbitmap iLeft iTop iRight iBottom 'Create Attribute.bmp' true)
+			)
+		)
+
+	)
+)

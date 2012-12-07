@@ -1,0 +1,154 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+		(arrangeObject view)
+		(if (not (= (mofattr view 'StereotypeDisplay') 'sdkIcon'))
+			(sequence
+				(set width (mofattr view 'Width'))
+				(set height (mofattr view 'Height'))
+				(set right (+ (mofattr view 'Left') width) )
+				(set bottom (+ (mofattr view 'Top') height) )
+				(set minWidth (mofattr view 'MinWidth'))
+				(set minHeight (mofattr view 'MinHeight'))
+				(set mw minWidth)
+				(set mh minHeight)
+				(set nc (mofref view 'NameCompartment'))
+				(set at (mofref view 'AttributeCompartment'))
+				(set op (mofref view 'OperationCompartment'))
+            	(set H (+ (- (mofattr nc 'Top') top) (mofattr nc 'MinHeight')))
+				(if (= (length (mofattr (mofref nc 'NameLabel') 'Text')) 0)
+					(set H 4)
+				)
+				(if (= (mofattr view 'SuppressAttributes') false)
+					(sequence
+						(set H (+ H 2 (mofattr at 'MinHeight')))
+					)
+				)
+				(if (= (mofattr view 'SuppressOperations') false)
+					(sequence
+						(set H (+ H 2 (mofattr op 'MinHeight')))
+					)
+				)
+				(set W 0)
+				//get pre compartment
+				(if (<= 1  (mofColCount model 'Constraints'))
+					(sequence
+						// select i-th column
+						(set attr (mofColAt model 'Constraints' 0))
+						(sequence
+							(set bs (concat '{' (mofattr attr 'Body') '}'))
+							(set H (+ H (textheight bs) 2 4 4))
+							(set w2 (textwidth bs))
+							(if (< (+ W 0) (+ w2 5 5))
+								(set W (+ w2 5 5))
+							)
+						)
+					)
+				)
+				(if (< (+ minWidth 0) (+ W 0))
+					(set minWidth W)
+				)
+				(if (> (+ minWidth 0) width)
+					(set width minWidth)
+				)
+				(mofsetattr view 'Width' width)
+				(if (< minHeight (+ H 0))
+					(set minHeight H)
+				)
+				(if (> (+ minHeight 0)  height)
+					(set height minHeight)
+				)
+
+				(mofsetattr view 'Height' height)
+				(set right (+ (mofattr view 'Left') width) )
+				(set bottom (+ (mofattr view 'Top') height) )
+			)
+		)
+	)
+
+	(ondraw
+		(setdefaultstyle)
+		(if (not (= (mofattr view 'StereotypeDisplay') 'sdkIcon'))
+		(sequence
+			(polygon (pt left (- bottom 2)) (pt (- right 12) (- bottom 2)) (pt (- right 2) (- bottom 12)) (pt (- right 2) top) (pt (+ left 10) top) (pt left (+ top 10)))
+			(set nc (mofref view 'NameCompartment'))				
+			(set hasname false)
+			(set Last (+ top 2))
+			(if (not (= (length (mofattr (mofref nc 'NameLabel') 'Text')) 0))
+				(sequence
+					(mofsetattr nc 'Width' width)
+					(drawObject nc)
+					(set Last (+ (mofattr nc 'Top') (mofattr nc 'Height')))
+					(set hasname true)
+				)
+				
+				(if (<= 1  (mofColCount model 'Constraints'))
+					(sequence
+						(set constr (mofColAt model 'Constraints' 0))
+						(set bs (concat '{' (mofattr constr 'Body') '}'))
+						(set xTop (+ Last 2))						
+						(textout (+ left (- (/ width 2) (/ (textwidth bs) 2))) (+ xTop 4) bs)
+						(set Last (+ xTop (textheight bs) 6))
+					)
+				)
+				
+				
+			)
+
+			//if attr visible & has attributes
+			
+			(set at (mofref view 'AttributeCompartment'))
+			(if (= (mofattr view 'SuppressAttributes') false)
+				(sequence
+					(mofsetattr at 'Width' width)
+					(if (not hasname)
+						(mofattr at 'Top' Last)
+					)
+					(drawObject at)
+					(set Last (+ (mofattr at 'Top') (mofattr at 'Height')))
+				)
+			)
+			(set op (mofref view 'OperationCompartment'))
+			(if (= (mofattr view 'SuppressOperations') false)
+				(sequence
+					(mofsetattr op 'Width' width)
+					(if (not hasname)
+						(mofattr op 'Top' Last)
+					)
+					(drawObject op)
+					(set Last (+ (mofattr op 'Top') (mofattr op 'Height')))
+				)
+			)
+
+
+			//get pre compartment
+			(setdefaultstyle)
+			(if hasname
+				(if (<= 1  (mofColCount model 'Constraints'))
+					(sequence
+						// select i-th column
+						(set constr (mofColAt model 'Constraints' 0))
+						(set bs (concat '{' (mofattr constr 'Body') '}'))
+						(set xTop (+ Last 2))
+						(line left xTop right xTop)
+						(textout (+ left 5) (+ xTop 4) bs)
+						(set Last (+ xTop (textheight bs) 4))
+					)
+				)
+			)
+			
+			(for i 0 (-  (mofColCount view 'ContainedViews') 1)
+				(drawObject (mofColAt view 'ContainedViews' i))
+			)
+			(set minWidth mw)
+			(set minHeight mh)	
+		)
+		(drawobject view)
+		)
+	)
+)

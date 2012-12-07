@@ -1,0 +1,42 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange	
+		(set sd (mofattr view 'StereotypeDisplay'))		
+		(mofsetattr view 'StereotypeDisplay' 'sdkDecoration')		
+		(set nc (mofref view 'NameCompartment'))		
+		(mofsetattr (mofref nc 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref nc 'StereotypeLabel') 'Visible' false)
+
+		(arrangeObject view)
+		(set nc (mofref view 'NameCompartment'))		
+		(set minWidth (mofattr nc 'MinWidth'))
+		(if (< minWidth 50)  
+			(set minWidth 50)
+		)
+		(set minHeight (+ (mofattr nc 'MinHeight') 15 2))
+		(if (< minHeight 40)  
+			(set minHeight 40)
+		)
+		(mofsetattr nc 'Top' (+ Top 15))	
+		
+	)
+	(ondraw	    
+		(setdefaultstyle)
+		(set TabRightX (+ Left  (/ (* (- Right Left) 2)  5)))
+		(set TabBottomY (+ Top 15))
+		(rect Left Top TabRightX TabBottomY)
+		(rect Left (- TabBottomY 1) Right Bottom)
+		(set nc (mofref view 'NameCompartment'))		
+		(mofsetattr nc 'Width' width)			
+		(drawObject nc)
+		(for i 0 (-  (mofColCount view 'ContainedViews') 1)
+			(drawObject (mofColAt view 'ContainedViews' i))
+		)
+		(mofsetattr view 'StereotypeDisplay' sd)
+	)
+)

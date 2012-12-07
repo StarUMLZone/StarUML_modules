@@ -1,0 +1,96 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+	  (arrangeObject view)
+	)
+
+	(ondraw
+		(mofsetattr (mofref view 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+		(set NL (mofref view 'NameLabel') )
+		(set nlleft (mofattr NL 'Left'))
+		(set nltop (mofattr NL 'Top'))
+
+		(set text (mofattr NL 'Text'))
+		(set textrr (mofattr NL 'Text'))
+		(set sn (mofattr (mofref (mofref view 'OwnerDiagramView') 'Diagram') 'ShowSequenceNumber'))
+		(if (= sn 'True')
+			(sequence
+				(set nclist (tokenize text ' : '))
+				(set part1 (itemat nclist 0))
+				(if (= 1 (itemcount nclist))
+					(set part2 '')
+					(set part2 (itemat nclist 1))
+				)
+			)
+			(set part2 text)
+		)
+		(set textr '')
+		(set stereotype (mofattr model 'StereotypeName'))
+		(if (= sn 'True')
+			(set textr (concat part1 ' : '))			
+		)
+		(if (= stereotype 'communication')
+			(sequence
+				(set sender (tagval model 'AML' 'CommunicationMessage' 'sendDiscriminator'))
+				(set receiver (tagval model 'AML' 'CommunicationMessage' 'receiveDiscriminator'))
+				(set toitself (tagval model 'AML' 'CommunicationMessage' 'toItself'))
+			)
+			(sequence
+				(set sender (tagval model 'AML' 'MultiMessage' 'sendDiscriminator'))
+				(set receiver (tagval model 'AML' 'MultiMessage' 'receiveDiscriminator'))
+				(set toitself (tagval model 'AML' 'MultiMessage' 'toItself'))
+			)
+		)
+
+		(if (> (length sender) 0)
+			(sequence
+				(set textr (concat textr '[' sender '] '))
+			)
+		)
+		(set textr (concat textr part2))
+		(if (> (length receiver) 0)
+			(sequence
+				(set textr (concat textr ' [' receiver ']'))
+			)
+		)
+		(if (= toitself false)
+			(sequence
+				(set textr (concat textr ' /'))
+			)
+		)
+
+		(set text textr)
+		(mofsetattr NL 'Visible' false)
+		(mofsetattr NL 'Text' '')
+		(drawObject view)
+
+		(mofsetattr NL 'Text' text)
+		(mofsetattr NL 'Width' (textwidth text))
+		(mofsetattr NL 'Left' nlleft)
+		(mofsetattr NL 'Top' nltop)
+		(mofsetattr NL 'Visible' true)
+		(drawObject NL )
+		
+		(set iTop (- (mofattr NL 'Top') 2))
+		(set iLeft (+ 2 (mofattr NL 'Left') (mofattr NL 'Width') ) )
+		(set iSize (+ (mofattr NL 'Height') 4) )
+		(set iRight (+ iLeft iSize))
+		(set iBottom (+ iTop iSize))
+
+		(if (= stereotype 'multi')
+			(drawbitmap iLeft iTop iRight iBottom 'Multi Message.emf' true)
+		)
+		(if (= stereotype 'decoupled')
+			(drawbitmap iLeft iTop iRight iBottom 'Decoupled Message.emf' true)
+		)
+		(if (= stereotype 'communication')
+			(drawbitmap iLeft iTop iRight iBottom 'Communication Message.emf' true)
+		)
+	)
+)

@@ -1,0 +1,111 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+		(mofsetattr (mofref view 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+		(arrangeObject view)
+	)
+	(ondraw
+		(set nl (mofref view 'NameLabel'))
+		(drawobject nl)	
+
+		(if (= true (mofattr (mofref view 'PropertyLabel') 'Visible'))
+			(drawobject (mofref view 'PropertyLabel'))
+		)
+		
+	    (setdefaultstyle)
+		
+	    //consts
+		(set ARROW 10) 			//length of arrow
+		(set SPACE 6) 			//length of arrow
+		(set pi (/ 3141592 1000000))
+		(set pi2 (/ pi 2))
+
+		//end points
+		(set BX (ptatx (- (ptcount) 2)))
+		(set BY (ptaty (- (ptcount) 2)))
+		(set EX (ptatx (- (ptcount) 1)))
+		(set EY (ptaty (- (ptcount) 1)))
+
+		//angle
+		(set A (- EX  BX))
+		(set B (- EY  BY))
+
+		//iterate to find the correct angle
+		(set angle 0)
+		(if (= A 0)
+			(set angle pi2)
+			(sequence
+				(set z (/ B A))
+				(if (< z 0)
+					(set z (* -1 z))
+				)
+				(for i 1 90
+					(sequence
+						(set tang (tan (* (/ pi2 90) i)))
+						(if (> z tang)
+							(set angle (* (/ pi2 90) i))
+						)
+						(set i (+ i 4))
+					)
+				)
+				
+			)
+		)
+
+		//count the end of arrow lines
+		(set angle1 (+ angle (/ pi 3))) //arrow angle = 60
+		(set angle2 (- angle (/ pi 3)))
+		(set MOVEX1 (* (cos angle1) ARROW))
+		(set MOVEY1 (* (sin angle1) ARROW))
+		(set MOVEX2 (* (cos angle2) ARROW))
+		(set MOVEY2 (* (sin angle2) ARROW))
+		(if (< A 0) (set MOVEX1 (* MOVEX1 -1)))
+		(if (< B 0) (set MOVEY1 (* MOVEY1 -1)))
+		(if (< A 0) (set MOVEX2 (* MOVEX2 -1)))
+		(if (< B 0) (set MOVEY2 (* MOVEY2 -1)))
+		(set MOVEX (* (cos angle) SPACE))
+		(set MOVEY (* (sin angle) SPACE))
+		(if (> A 0) (set MOVEX (* MOVEX -1)))
+		(if (> B 0) (set MOVEY (* MOVEY -1)))
+			
+	
+		(set SX (+ EX MOVEX))
+		(set SY (+ EY MOVEY))
+		
+		//first arrow
+		(set SX1 (+ SX MOVEX1))
+		(set SY1 (+ SY MOVEY1))
+		(set SX2 (+ SX MOVEX2))
+		(set SY2 (+ SY MOVEY2))
+		
+	    (setpenstyle 'psSolid')
+		(moveto (ptatx 0) (ptaty 0))
+		(for i 1 (- (ptcount) 2)
+			(sequence
+				(lineto (ptatx i) (ptaty i))
+			)
+		)
+		(lineto SX SY)		
+		(line SX SY SX1 SY1)
+		(line SX SY SX2 SY2)
+
+		
+		//second arrow
+		(set SX1 (+ SX MOVEX1))
+		(set SY1 (+ SY MOVEY1))
+		(set SX2 (+ SX MOVEX2))
+		(set SY2 (+ SY MOVEY2))
+
+		(line SX SY SX1 SY1)
+		(line SX SY SX2 SY2)
+
+		
+	
+	)
+)

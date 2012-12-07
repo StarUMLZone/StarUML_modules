@@ -1,0 +1,90 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+    (onarrange
+		(mofsetattr (mofref view 'StereotypeLabel') 'Text' '')
+		(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+		(arrangeObject view)
+    )
+    (ondraw
+		(setdefaultstyle)
+        (drawObject (mofref view 'NameLabel'))
+		(if (= true (mofattr (mofref view 'PropertyLabel') 'Visible'))
+			(drawobject (mofref view 'PropertyLabel'))
+		)
+		
+		(setpenstyle 'psDash')
+		(polyline points)
+
+		(setdefaultstyle)
+		
+		//size of triangle
+		(set halfT 7)
+		(set heightT 8)
+	    //right & top constants - use to move triangle to the border of the box
+	    (set constX 2)	
+		(set constY 2)	
+	
+		//HEAD
+		(set EX (ptatx (- (ptcount) 1)))
+		(set EY (ptaty (- (ptcount) 1)))
+		(set headV (mofref view 'Head'))
+		(set leftV (mofattr headV 'Left'))
+		(set topV (mofattr headV 'Top'))
+		(set bottomV (+ topV (mofattr headV 'Height')))
+		(set rightV (+ leftV (mofattr headV 'Width')))
+
+		(set L1 (- leftV EX))
+		(if (< L1 0) (set L1 (* -1 L1)))
+		(set L2 (- topV EY))
+		(if (< L2 0) (set L2 (* -1 L2)))
+		(set L3 (- rightV EX))
+		(if (< L3 0) (set L3 (* -1 L3)))
+		(set L4 (- bottomV EY))
+		(if (< L4 0) (set L4 (* -1 L4)))
+		(set x1 (- EX halfT))
+		(set x2 (+ EX halfT))
+		(set y1 (- EY halfT))
+		(set y2 (+ EY halfT))
+		
+		(set headType 'peer')
+		(if (and (<= L1 L2) (<= L1 L3) (<= L1 L4)) //left
+			(sequence
+				(set x3 (- leftV heightT))
+				(setbrushcolor 'clBlack')
+				(polygon (pt leftV y1) (pt x3 EY) (pt leftV y2))		
+				(setdefaultstyle)
+		
+			)
+			(if (and (< L2 L1) (<= L2 L3) (<= L2 L4)) //top
+				(sequence
+					(set y3 (- topV heightT))
+					(setbrushcolor 'clBlack')
+					(polygon (pt x1 topV) (pt EX y3) (pt x2 topV))					
+					(setdefaultstyle)
+					
+				)
+				(if (and (< L3 L1) (< L3 L1) (<= L3 L4)) //right
+					(sequence
+						(set x3 (+ rightV heightT))
+						(setbrushcolor 'clBlack')
+						(polygon (pt (- rightV constX) y2) (pt (- x3 constX) EY) (pt (- rightV constX) y1))
+						(setdefaultstyle)
+					)
+					(if (and (< L4 L1) (< L4 L2) (< L4 L3)) //bottom
+						(sequence
+							(set y3 (+ bottomV heightT))
+							(setbrushcolor 'clBlack')
+							(polygon (pt x2 (- bottomV constY)) (pt EX (- y3 constY)) (pt x1 (- bottomV constY)))
+							(setdefaultstyle)
+						)
+					)
+				)
+			)
+		)
+	)
+)

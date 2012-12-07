@@ -1,0 +1,86 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+	   (mofsetattr (mofref view 'StereotypeLabel') 'Text' '')
+	   (mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)      
+       (arrangeObject view)
+	)
+
+	(ondraw
+		(setdefaultstyle)
+		 (drawObject view)
+
+		//draw head
+
+		//consts
+		(set RADIUS 8)
+		(set SPACE 18)
+		(set pi (/ 3141592 1000000))
+		(set pi2 (/ pi 2))
+	
+		//end points
+		(set BX (ptatx (- (ptcount) 2)))
+		(set BY (ptaty (- (ptcount) 2)))
+		(set EX (ptatx (- (ptcount) 1)))
+		(set EY (ptaty (- (ptcount) 1)))
+	
+		//angle
+		(set A (- EX  BX))
+		(set B (- EY  BY))
+
+		//iterate to find the correct angle
+		(set angle 0)
+		(if (= A 0)
+			(set angle pi2)
+			(sequence	
+				(set z (/ B A))
+				(if (< z 0)
+					(set z (* -1 z))
+				)
+				(for i 1 90
+					(sequence
+						(set tang (tan (* (/ pi2 90) i)))
+						(if (> z tang)
+							(set angle (* (/ pi2 90) i))
+						)
+						(set i (+ i 4)) //step 5
+					)
+				)
+			)
+		)
+
+		//arc centre
+		(set MOVEX (* (cos angle) SPACE))	
+		(set MOVEY (* (sin angle) SPACE))
+		(if (> A 0) (set MOVEX (* MOVEX -1)))
+		(if (> B 0) (set MOVEY (* MOVEY -1)))
+		(set SX (+ EX MOVEX))
+		(set SY (+ EY MOVEY))
+
+		//ends of arc
+		(set MOVEX (* (cos (+ angle pi2)) SPACE))	
+		(set MOVEY (* (sin (+ angle pi2)) SPACE))
+		(set X1 (+ SX MOVEX))
+		(set Y1 (+ SY MOVEY))
+		(set X1 (+ SX MOVEX))
+		(set Y2 (- SY MOVEY))
+		(set X2 (- SX MOVEX))
+
+		//rotation in various arcs
+		(if (<= A 0) 
+			(if (<= B 0) //A<0
+				(arc (- SX RADIUS) (- SY RADIUS) (+ SX RADIUS) (+ SY RADIUS) X2 Y2 X1 Y1) 					     //IIq
+				(arc (- SX RADIUS) (- SY RADIUS) (+ SX RADIUS) (+ SY RADIUS) X1 Y2 X2 Y1)						 //IIIq					
+			)		
+			(if (< B 0) //A>0
+				(arc (- SX RADIUS) (- SY RADIUS) (+ SX RADIUS) (+ SY RADIUS) X2 Y1 X1 Y2)						 //Iq						
+				(arc (- SX RADIUS) (- SY RADIUS) (+ SX RADIUS) (+ SY RADIUS) X1 Y1 X2 Y2)						 //IVq				
+			)		
+		)
+	)
+)

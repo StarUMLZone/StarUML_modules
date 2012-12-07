@@ -1,0 +1,2418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROFILE version="1.0">
+	<HEADER>
+		<NAME>AML</NAME>
+		<DISPLAYNAME>AML Profile</DISPLAYNAME>
+		<DESCRIPTION>AML Profile</DESCRIPTION>
+		<AUTOINCLUDE>False</AUTOINCLUDE>
+	</HEADER>
+	<BODY>
+		<STEREOTYPELIST>
+			<STEREOTYPE>
+				<NAME>agent</NAME>
+				<DESCRIPTION>Creates an Agent Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SocializedSemiEntityType</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="38" minHeight="40">Agent.emf</ICON>
+				<SMALLICON>Agent.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ag</NAME>
+				<DESCRIPTION>Creates an Agent Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="38" minHeight="40">Agent.emf</ICON>
+				<SMALLICON>Agent Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>resource</NAME>
+				<DESCRIPTION>Creates a Resource Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SocializedSemiEntityType</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="42">Resource.emf</ICON>
+				<SMALLICON>Resource.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>re</NAME>
+				<DESCRIPTION>Creates a Resource Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="42">Resource.emf</ICON>
+				<SMALLICON>Resource Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>environment</NAME>
+				<DESCRIPTION>Creates an Environment Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SocializedSemiEntityType</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="46" minHeight="36">Environment.emf</ICON>
+				<SMALLICON>Environment.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>en</NAME>
+				<DESCRIPTION>Creates an Environment Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="46" minHeight="36">Environment.emf</ICON>
+				<SMALLICON>Environment Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>organization unit</NAME>
+				<DESCRIPTION>Creates an Organization Unit Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SocializedSemiEntityType</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="46" minHeight="36">Organization Unit.emf</ICON>
+				<SMALLICON>Organization Unit.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ou</NAME>
+				<DESCRIPTION>Creates an Organization Unit Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="46" minHeight="36">Organization Unit.emf</ICON>
+				<SMALLICON>Organization Unit Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>entity role</NAME>
+				<DESCRIPTION>Creates an Entity Role Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SocializedSemiEntityType</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="42">Entity Role.emf</ICON>
+				<SMALLICON>Entity Role.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>er</NAME>
+				<DESCRIPTION>Creates an Entity Role Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="42">Entity Role.emf</ICON>
+				<SMALLICON>Entity Role Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>role</NAME>
+				<DESCRIPTION>Creates a Role Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="28">Role Property.emf</ICON>
+				<SMALLICON>Role Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>play</NAME>
+				<DESCRIPTION>Creates a Play Association.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+					<BASECLASS>UMLLink</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Play Association.bmp</SMALLICON>
+				<NOTATION>Play Association.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>peer</NAME>
+				<DESCRIPTION>Creates a Social Property Peer.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Peer.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>super</NAME>
+				<DESCRIPTION>Creates a Social Property Super.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Super.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>sub</NAME>
+				<DESCRIPTION>Creates a Social Property Sub.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Sub.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>social</NAME>
+				<DESCRIPTION>Creates a Social Relationship.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+					<BASECLASS>UMLLink</BASECLASS>
+					<BASECLASS>UMLConnector</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SocialRoleKind</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Social Relationship.bmp</SMALLICON>
+				<NOTATION>Social Relationship.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>agent execution environment</NAME>
+				<DESCRIPTION>Creates an Agent Execution Environment.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLNode</BASECLASS>
+					<BASECLASS>UMLNodeInstance</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="48" minHeight="28">Agent Execution Environment.emf</ICON>
+				<SMALLICON>Agent Execution Environment.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>aee</NAME>
+				<DESCRIPTION>Creates an Agent Execution Environment Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="48" minHeight="28">Agent Execution Environment.emf</ICON>
+				<SMALLICON>Agent Execution Environment Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>hosting</NAME>
+				<DESCRIPTION>Creates a Hosting Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>HostingKind</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="20">Hosting Property.emf</ICON>
+				<SMALLICON>Hosting Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>agent hosting</NAME>
+				<DESCRIPTION>Creates an Agent Hosting Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>HostingKind</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="48" minHeight="58">Agent Hosting Property.emf</ICON>
+				<SMALLICON>Agent Hosting Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>resource hosting</NAME>
+				<DESCRIPTION>Creates a Resource Hosting Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>HostingKind</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="48" minHeight="56">Resource Hosting Property.emf</ICON>
+				<SMALLICON>Resource Hosting Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>environment hosting</NAME>
+				<DESCRIPTION>Creates an Environment Hosting Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>HostingKind</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="48" minHeight="42">Environment Hosting Property.emf</ICON>
+				<SMALLICON>Environment Hosting Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>organization unit hosting</NAME>
+				<DESCRIPTION>Creates an Organization Unit Hosting Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>HostingKind</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="48" minHeight="42">Organization Unit Hosting Property.emf</ICON>
+				<SMALLICON>Organization Unit Hosting Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>host</NAME>
+				<DESCRIPTION>Creates a Hosting Association.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>HostingAssociationKind</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Hosting Association.bmp</SMALLICON>
+				<NOTATION>Hosting Association.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>move</NAME>
+				<DESCRIPTION>Creates a Move.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Move.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>clone</NAME>
+				<DESCRIPTION>Creates a Clone.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Clone.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ontology</NAME>
+				<DESCRIPTION>Creates an Ontology.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPackage</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="30">Ontology.emf</ICON>
+				<SMALLICON>Ontology.bmp</SMALLICON>
+				<NOTATION>Package.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>oclass</NAME>
+				<DESCRIPTION>Creates an Ontology Class.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="30">Ontology Class.emf</ICON>
+				<SMALLICON>Ontology Class.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>opredicate</NAME>
+				<DESCRIPTION>Creates an Ontology Predicate.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="30">Ontology Predicate.emf</ICON>
+				<SMALLICON>Ontology Predicate.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>oaction</NAME>
+				<DESCRIPTION>Creates an Ontology Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="30">Ontology Action.emf</ICON>
+				<SMALLICON>Ontology Action.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>outility</NAME>
+				<DESCRIPTION>Creates an Ontology Utility.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="30">Ontology Utility.emf</ICON>
+				<SMALLICON>Ontology Utility.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>behavior fragment</NAME>
+				<DESCRIPTION>Creates a Behavior Fragment.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="40">Behavior Fragment.emf</ICON>
+				<SMALLICON>Behavior Fragment.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>bf</NAME>
+				<DESCRIPTION>Creates a Behavior Fragment Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="40">Behavior Fragment.emf</ICON>
+				<SMALLICON>Behavior Fragment Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>communicative</NAME>
+				<DESCRIPTION>Creates a Communicative Interaction.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLInteraction</BASECLASS>
+					<BASECLASS>UMLInteractionInstanceSet</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>CommunicativeInteraction</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Communicative Interaction.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>x</NAME>
+				<DESCRIPTION>Creates an Extended Frame.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLFrame</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Extended Frame.bmp</SMALLICON>
+				<NOTATION>Extended Frame.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>multi</NAME>
+				<DESCRIPTION>Creates a Multi Lifeline.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClassifierRole</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MultiLifeline</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Multi Lifeline.bmp</SMALLICON>
+				<NOTATION>Multi Lifeline.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>multi</NAME>
+				<DESCRIPTION>Creates a Multi Message.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MultiMessage</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Multi Message.bmp</SMALLICON>
+				<NOTATION>Multi Message.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>decoupled</NAME>
+				<DESCRIPTION>Creates a Decoupled Message.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MultiMessage</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Decoupled Message.bmp</SMALLICON>
+				<NOTATION>Multi Message.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>communication</NAME>
+				<DESCRIPTION>Creates a Communication Message.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>CommunicationMessage</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Communication Message.bmp</SMALLICON>
+				<NOTATION>Multi Message.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>sub</NAME>
+				<DESCRIPTION>Creates a Subset.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Subset.bmp</SMALLICON>
+				<NOTATION>Subset Join.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>join</NAME>
+				<DESCRIPTION>Creates a Join.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Join.bmp</SMALLICON>
+				<NOTATION>Subset Join.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>create attribute</NAME>
+				<DESCRIPTION>Creates a Create Attribute.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Create Attribute.bmp</SMALLICON>
+				<NOTATION>Create Attribute.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>destroy attribute</NAME>
+				<DESCRIPTION>Creates a Destroy Attribute.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLMessage</BASECLASS>
+					<BASECLASS>UMLStimulus</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Destroy Attribute.bmp</SMALLICON>
+				<NOTATION>Destroy Attribute.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>dm payload</NAME>
+				<DESCRIPTION>Creates a Decoupled Message Payload.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="35" minHeight="35">Decoupled Message Payload.emf</ICON>
+				<SMALLICON>Decoupled Message Payload.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>cm payload</NAME>
+				<DESCRIPTION>Creates a Communication Message Payload.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>CommunicationMessagePayload</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="35" minHeight="35">Communication Message Payload.emf</ICON>
+				<SMALLICON>Communication Message Payload.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>service specification</NAME>
+				<DESCRIPTION>Creates a Service Specification.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLCollaboration</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>ServiceSpecification</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="35">Service Specification.emf</ICON>
+				<SMALLICON>Service Specification.bmp</SMALLICON>
+				<NOTATION>Service Specification.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>sp</NAME>
+				<DESCRIPTION>Creates a Service Protocol.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLInteraction</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>CommunicativeInteraction</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Service Protocol.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>provides</NAME>
+				<DESCRIPTION>Creates a Service Provision.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Service Provision.bmp</SMALLICON>
+				<NOTATION>Service Provision.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>uses</NAME>
+				<DESCRIPTION>Creates a Service Usage.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Service Usage.bmp</SMALLICON>
+				<NOTATION>Service Usage.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>pa</NAME>
+				<DESCRIPTION>Creates a Perceiving Act.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLOperation</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Perceiving Act.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ea</NAME>
+				<DESCRIPTION>Creates an Effecting Act.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLOperation</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Effecting Act.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>perceptor type</NAME>
+				<DESCRIPTION>Creates a Perceptor Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="32">Perceptor Type.emf</ICON>
+				<SMALLICON>Perceptor Type.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>effector type</NAME>
+				<DESCRIPTION>Creates an Effector Type.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="32">Effector Type.emf</ICON>
+				<SMALLICON>Effector Type.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>perceptor</NAME>
+				<DESCRIPTION>Creates a Perceptor.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPort</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Perceptor.bmp</SMALLICON>
+				<NOTATION>Perceptor.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>effector</NAME>
+				<DESCRIPTION>Creates an Effector.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPort</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Effector.bmp</SMALLICON>
+				<NOTATION>Effector.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>perceives</NAME>
+				<DESCRIPTION>Creates a Perceives.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Perceives.bmp</SMALLICON>
+				<NOTATION>Perceives.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>effects</NAME>
+				<DESCRIPTION>Creates an Effects.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Effects.bmp</SMALLICON>
+				<NOTATION>Effects.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>mental</NAME>
+				<DESCRIPTION>Creates a Mental Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalProperty</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Mental Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>mental ae</NAME>
+				<DESCRIPTION>Creates a Mental Association End.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociationEnd</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalAssociationEnd</RELATEDTAGDEFINITIONSET>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>responsible</NAME>
+				<DESCRIPTION>Creates a Responsibility.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<SMALLICON>Responsibility.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>belief</NAME>
+				<DESCRIPTION>Creates a Belief.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalState</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Belief.emf</ICON>
+				<SMALLICON>Belief.bmp</SMALLICON>
+				<NOTATION>Belief.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>be</NAME>
+				<DESCRIPTION>Creates a Belief Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalProperty</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Belief.emf</ICON>
+				<SMALLICON>Belief Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>dgoal</NAME>
+				<DESCRIPTION>Creates a Decidable Goal.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalState</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Decidable Goal.emf</ICON>
+				<SMALLICON>Decidable Goal.bmp</SMALLICON>
+				<NOTATION>Goal Plan.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>dg</NAME>
+				<DESCRIPTION>Creates a Decidable Goal Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalProperty</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Decidable Goal.emf</ICON>
+				<SMALLICON>Decidable Goal Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ugoal</NAME>
+				<DESCRIPTION>Creates an Undecidable Goal.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalState</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Undecidable Goal.emf</ICON>
+				<SMALLICON>Undecidable Goal.bmp</SMALLICON>
+				<NOTATION>Goal Plan.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ug</NAME>
+				<DESCRIPTION>Creates an Undecidable Goal Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalProperty</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Undecidable Goal.emf</ICON>
+				<SMALLICON>Undecidable Goal Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>plan</NAME>
+				<DESCRIPTION>Creates a Plan.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalState</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="44" minHeight="38">Plan.emf</ICON>
+				<SMALLICON>Plan.bmp</SMALLICON>
+				<NOTATION>Goal Plan.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>pl</NAME>
+				<DESCRIPTION>Creates a Plan Property.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>MentalProperty</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="44" minHeight="38">Plan.emf</ICON>
+				<SMALLICON>Plan Property.bmp</SMALLICON>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>contribution</NAME>
+				<DESCRIPTION>Creates a Contribution.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLDependency</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>Contribution</RELATEDTAGDEFINITIONSET>
+				<SMALLICON>Contribution.bmp</SMALLICON>
+				<NOTATION>Contribution.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>create role</NAME>
+				<DESCRIPTION>Creates a Create Role Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="37">Create Role Action.emf</ICON>
+				<SMALLICON>Create Role Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>dispose role</NAME>
+				<DESCRIPTION>Creates a Dispose Role Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="37">Dispose Role Action.emf</ICON>
+				<SMALLICON>Dispose Role Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>send decoupled message</NAME>
+				<DESCRIPTION>Creates a Send Decoupled Message Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="34">Send Decoupled Message Action.emf</ICON>
+				<SMALLICON>Send Decoupled Message Action.bmp</SMALLICON>
+				<NOTATION>Send Decoupled Message Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>send communication message</NAME>
+				<DESCRIPTION>Creates a Send Communication Message Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>SendCommunicationMessageAction</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="34">Send Communication Message Action.emf</ICON>
+				<SMALLICON>Send Communication Message Action.bmp</SMALLICON>
+				<NOTATION>Send Communication Message Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>accept decoupled message</NAME>
+				<DESCRIPTION>Creates an Accept Decoupled Message Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="34">Accept Decoupled Message Action.emf</ICON>
+				<SMALLICON>Accept Decoupled Message Action.bmp</SMALLICON>
+				<NOTATION>Accept Decoupled Message Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>accept communication message</NAME>
+				<DESCRIPTION>Creates an Accept Communication Message Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="34">Accept Communication Message Action.emf</ICON>
+				<SMALLICON>Accept Communication Message Action.bmp</SMALLICON>
+				<NOTATION>Accept Communication Message Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>percept</NAME>
+				<DESCRIPTION>Creates a Percept Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="31">Percept Action.emf</ICON>
+				<SMALLICON>Percept Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>effect</NAME>
+				<DESCRIPTION>Creates an Effect Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="31">Effect Action.emf</ICON>
+				<SMALLICON>Effect Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>move</NAME>
+				<DESCRIPTION>Creates a Move Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="38" minHeight="40">Move Action.emf</ICON>
+				<SMALLICON>Move Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>clone</NAME>
+				<DESCRIPTION>Creates a Clone Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="26">Clone Action.emf</ICON>
+				<SMALLICON>Clone Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>commit goal</NAME>
+				<DESCRIPTION>Creates a Commit Goal Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="40">Commit Goal Action.emf</ICON>
+				<SMALLICON>Commit Goal Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>cancel goal</NAME>
+				<DESCRIPTION>Creates a Cancel Goal Action.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="40">Cancel Goal Action.emf</ICON>
+				<SMALLICON>Cancel Goal Action.bmp</SMALLICON>
+				<NOTATION>Action.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>context</NAME>
+				<DESCRIPTION>Creates a Context.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPackage</BASECLASS>
+				</BASECLASSES>
+				<RELATEDTAGDEFINITIONSET>Context</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="30">Context.emf</ICON>
+				<SMALLICON>Context.bmp</SMALLICON>
+				<NOTATION>Context.nxt</NOTATION>
+			</STEREOTYPE>
+		</STEREOTYPELIST>
+		<TAGDEFINITIONSETLIST>
+			<TAGDEFINITIONSET>
+				<NAME>SocializedSemiEntityType</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>supportedAcl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>supportedCl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>supportedEncoding</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>supportedOntology</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>SocializedActor</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLActor</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>supportedAcl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>supportedCl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>supportedEncoding</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>supportedOntology</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>Contribution</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>kind</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<DEFAULTDATAVALUE>sufficient</DEFAULTDATAVALUE>
+						<LITERALS>
+							<LITERAL>sufficient</LITERAL>
+							<LITERAL>neccessary</LITERAL>
+							<LITERAL>iff</LITERAL>
+						</LITERALS>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>contributorConstraintKind</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<DEFAULTDATAVALUE>none</DEFAULTDATAVALUE>
+						<LITERALS>
+							<LITERAL>none</LITERAL>
+							<LITERAL>commit</LITERAL>
+							<LITERAL>pre</LITERAL>
+							<LITERAL>commpre</LITERAL>
+							<LITERAL>inv</LITERAL>
+							<LITERAL>cancel</LITERAL>
+							<LITERAL>post</LITERAL>
+						</LITERALS>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>beneficiaryConstraintKind</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<DEFAULTDATAVALUE>none</DEFAULTDATAVALUE>
+						<LITERALS>
+							<LITERAL>none</LITERAL>
+							<LITERAL>commit</LITERAL>
+							<LITERAL>pre</LITERAL>
+							<LITERAL>commpre</LITERAL>
+							<LITERAL>inv</LITERAL>
+							<LITERAL>cancel</LITERAL>
+							<LITERAL>post</LITERAL>
+						</LITERALS>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>MentalProperty</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>degree</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>MentalAssociationEnd</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>degree</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>MentalState</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>degree</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>SocialRoleKind</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>socialRoleKind</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<DEFAULTDATAVALUE>peer-peer</DEFAULTDATAVALUE>
+						<LITERALS>
+							<LITERAL>peer-peer</LITERAL>
+							<LITERAL>super-sub</LITERAL>
+							<LITERAL>sub-super</LITERAL>
+						</LITERALS>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>HostingKind</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>hostedAs</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<LITERALS>
+							<LITERAL>resident</LITERAL>
+							<LITERAL>visitor</LITERAL>
+							<LITERAL>resident+visitor</LITERAL>
+						</LITERALS>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>HostingAssociationKind</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>hostedAs</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<LITERALS>
+							<LITERAL>resident</LITERAL>
+							<LITERAL>visitor</LITERAL>
+							<LITERAL>resident+visitor</LITERAL>
+						</LITERALS>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>MultiLifeline</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>isDestroyed</NAME>
+						<TAGTYPE>Boolean</TAGTYPE>
+						<DEFAULTDATAVALUE>False</DEFAULTDATAVALUE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>MultiMessage</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>sendDiscriminator</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>receiveDiscriminator</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>toItself</NAME>
+						<TAGTYPE>Boolean</TAGTYPE>
+						<DEFAULTDATAVALUE>True</DEFAULTDATAVALUE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>ServiceSpecification</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>acl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>cl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>encoding</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>ontology</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>SendCommunicationMessageAction</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>acl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>cl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>encoding</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>ontology</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>CommunicationMessage</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>sendDiscriminator</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>receiveDiscriminator</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>toItself</NAME>
+						<TAGTYPE>Boolean</TAGTYPE>
+						<DEFAULTDATAVALUE>True</DEFAULTDATAVALUE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>acl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>cl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>encoding</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>ontology</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>CommunicativeInteraction</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>acl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>cl</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>encoding</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION>
+						<NAME>ontology</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>CommunicationMessagePayload</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>performative</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+			<TAGDEFINITIONSET>
+				<NAME>Context</NAME>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>situation</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+		</TAGDEFINITIONSETLIST>
+		<ELEMENTPROTOTYPELIST>
+			<ELEMENTPROTOTYPE>
+				<NAME>AgentType</NAME>
+				<DISPLAYNAME>Agent Type</DISPLAYNAME>
+				<ICON>Agent.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>agent</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AgentProperty</NAME>
+				<DISPLAYNAME>Agent Property</DISPLAYNAME>
+				<ICON>Agent Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>ag</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ResourceType</NAME>
+				<DISPLAYNAME>Resource Type</DISPLAYNAME>
+				<ICON>Resource.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>resource</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ResourceProperty</NAME>
+				<DISPLAYNAME>Resource Property</DISPLAYNAME>
+				<ICON>Resource Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>re</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EnvironmentType</NAME>
+				<DISPLAYNAME>Environment Type</DISPLAYNAME>
+				<ICON>Environment.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>environment</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EnvironmentProperty</NAME>
+				<DISPLAYNAME>Environment Property</DISPLAYNAME>
+				<ICON>Environment Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>en</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OrganizationUnitType</NAME>
+				<DISPLAYNAME>Organization Unit Type</DISPLAYNAME>
+				<ICON>Organization Unit.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>organization unit</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OrganizationUnitProperty</NAME>
+				<DISPLAYNAME>Organization Unit Property</DISPLAYNAME>
+				<ICON>Organization Unit Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>ou</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EntityRoleType</NAME>
+				<DISPLAYNAME>Entity Role Type</DISPLAYNAME>
+				<ICON>Entity Role.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>entity role</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EntityRoleProperty</NAME>
+				<DISPLAYNAME>Entity Role Property</DISPLAYNAME>
+				<ICON>Entity Role Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>er</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>PlayAssociation</NAME>
+				<DISPLAYNAME>Play Association</DISPLAYNAME>
+				<ICON>Play Association.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Association</BASEELEMENT>
+				<STEREOTYPENAME>play</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>RoleProperty</NAME>
+				<DISPLAYNAME>Role Property</DISPLAYNAME>
+				<ICON>Role Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>role</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SocialAssociation</NAME>
+				<DISPLAYNAME>Social Association</DISPLAYNAME>
+				<ICON>Social Relationship.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Association</BASEELEMENT>
+				<STEREOTYPENAME>social</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SocialConnector</NAME>
+				<DISPLAYNAME>Social Connector</DISPLAYNAME>
+				<ICON>Social Connector.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Connector</BASEELEMENT>
+				<STEREOTYPENAME>social</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AgentExecutionEnvironment</NAME>
+				<DISPLAYNAME>Agent Execution Environment</DISPLAYNAME>
+				<ICON>Agent Execution Environment.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Node</BASEELEMENT>
+				<STEREOTYPENAME>agent execution environment</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AgentExecutionEnvironmentInstance</NAME>
+				<DISPLAYNAME>Agent Execution Environment Instance</DISPLAYNAME>
+				<ICON>Agent Execution Environment.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>NodeInstance</BASEELEMENT>
+				<STEREOTYPENAME>agent execution environment</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AgentExecutionEnvironmentProperty</NAME>
+				<DISPLAYNAME>Agent Execution Environment Property</DISPLAYNAME>
+				<ICON>Agent Execution Environment Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>aee</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>HostingProperty</NAME>
+				<DISPLAYNAME>Hosting Property</DISPLAYNAME>
+				<ICON>Hosting Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>hosting</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AgentHostingProperty</NAME>
+				<DISPLAYNAME>Agent Hosting Property</DISPLAYNAME>
+				<ICON>Agent Hosting Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>agent hosting</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ResourceHostingProperty</NAME>
+				<DISPLAYNAME>Resource Hosting Property</DISPLAYNAME>
+				<ICON>Resource Hosting Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>resource hosting</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EnvironmentHostingProperty</NAME>
+				<DISPLAYNAME>Environment Hosting Property</DISPLAYNAME>
+				<ICON>Environment Hosting Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>environment hosting</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OrganizationUnitHostingProperty</NAME>
+				<DISPLAYNAME>Organization Unit Hosting Property</DISPLAYNAME>
+				<ICON>Organization Unit Hosting Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>organization unit hosting</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>HostingAssociation</NAME>
+				<DISPLAYNAME>Hosting Association</DISPLAYNAME>
+				<ICON>Hosting Association.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Association</BASEELEMENT>
+				<STEREOTYPENAME>host</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Move</NAME>
+				<DISPLAYNAME>Move</DISPLAYNAME>
+				<ICON>Move.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>move</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Clone</NAME>
+				<DISPLAYNAME>Clone</DISPLAYNAME>
+				<ICON>Clone.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>clone</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Ontology</NAME>
+				<DISPLAYNAME>Ontology</DISPLAYNAME>
+				<ICON>Ontology.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Package</BASEELEMENT>
+				<STEREOTYPENAME>ontology</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OntologyClass</NAME>
+				<DISPLAYNAME>Ontology Class</DISPLAYNAME>
+				<ICON>Ontology Class.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>oclass</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OntologyPredicate</NAME>
+				<DISPLAYNAME>Ontology Predicate</DISPLAYNAME>
+				<ICON>Ontology Predicate.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>opredicate</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OntologyAction</NAME>
+				<DISPLAYNAME>Ontology Action</DISPLAYNAME>
+				<ICON>Ontology Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>oaction</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>OntologyUtility</NAME>
+				<DISPLAYNAME>Ontology Utility</DISPLAYNAME>
+				<ICON>Ontology Utility.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>outility</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>BehaviorFragment</NAME>
+				<DISPLAYNAME>Behavior Fragment</DISPLAYNAME>
+				<ICON>Behavior Fragment.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>behavior fragment</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>BehaviorFragmentProperty</NAME>
+				<DISPLAYNAME>Behavior Fragment Property</DISPLAYNAME>
+				<ICON>Behavior Fragment Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>bf</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ExtendedFrame</NAME>
+				<DISPLAYNAME>Extended Frame</DISPLAYNAME>
+				<ICON>Extended Frame.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Frame</BASEELEMENT>
+				<STEREOTYPENAME>x</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>MultiLifeline</NAME>
+				<DISPLAYNAME>Multi Lifeline</DISPLAYNAME>
+				<ICON>Multi Lifeline.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ClassifierRole</BASEELEMENT>
+				<STEREOTYPENAME>multi</STEREOTYPENAME>
+				<STEREOTYPEDISPLAY>sdkNone</STEREOTYPEDISPLAY>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseMessage</NAME>
+				<DISPLAYNAME>Reverse Message</DISPLAYNAME>
+				<ICON>Reverse Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="5">Message</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseStimulus</NAME>
+				<DISPLAYNAME>Reverse Stimulus</DISPLAYNAME>
+				<ICON>Reverse Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="5">Stimulus</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>MultiMessage</NAME>
+				<DISPLAYNAME>Multi Message</DISPLAYNAME>
+				<ICON>Multi Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Message</BASEELEMENT>
+				<STEREOTYPENAME>multi</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>MultiStimulus</NAME>
+				<DISPLAYNAME>Multi Stimulus</DISPLAYNAME>
+				<ICON>Multi Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>multi</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseMultiMessage</NAME>
+				<DISPLAYNAME>Reverse Multi Message</DISPLAYNAME>
+				<ICON>Reverse Multi Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="5">Message</BASEELEMENT>
+				<STEREOTYPENAME>multi</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseMultiStimulus</NAME>
+				<DISPLAYNAME>Reverse Multi Stimulus</DISPLAYNAME>
+				<ICON>Reverse Multi Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="5">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>multi</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DecoupledMessage</NAME>
+				<DISPLAYNAME>Decoupled Message</DISPLAYNAME>
+				<ICON>Decoupled Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Message</BASEELEMENT>
+				<STEREOTYPENAME>decoupled</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DecoupledStimulus</NAME>
+				<DISPLAYNAME>Decoupled Stimulus</DISPLAYNAME>
+				<ICON>Decoupled Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>decoupled</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseDecoupledMessage</NAME>
+				<DISPLAYNAME>Reverse Decoupled Message</DISPLAYNAME>
+				<ICON>Reverse Decoupled Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="5">Message</BASEELEMENT>
+				<STEREOTYPENAME>decoupled</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseDecoupledStimulus</NAME>
+				<DISPLAYNAME>Reverse Decoupled Stimulus</DISPLAYNAME>
+				<ICON>Reverse Decoupled Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="5">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>decoupled</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CommunicationMessage</NAME>
+				<DISPLAYNAME>Communication Message</DISPLAYNAME>
+				<ICON>Communication Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Message</BASEELEMENT>
+				<STEREOTYPENAME>communication</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CommunicationStimulus</NAME>
+				<DISPLAYNAME>Communication Stimulus</DISPLAYNAME>
+				<ICON>Communication Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>communication</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseCommunicationMessage</NAME>
+				<DISPLAYNAME>Reverse Communication Message</DISPLAYNAME>
+				<ICON>Reverse Communication Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="6">Message</BASEELEMENT>
+				<STEREOTYPENAME>communication</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseCommunicationStimulus</NAME>
+				<DISPLAYNAME>Reverse Communication Stimulus</DISPLAYNAME>
+				<ICON>Reverse Communication Message.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="6">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>communication</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SubsetMessage</NAME>
+				<DISPLAYNAME>Subset</DISPLAYNAME>
+				<ICON>Subset.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="2">Message</BASEELEMENT>
+				<STEREOTYPENAME>sub</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseSubsetMessage</NAME>
+				<DISPLAYNAME>Reverse Subset</DISPLAYNAME>
+				<ICON>Reverse Subset.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="7">Message</BASEELEMENT>
+				<STEREOTYPENAME>sub</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SubsetStimulus</NAME>
+				<DISPLAYNAME>Subset</DISPLAYNAME>
+				<ICON>Subset.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="2">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>sub</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseSubsetStimulus</NAME>
+				<DISPLAYNAME>Reverse Subset</DISPLAYNAME>
+				<ICON>Reverse Subset.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="7">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>sub</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>JoinMessage</NAME>
+				<DISPLAYNAME>Join</DISPLAYNAME>
+				<ICON>Join.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="2">Message</BASEELEMENT>
+				<STEREOTYPENAME>join</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseJoinMessage</NAME>
+				<DISPLAYNAME>Reverse Join</DISPLAYNAME>
+				<ICON>Reverse Join.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="7">Message</BASEELEMENT>
+				<STEREOTYPENAME>join</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>JoinStimulus</NAME>
+				<DISPLAYNAME>Join</DISPLAYNAME>
+				<ICON>Join.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="2">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>join</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseJoinStimulus</NAME>
+				<DISPLAYNAME>Reverse Join</DISPLAYNAME>
+				<ICON>Reverse Join.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="7">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>join</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CreateAttributeMessage</NAME>
+				<DISPLAYNAME>Create Attribute</DISPLAYNAME>
+				<ICON>Create Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Message</BASEELEMENT>
+				<STEREOTYPENAME>create attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseCreateAttributeMessage</NAME>
+				<DISPLAYNAME>Reverse Create Attribute</DISPLAYNAME>
+				<ICON>Reverse Create Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="6">Message</BASEELEMENT>
+				<STEREOTYPENAME>create attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CreateAttributeStimulus</NAME>
+				<DISPLAYNAME>Create Attribute</DISPLAYNAME>
+				<ICON>Create Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>create attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseCreateAttributeStimulus</NAME>
+				<DISPLAYNAME>Reverse Create Attribute</DISPLAYNAME>
+				<ICON>Reverse Create Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="6">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>create attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DestroyAttributeMessage</NAME>
+				<DISPLAYNAME>Destroy Attribute</DISPLAYNAME>
+				<ICON>Destroy Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Message</BASEELEMENT>
+				<STEREOTYPENAME>destroy attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseDestroyAttributeMessage</NAME>
+				<DISPLAYNAME>Reverse Destroy Attribute</DISPLAYNAME>
+				<ICON>Reverse Destroy Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="6">Message</BASEELEMENT>
+				<STEREOTYPENAME>destroy attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DestroyAttributeStimulus</NAME>
+				<DISPLAYNAME>Destroy Attribute</DISPLAYNAME>
+				<ICON>Destroy Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>destroy attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReverseDestroyAttributeStimulus</NAME>
+				<DISPLAYNAME>Reverse Destroy Attribute</DISPLAYNAME>
+				<ICON>Reverse Destroy Attribute.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="6">Stimulus</BASEELEMENT>
+				<STEREOTYPENAME>destroy attribute</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DecoupledMessagePayload</NAME>
+				<DISPLAYNAME>Decoupled Message Payload</DISPLAYNAME>
+				<ICON>Decoupled Message Payload.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>dm payload</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CommunicationMessagePayload</NAME>
+				<DISPLAYNAME>Communication Message Payload</DISPLAYNAME>
+				<ICON>Communication Message Payload.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>cm payload</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ServiceSpecification</NAME>
+				<DISPLAYNAME>Service Specification</DISPLAYNAME>
+				<ICON>Service Specification.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Collaboration</BASEELEMENT>
+				<STEREOTYPENAME>service specification</STEREOTYPENAME>
+				<STEREOTYPEDISPLAY>sdkNone</STEREOTYPEDISPLAY>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ServiceProvision</NAME>
+				<DISPLAYNAME>Service Provision</DISPLAYNAME>
+				<ICON>Service Provision.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>provides</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ServiceUsage</NAME>
+				<DISPLAYNAME>Service Usage</DISPLAYNAME>
+				<ICON>Service Usage.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>uses</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>PerceptorType</NAME>
+				<DISPLAYNAME>Perceptor Type</DISPLAYNAME>
+				<ICON>Perceptor Type.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>perceptor type</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EffectorType</NAME>
+				<DISPLAYNAME>Effector Type</DISPLAYNAME>
+				<ICON>Effector Type.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>effector type</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Perceptor</NAME>
+				<DISPLAYNAME>Perceptor</DISPLAYNAME>
+				<ICON>Perceptor.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Port</BASEELEMENT>
+				<STEREOTYPENAME>perceptor</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Effector</NAME>
+				<DISPLAYNAME>Effector</DISPLAYNAME>
+				<ICON>Effector.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Port</BASEELEMENT>
+				<STEREOTYPENAME>effector</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Perceives</NAME>
+				<DISPLAYNAME>Perceives</DISPLAYNAME>
+				<ICON>Perceives.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>perceives</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Effects</NAME>
+				<DISPLAYNAME>Effects</DISPLAYNAME>
+				<ICON>Effects.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>effects</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>MentalProperty</NAME>
+				<DISPLAYNAME>Mental Property</DISPLAYNAME>
+				<ICON>Mental Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>mental</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Belief</NAME>
+				<DISPLAYNAME>Belief</DISPLAYNAME>
+				<ICON>Belief.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>belief</STEREOTYPENAME>
+				<STEREOTYPEDISPLAY>sdkNone</STEREOTYPEDISPLAY>
+				<VIEWPROPERTYLIST>
+					<VIEWPROPERTY name="SuppressAttributes">True</VIEWPROPERTY>
+					<VIEWPROPERTY name="SuppressOperations">True</VIEWPROPERTY>
+				</VIEWPROPERTYLIST>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>BeliefProperty</NAME>
+				<DISPLAYNAME>Belief Property</DISPLAYNAME>
+				<ICON>Belief Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>be</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DecidableGoal</NAME>
+				<DISPLAYNAME>Decidable Goal</DISPLAYNAME>
+				<ICON>Decidable Goal.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>dgoal</STEREOTYPENAME>
+				<VIEWPROPERTYLIST>
+					<VIEWPROPERTY name="SuppressAttributes">True</VIEWPROPERTY>
+					<VIEWPROPERTY name="SuppressOperations">True</VIEWPROPERTY>
+				</VIEWPROPERTYLIST>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DecidableGoalProperty</NAME>
+				<DISPLAYNAME>Decidable Goal Property</DISPLAYNAME>
+				<ICON>Decidable Goal Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>dg</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>UndecidableGoal</NAME>
+				<DISPLAYNAME>Undecidable Goal</DISPLAYNAME>
+				<ICON>Undecidable Goal.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>ugoal</STEREOTYPENAME>
+				<VIEWPROPERTYLIST>
+					<VIEWPROPERTY name="SuppressAttributes">True</VIEWPROPERTY>
+					<VIEWPROPERTY name="SuppressOperations">True</VIEWPROPERTY>
+				</VIEWPROPERTYLIST>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>UndecidableGoalProperty</NAME>
+				<DISPLAYNAME>Undecidable Goal Property</DISPLAYNAME>
+				<ICON>Undecidable Goal Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>ug</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Plan</NAME>
+				<DISPLAYNAME>Plan</DISPLAYNAME>
+				<ICON>Plan.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<VIEWPROPERTYLIST>
+					<VIEWPROPERTY name="SuppressAttributes">True</VIEWPROPERTY>
+					<VIEWPROPERTY name="SuppressOperations">True</VIEWPROPERTY>
+				</VIEWPROPERTYLIST>
+				<STEREOTYPENAME>plan</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>PlanProperty</NAME>
+				<DISPLAYNAME>Plan Property</DISPLAYNAME>
+				<ICON>Plan Property.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Part</BASEELEMENT>
+				<STEREOTYPENAME>pl</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Contribution</NAME>
+				<DISPLAYNAME>Contribution</DISPLAYNAME>
+				<ICON>Contribution.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>contribution</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Responsibility</NAME>
+				<DISPLAYNAME>Responsibility</DISPLAYNAME>
+				<ICON>Responsibility.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Dependency</BASEELEMENT>
+				<STEREOTYPENAME>responsible</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CreateRoleAction</NAME>
+				<DISPLAYNAME>Create Role Action</DISPLAYNAME>
+				<ICON>Create Role Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>create role</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>DisposeRoleAction</NAME>
+				<DISPLAYNAME>Dispose Role Action</DISPLAYNAME>
+				<ICON>Dispose Role Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>dispose role</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SendDecoupledMessageAction</NAME>
+				<DISPLAYNAME>Send Decoupled Message Action</DISPLAYNAME>
+				<ICON>Send Decoupled Message Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>send decoupled message</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SendCommunicationMessageAction</NAME>
+				<DISPLAYNAME>Send Communication Message Action</DISPLAYNAME>
+				<ICON>Send Communication Message Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>send communication message</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AcceptDecoupledMessageAction</NAME>
+				<DISPLAYNAME>Accept Decoupled Message Action</DISPLAYNAME>
+				<ICON>Accept Decoupled Message Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>accept decoupled message</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AcceptCommunicationMessageAction</NAME>
+				<DISPLAYNAME>Accept Communication Message Action</DISPLAYNAME>
+				<ICON>Accept Communication Message Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>accept communication message</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>PerceptAction</NAME>
+				<DISPLAYNAME>Percept Action</DISPLAYNAME>
+				<ICON>Percept Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>percept</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>EffectAction</NAME>
+				<DISPLAYNAME>Effect Action</DISPLAYNAME>
+				<ICON>Effect Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>effect</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>MoveAction</NAME>
+				<DISPLAYNAME>Move Action</DISPLAYNAME>
+				<ICON>Move Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>move</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CloneAction</NAME>
+				<DISPLAYNAME>Clone Action</DISPLAYNAME>
+				<ICON>Clone Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>clone</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CommitGoalAction</NAME>
+				<DISPLAYNAME>Commit Goal Action</DISPLAYNAME>
+				<ICON>Commit Goal Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>commit goal</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>CancelGoalAction</NAME>
+				<DISPLAYNAME>Cancel Goal Action</DISPLAYNAME>
+				<ICON>Cancel Goal Action.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>cancel goal</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Context</NAME>
+				<DISPLAYNAME>Context</DISPLAYNAME>
+				<ICON>Context.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Package</BASEELEMENT>
+				<STEREOTYPENAME>context</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>_DirectedAssociation</NAME>
+				<DISPLAYNAME>Directed Association</DISPLAYNAME>
+				<ICON>Directed Association.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Association</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>_Aggregation</NAME>
+				<DISPLAYNAME>Aggregation</DISPLAYNAME>
+				<ICON>Aggregation.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="2">Association</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>_Composition</NAME>
+				<DISPLAYNAME>Composition</DISPLAYNAME>
+				<ICON>Composition.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="3">Association</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>_Synchronization</NAME>
+				<DISPLAYNAME>Synchronization</DISPLAYNAME>
+				<ICON>Synchronization.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="2">Pseudostate</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>_Decision</NAME>
+				<DISPLAYNAME>Decision</DISPLAYNAME>
+				<ICON>Decision.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="0">Pseudostate</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>_SwimlaneHorizontal</NAME>
+				<DISPLAYNAME>Swimlane(Horizontal)</DISPLAYNAME>
+				<ICON>Swimlane Horizontal.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="1">Swimlane</BASEELEMENT>
+			</ELEMENTPROTOTYPE>
+		</ELEMENTPROTOTYPELIST>
+		<PALETTELIST>
+			<PALETTE>
+				<NAME>OntologyPalette</NAME>
+				<DISPLAYNAME>(AML) Ontology</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Ontology</PALETTEITEM>
+					<PALETTEITEM>OntologyClass</PALETTEITEM>
+					<PALETTEITEM>OntologyPredicate</PALETTEITEM>
+					<PALETTEITEM>OntologyAction</PALETTEITEM>
+					<PALETTEITEM>OntologyUtility</PALETTEITEM>
+					<PALETTEITEM>Association</PALETTEITEM>
+					<PALETTEITEM>_DirectedAssociation</PALETTEITEM>
+					<PALETTEITEM>_Aggregation</PALETTEITEM>
+					<PALETTEITEM>_Composition</PALETTEITEM>
+					<PALETTEITEM>Generalization</PALETTEITEM>
+					<PALETTEITEM>Dependency</PALETTEITEM>
+					<PALETTEITEM>Realization</PALETTEITEM>
+					<PALETTEITEM>AssociationClass</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>ArchitecturePalette</NAME>
+				<DISPLAYNAME>(AML) Architecture</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Package</PALETTEITEM>
+					<PALETTEITEM>Context</PALETTEITEM>
+					<PALETTEITEM>AgentType</PALETTEITEM>
+					<PALETTEITEM>AgentProperty</PALETTEITEM>
+					<PALETTEITEM>ResourceType</PALETTEITEM>
+					<PALETTEITEM>ResourceProperty</PALETTEITEM>
+					<PALETTEITEM>EnvironmentType</PALETTEITEM>
+					<PALETTEITEM>EnvironmentProperty</PALETTEITEM>
+					<PALETTEITEM>OrganizationUnitType</PALETTEITEM>
+					<PALETTEITEM>OrganizationUnitProperty</PALETTEITEM>
+					<PALETTEITEM>EntityRoleType</PALETTEITEM>
+					<PALETTEITEM>EntityRoleProperty</PALETTEITEM>
+					<PALETTEITEM>PlayAssociation</PALETTEITEM>
+					<PALETTEITEM>RoleProperty</PALETTEITEM>
+					<PALETTEITEM>SocialAssociation</PALETTEITEM>
+					<PALETTEITEM>SocialConnector</PALETTEITEM>
+					<PALETTEITEM>Association</PALETTEITEM>
+					<PALETTEITEM>_DirectedAssociation</PALETTEITEM>
+					<PALETTEITEM>_Aggregation</PALETTEITEM>
+					<PALETTEITEM>_Composition</PALETTEITEM>
+					<PALETTEITEM>Generalization</PALETTEITEM>
+					<PALETTEITEM>Dependency</PALETTEITEM>
+					<PALETTEITEM>Realization</PALETTEITEM>
+					<PALETTEITEM>AssociationClass</PALETTEITEM>
+					<PALETTEITEM>Connector</PALETTEITEM>
+					<PALETTEITEM>Object</PALETTEITEM>
+					<PALETTEITEM>Link</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>BehaviorPalette</NAME>
+				<DISPLAYNAME>(AML) Behavior</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>BehaviorFragment</PALETTEITEM>
+					<PALETTEITEM>BehaviorFragmentProperty</PALETTEITEM>
+					<PALETTEITEM>DecoupledMessagePayload</PALETTEITEM>
+					<PALETTEITEM>CommunicationMessagePayload</PALETTEITEM>
+					<PALETTEITEM>ServiceSpecification</PALETTEITEM>
+					<PALETTEITEM>ServiceProvision</PALETTEITEM>
+					<PALETTEITEM>ServiceUsage</PALETTEITEM>
+					<PALETTEITEM>PerceptorType</PALETTEITEM>
+					<PALETTEITEM>EffectorType</PALETTEITEM>
+					<PALETTEITEM>Perceptor</PALETTEITEM>
+					<PALETTEITEM>Effector</PALETTEITEM>
+					<PALETTEITEM>Perceives</PALETTEITEM>
+					<PALETTEITEM>Effects</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>MASDeploymentPalette</NAME>
+				<DISPLAYNAME>(AML) MAS Deployment</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Package</PALETTEITEM>
+					<PALETTEITEM>Context</PALETTEITEM>
+					<PALETTEITEM>Node</PALETTEITEM>
+					<PALETTEITEM>NodeInstance</PALETTEITEM>
+					<PALETTEITEM>AgentExecutionEnvironment</PALETTEITEM>
+					<PALETTEITEM>AgentExecutionEnvironmentProperty</PALETTEITEM>
+					<PALETTEITEM>AgentExecutionEnvironmentInstance</PALETTEITEM>
+					<PALETTEITEM>HostingProperty</PALETTEITEM>
+					<PALETTEITEM>AgentHostingProperty</PALETTEITEM>
+					<PALETTEITEM>ResourceHostingProperty</PALETTEITEM>
+					<PALETTEITEM>EnvironmentHostingProperty</PALETTEITEM>
+					<PALETTEITEM>OrganizationUnitHostingProperty</PALETTEITEM>
+					<PALETTEITEM>Artifact</PALETTEITEM>
+					<PALETTEITEM>HostingAssociation</PALETTEITEM>
+					<PALETTEITEM>Move</PALETTEITEM>
+					<PALETTEITEM>Clone</PALETTEITEM>
+					<PALETTEITEM>Association</PALETTEITEM>
+					<PALETTEITEM>Dependency</PALETTEITEM>
+					<PALETTEITEM>Connector</PALETTEITEM>
+					<PALETTEITEM>Link</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>MentalPalette</NAME>
+				<DISPLAYNAME>(AML) Mental</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Belief</PALETTEITEM>
+					<PALETTEITEM>BeliefProperty</PALETTEITEM>
+					<PALETTEITEM>DecidableGoal</PALETTEITEM>
+					<PALETTEITEM>DecidableGoalProperty</PALETTEITEM>
+					<PALETTEITEM>UndecidableGoal</PALETTEITEM>
+					<PALETTEITEM>UndecidableGoalProperty</PALETTEITEM>
+					<PALETTEITEM>Plan</PALETTEITEM>
+					<PALETTEITEM>PlanProperty</PALETTEITEM>
+					<PALETTEITEM>MentalProperty</PALETTEITEM>
+					<PALETTEITEM>Contribution</PALETTEITEM>
+					<PALETTEITEM>Responsibility</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>CommunicativeSequenceDiagramPalette</NAME>
+				<DISPLAYNAME>(AML) Communicative Sequence</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Object</PALETTEITEM>
+					<PALETTEITEM>Stimulus</PALETTEITEM>
+					<PALETTEITEM>MultiStimulus</PALETTEITEM>
+					<PALETTEITEM>DecoupledStimulus</PALETTEITEM>
+					<PALETTEITEM>CommunicationStimulus</PALETTEITEM>
+					<PALETTEITEM>SubsetStimulus</PALETTEITEM>
+					<PALETTEITEM>JoinStimulus</PALETTEITEM>
+					<PALETTEITEM>CreateAttributeStimulus</PALETTEITEM>
+					<PALETTEITEM>DestroyAttributeStimulus</PALETTEITEM>
+					<PALETTEITEM>CombinedFragment</PALETTEITEM>
+					<PALETTEITEM>InteractionOperand</PALETTEITEM>
+					<PALETTEITEM>Frame</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>CommunicativeSequenceRoleDiagramPalette</NAME>
+				<DISPLAYNAME>(AML) Communicative Sequence (Role)</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>ClassifierRole</PALETTEITEM>
+					<PALETTEITEM>MultiLifeline</PALETTEITEM>
+					<PALETTEITEM>Message</PALETTEITEM>
+					<PALETTEITEM>MultiMessage</PALETTEITEM>
+					<PALETTEITEM>DecoupledMessage</PALETTEITEM>
+					<PALETTEITEM>CommunicationMessage</PALETTEITEM>
+					<PALETTEITEM>SubsetMessage</PALETTEITEM>
+					<PALETTEITEM>JoinMessage</PALETTEITEM>
+					<PALETTEITEM>CreateAttributeMessage</PALETTEITEM>
+					<PALETTEITEM>DestroyAttributeMessage</PALETTEITEM>
+					<PALETTEITEM>CombinedFragment</PALETTEITEM>
+					<PALETTEITEM>InteractionOperand</PALETTEITEM>
+					<PALETTEITEM>ExtendedFrame</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>CommunicativeCollaborationDiagramPalette</NAME>
+				<DISPLAYNAME>(AML) Communicative Collaboration</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Object</PALETTEITEM>
+					<PALETTEITEM>Link</PALETTEITEM>
+					<PALETTEITEM>Stimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseStimulus</PALETTEITEM>
+					<PALETTEITEM>MultiStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseMultiStimulus</PALETTEITEM>
+					<PALETTEITEM>DecoupledStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseDecoupledStimulus</PALETTEITEM>
+					<PALETTEITEM>CommunicationStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseCommunicationStimulus</PALETTEITEM>
+					<PALETTEITEM>SubsetStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseSubsetStimulus</PALETTEITEM>
+					<PALETTEITEM>JoinStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseJoinStimulus</PALETTEITEM>
+					<PALETTEITEM>CreateAttributeStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseCreateAttributeStimulus</PALETTEITEM>
+					<PALETTEITEM>DestroyAttributeStimulus</PALETTEITEM>
+					<PALETTEITEM>ReverseDestroyAttributeStimulus</PALETTEITEM>
+					<PALETTEITEM>Frame</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>CommunicativeCollaborationRoleDiagramPalette</NAME>
+				<DISPLAYNAME>(AML) Communicative Collaboration (Role)</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>ClassifierRole</PALETTEITEM>
+					<PALETTEITEM>MultiLifeline</PALETTEITEM>
+					<PALETTEITEM>AssociationRole</PALETTEITEM>
+					<PALETTEITEM>Message</PALETTEITEM>
+					<PALETTEITEM>ReverseMessage</PALETTEITEM>
+					<PALETTEITEM>MultiMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseMultiMessage</PALETTEITEM>
+					<PALETTEITEM>DecoupledMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseDecoupledMessage</PALETTEITEM>
+					<PALETTEITEM>CommunicationMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseCommunicationMessage</PALETTEITEM>
+					<PALETTEITEM>SubsetMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseSubsetMessage</PALETTEITEM>
+					<PALETTEITEM>JoinMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseJoinMessage</PALETTEITEM>
+					<PALETTEITEM>CreateAttributeMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseCreateAttributeMessage</PALETTEITEM>
+					<PALETTEITEM>DestroyAttributeMessage</PALETTEITEM>
+					<PALETTEITEM>ReverseDestroyAttributeMessage</PALETTEITEM>
+					<PALETTEITEM>ExtendedFrame</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+				<NAME>AMLActivityPalette</NAME>
+				<DISPLAYNAME>(AML) Activity</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Activity</PALETTEITEM>
+					<PALETTEITEM>CreateRoleAction</PALETTEITEM>
+					<PALETTEITEM>DisposeRoleAction</PALETTEITEM>
+					<PALETTEITEM>SendDecoupledMessageAction</PALETTEITEM>
+					<PALETTEITEM>SendCommunicationMessageAction</PALETTEITEM>
+					<PALETTEITEM>AcceptDecoupledMessageAction</PALETTEITEM>
+					<PALETTEITEM>AcceptCommunicationMessageAction</PALETTEITEM>
+					<PALETTEITEM>PerceptAction</PALETTEITEM>
+					<PALETTEITEM>EffectAction</PALETTEITEM>
+					<PALETTEITEM>MoveAction</PALETTEITEM>
+					<PALETTEITEM>CloneAction</PALETTEITEM>
+					<PALETTEITEM>CommitGoalAction</PALETTEITEM>
+					<PALETTEITEM>CancelGoalAction</PALETTEITEM>
+					<PALETTEITEM>SubactivityState</PALETTEITEM>
+					<PALETTEITEM>Pseudostate</PALETTEITEM>
+					<PALETTEITEM>FinalState</PALETTEITEM>
+					<PALETTEITEM>_Synchronization</PALETTEITEM>
+					<PALETTEITEM>_Decision</PALETTEITEM>
+					<PALETTEITEM>FlowFinalState</PALETTEITEM>
+					<PALETTEITEM>ObjectFlowState</PALETTEITEM>
+					<PALETTEITEM>SignalAcceptState</PALETTEITEM>
+					<PALETTEITEM>SignalSendState</PALETTEITEM>
+					<PALETTEITEM>Transition</PALETTEITEM>
+					<PALETTEITEM>Swimlane</PALETTEITEM>
+					<PALETTEITEM>_SwimlaneHorizontal</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+		</PALETTELIST>
+		<DIAGRAMTYPELIST>
+			<DIAGRAMTYPE>
+				<NAME>AgentDiagram</NAME>
+				<DISPLAYNAME>Agent Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+				<ICON>Agent Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>ArchitecturePalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>BehaviorPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>MentalPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>OntologyPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Class</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>OntologyDiagram</NAME>
+				<DISPLAYNAME>Ontology Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+				<ICON>Ontology Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>OntologyPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Class</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>MASDeploymentDiagram</NAME>
+				<DISPLAYNAME>MAS Deployment Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>DeploymentDiagram</BASEDIAGRAM>
+				<ICON>MAS Deployment Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>MASDeploymentPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>ArchitecturePalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>BehaviorPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Deployment</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>MentalDiagram</NAME>
+				<DISPLAYNAME>Mental Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+				<ICON>Mental Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>MentalPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>BehaviorPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>ArchitecturePalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Class</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>CommunicativeSequenceDiagram</NAME>
+				<DISPLAYNAME>Communicative Sequence Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>SequenceDiagram</BASEDIAGRAM>
+				<ICON>Communicative Sequence Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>CommunicativeSequenceDiagramPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Sequence</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>CommunicativeSequenceRoleDiagram</NAME>
+				<DISPLAYNAME>Communicative Sequence Diagram (Role)</DISPLAYNAME>
+				<BASEDIAGRAM>SequenceRoleDiagram</BASEDIAGRAM>
+				<ICON>Communicative Sequence Role Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>CommunicativeSequenceRoleDiagramPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>SequenceRole</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>CommunicativeCollaborationDiagram</NAME>
+				<DISPLAYNAME>Communicative Collaboration Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>CollaborationDiagram</BASEDIAGRAM>
+				<ICON>Communicative Collaboration Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>CommunicativeCollaborationDiagramPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Collaboration</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>CommunicativeCollaborationRoleDiagram</NAME>
+				<DISPLAYNAME>Communicative Collaboration Diagram (Role)</DISPLAYNAME>
+				<BASEDIAGRAM>CollaborationRoleDiagram</BASEDIAGRAM>
+				<ICON>Communicative Collaboration Role Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>CommunicativeCollaborationRoleDiagramPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>CollaborationRole</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>AMLActivityDiagram</NAME>
+				<DISPLAYNAME>AML Activity Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>ActivityDiagram</BASEDIAGRAM>
+				<ICON>AML Activity Diagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>AMLActivityPalette</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Activity</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+		</DIAGRAMTYPELIST>
+	</BODY>
+</PROFILE>

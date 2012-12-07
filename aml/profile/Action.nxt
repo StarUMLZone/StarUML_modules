@@ -1,0 +1,130 @@
+/*
+ * Copyright (c) 2006 Whitestein Technologies AG.
+ * All rights reserved.
+ *
+ */
+
+(notation
+	(onarrange
+		(set bc -12)
+		(set bc2 -6)
+		(arrangeObject view)
+		(if (= (mofattr view 'StereotypeDisplay') 'sdkDecoration') 
+			(sequence 
+				(set nc (mofref view 'NameCompartment'))
+				(mofsetattr (mofref nc 'StereotypeLabel') 'Text' '')
+				(mofsetattr (mofref nc 'StereotypeLabel') 'Visible' false)
+
+
+				(arrangeObject view)
+				(set left (mofattr view 'Left'))
+				(set top (mofattr view 'Top'))
+				(set width (mofattr view 'Width'))
+				(set height (mofattr view 'Height'))
+				(set right (+ (mofattr view 'Left') (mofattr view 'Width')))
+				(set bottom (+ (mofattr view 'Top') (mofattr view 'Height')))
+				(set minWidth (mofattr view 'MinWidth'))
+				(set minHeight (mofattr view 'MinHeight'))
+
+				(set h Height)
+				(if ( <= (/ width 3)  Height)
+					(sequence 
+						(set h 0)
+						(for i 1 (/ width 3)
+							(set h (+ h 1))
+						)
+					)
+				)
+				(set da (mofattr model 'DynamicArguments'))
+				(if (not (= 0 (length da)))
+					(sequence
+					    (set da (concat '   [' da ']   '))
+						(set nch (mofattr nc 'MinHeight'))
+
+						(set vh (+ nch 8 (textheight da)))
+						(if (> (+ vh 0) minheight)
+							(sequence
+								(mofsetattr view 'MinHeight' vh)
+							)
+						)
+						(if (> (+ vh 0) height)
+							(sequence
+								(mofsetattr view 'Height' vh)
+							)
+						)
+						(if (> (+ (textwidth da) h bc) minwidth)
+							(mofsetattr view 'MinWidth' (+ (textwidth da) h bc))
+						)
+						(if (> (+ (textwidth da) h bc) width)
+							(mofsetattr view 'Width' (+ (textwidth da) h bc))
+						)
+					)
+				)
+
+
+				(set width (mofattr view 'Width'))
+				(set minWidth (mofattr view 'MinWidth'))
+				(if (< minWidth (+ (mofattr nc 'MinWidth') h bc))
+					(mofsetattr view 'MinWidth' (+ (mofattr nc 'MinWidth') h bc))
+				)
+				(if (< width (+ (mofattr nc 'MinWidth') h bc))
+					(mofsetattr view 'Width' (+ (mofattr nc 'MinWidth') h bc))
+				)
+
+				(set left (mofattr view 'Left'))
+				(set top (mofattr view 'Top'))
+				(set width (mofattr view 'Width'))
+				(set height (mofattr view 'Height'))
+				(set right (+ (mofattr view 'Left') (mofattr view 'Width')))
+				(set bottom (+ (mofattr view 'Top') (mofattr view 'Height')))
+				(set minWidth (mofattr view 'MinWidth'))
+				(set minHeight (mofattr view 'MinHeight'))
+			)
+		)
+
+	)
+	(onDraw
+		(if (= (mofattr view 'StereotypeDisplay') 'sdkDecoration') 
+			(sequence
+				(setdefaultstyle)
+
+				(set h Height)
+				(if ( <= (/ width 3)  Height)
+					(sequence 
+						(set h 0)
+						(for i 1 (/ width 3)
+							(set h (+ h 1))
+						)
+					)
+				)
+
+				(roundrect left top right bottom h height)
+
+				(set nc (mofref view 'NameCompartment'))
+				(set w (mofattr nc 'Width'))
+				(mofsetattr nc 'Width' (- width h))
+				(set x (+ left (/ width 2) (* -1   (/ (mofattr nc 'Width') 2) )))
+				(set ncleft 0)
+				(for i 0 x
+					(set ncleft (+ ncleft 1))
+				)
+				(mofsetattr nc 'Left' ncleft)
+				(drawobject nc)
+				(mofsetattr nc 'Width' w)
+				(set da (mofattr model 'DynamicArguments'))
+				(if (not (= 0 (length da)))
+					(sequence
+						(set nch (mofattr nc 'Height'))
+						(set da (concat ' [' da '] '))
+						(set x (+ left (/ width 2) (* -1   (/ (textwidth da) 2) )))
+						(set y (+ (mofattr nc 'Top') nch 4))
+						(textout x y da)
+					)
+				)
+			)
+			(sequence
+				(drawobject view)
+			)
+		)
+	)
+)
