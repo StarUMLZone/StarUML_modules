@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XPD:PROJECT xmlns:XPD="http://www.staruml.com" version="1">
+<XPD:HEADER>
+<XPD:SUBUNITS>
+</XPD:SUBUNITS>
+<XPD:PROFILES>
+</XPD:PROFILES>
+</XPD:HEADER>
+<XPD:BODY>
+<XPD:OBJ name="DocumentElement" type="UMLProject" guid="axW5ik6rMEanjt0NqmPUjQAA">
+<XPD:ATTR name="Title" type="string">MyProject</XPD:ATTR>
+<XPD:ATTR name="#OwnedElements" type="integer">1</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLPackage" guid="Qzb77myEQEOsvZcGd3YTMAAA">
+<XPD:ATTR name="Name" type="string">MyPackage</XPD:ATTR>
+<XPD:REF name="Namespace">axW5ik6rMEanjt0NqmPUjQAA</XPD:REF>
+<XPD:ATTR name="#OwnedElements" type="integer">2</XPD:ATTR>
+<XPD:OBJ name="OwnedElements[0]" type="UMLClass" guid="/9xtgKyU7Eeq6itiMtHzVgAA">
+<XPD:ATTR name="Name" type="string">MyClassA</XPD:ATTR>
+<XPD:REF name="Namespace">Qzb77myEQEOsvZcGd3YTMAAA</XPD:REF>
+</XPD:OBJ>
+<XPD:OBJ name="OwnedElements[1]" type="UMLClass" guid="GAa4I9j4k0qn2UAU4s9fzgAA">
+<XPD:ATTR name="Name" type="string">MyClassB</XPD:ATTR>
+<XPD:REF name="Namespace">Qzb77myEQEOsvZcGd3YTMAAA</XPD:REF>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:OBJ>
+</XPD:BODY>
+</XPD:PROJECT>

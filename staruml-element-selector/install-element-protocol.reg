@@ -1,0 +1,12 @@
+REGEDIT4
+
+[HKEY_CLASSES_ROOT\element]
+@="URL:element Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\element\shell]
+
+[HKEY_CLASSES_ROOT\element\shell\open]
+
+[HKEY_CLASSES_ROOT\element\shell\open\command]
+@="WScript.exe \"C:\\Program Files\\StarUML\\modules\\staruml-element-selector\\select-staruml-element.js\" \"%1\" "

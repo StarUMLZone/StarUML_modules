@@ -61,3 +61,9 @@ staruml-WAESequence
 -------------------------------------------------------------------
 Contributed by Orlando Alfonzo and Kenyer Dominguez
 http://staruml.sourceforge.net/en/modules.php
+
+
+-------------------------------------------------------------------
+staruml-element-selector
+-------------------------------------------------------------------
+Contributed by Jean-Marie Favre
