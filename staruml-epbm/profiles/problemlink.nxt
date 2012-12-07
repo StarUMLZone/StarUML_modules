@@ -1,0 +1,36 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+  (onarrange
+    (sequence
+      //(mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+      //(mofsetattr (mofref view 'PropertyLabel') 'Visible' false)
+      //(mofsetattr (mofref view 'HeadRoleNameLabel') 'Visible' false)
+      //(mofsetattr (mofref view 'TailRoleNameLabel') 'Visible' false)
+      //(mofsetattr (mofref view 'HeadMultiplicityLabel') 'Visible' false)
+      //(mofsetattr (mofref view 'TailMultiplicityLabel') 'Visible' false)
+      //(mofsetattr view 'ShowProperty' false)
+      //(mofsetattr view 'ShowCompartmentStereotype' false)
+      //(mofsetattr view 'ShowCompartmentVisibility' false)
+    )
+  )
+  (ondraw
+
+    ////////////////////////////////////////////////////////////////////
+    // draw line
+    //
+
+	(setdefaultstyle)
+	(setpenstyle 'psDot')
+	(polyline points)
+	//(polybezier points) curve lines
+	(setdefaultstyle)      
+  )
+)

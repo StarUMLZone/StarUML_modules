@@ -1,0 +1,58 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		//(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set typeName '<<Atomic process>>')
+		(set space 4)
+		(set unit (/ (+ width height) 7))
+			
+		///////////////////////////////////////////////////////
+		// draw iconic
+		//		
+		(setdefaultstyle)
+		(roundrect left top right bottom unit unit)
+		
+		///////////////////////////////////////////////////////
+		// draw name part
+		//
+		//(textout (+ left (/ (- width (textwidth typeName)) 2)) (+ top space) typeName)
+		
+		//draw in the middle, bold, big size, font Unicode	
+		//(setfontface 'VNI-Times')
+		(if (> (textwidth name) (- right left)) 
+			(sequence
+				(set nameRight (- right unit))
+				(set nameLeft (+ left unit))
+			)
+			(sequence
+				(set nameRight (- right (/ (- right left (textwidth name))2)))
+				(set nameLeft (+ left (/ (- right left (textwidth name))2)))
+			)			
+		)
+		(set nameTop (+ top space))
+		(set nameBottom (- bottom space))
+		(textbound nameLeft nameTop nameRight nameBottom space name true)
+		(setdefaultstyle)
+	)
+)
+

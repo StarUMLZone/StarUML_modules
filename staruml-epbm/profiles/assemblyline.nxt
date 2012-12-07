@@ -1,0 +1,51 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		//(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set typeName '<<assemble line>>')
+		(set space 4)
+		(set nameHeight (textheight (concat typeName ' ' name)))
+		(set nameWidth (textwidth (concat typeName ' ' name)))
+		(if (> nameWidth width) (set width (+ nameWidth 100)))
+		///////////////////////////////////////////////////////
+		// draw iconic
+		//		
+		(setdefaultstyle)
+		(rect left top (+ left nameWidth (* space 2)) (+ top nameHeight (* space 2))) 
+		(rect left (+ top nameHeight (* space 2))  (+ right (* space 2)) bottom)
+		
+		///////////////////////////////////////////////////////
+		// draw name part
+		//
+		//(textout (+ left (/ (- width (textwidth typeName)) 2)) (+ top space) typeName)
+		
+		//draw in the middle, bold, big size, font Unicode	
+		//(setfontface 'VNI-Times')
+		//(textbound (+ left space) (+ (+ top (* 2 space) (textheight typeName)))
+		//	(- right space) (- bottom space) space name true)
+		(textbound (+ left space) (+ top space) (+ left nameWidth space)
+			 (+ top nameHeight space) space (concat typeName ' ' name) true)
+		//(textout (+ left space) (+ top space) (concat typeName ' ' name))
+	)
+)
+

@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		//(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		//(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set space 5)
+		(set x1 left)
+		(set y1 (/ (+ top bottom) 2))
+		(set x2 (/ (+ left right) 2))
+		(set y2 top)
+		(set x3 right)
+		(set y3 y1)
+		(set x4 x2)
+		(set y4 bottom)
+		///////////////////////////////////////////////////////
+		// draw iconic
+		//		
+		(setdefaultstyle)
+		//(polygon (pt x1 y1) (pt x2 y2) (pt x3 y3) (pt x4 y4))
+		(drawobject view)
+		
+		///////////////////////////////////////////////////////
+		// draw name part
+		//
+		
+		//draw in the middle, bold, big size, font Unicode	
+		//(setfontface 'VNI-Times')
+		(set tempLeft (/ (+ x1 x2) 2))
+		(set tempRight (/ (+ x2 x3) 2))
+		(set tempTop (/ (+ y1 y2) 2))
+		(set tempBottom (/ (+ y3 y4) 2))
+
+		(if (> (textwidth name) (- tempRight tempLeft)) 
+			(sequence
+				(set nameRight (- tempRight space))
+				(set nameLeft (+ tempLeft space))
+			)
+			(sequence
+				(set nameRight (+ (- tempRight (/ (- tempRight tempLeft (textwidth name))2)) space))
+				(set nameLeft (- (+ tempLeft (/ (- tempRight tempLeft (textwidth name))2)) space))
+			)			
+		)
+		(set nameTop (+ tempTop (* 2 space)))
+		(set nameBottom (- tempBottom space))
+		(textbound nameLeft nameTop nameRight nameBottom space name true)
+		(setdefaultstyle)
+	)
+)
+

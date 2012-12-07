@@ -1,0 +1,49 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		//(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		//(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set space 4)
+		(set nameWidth (textwidth name))
+		(set nameHeight (textheight name))
+		(set height (+ nameWidth space space))
+			
+		///////////////////////////////////////////////////////
+		// draw iconic
+		//		
+		//(setdefaultstyle)
+		//(setpensize 2)
+		//(filerect left top (+ left nameHeight space space) bottom)		
+		//(polyline (pt right top) (pt left top) (pt left bottom) (pt right bottom))
+		//(line (+ left nameHeight space space) top (+ left nameHeight space space)  bottom)
+		
+		///////////////////////////////////////////////////////
+		// draw name part
+		//
+		//draw in the middle, bold, big size, font Unicode	
+		//(setfontface 'VNI-Times')
+		//draw text vertically
+		(drawobject view)
+		(setdefaultstyle)
+	)
+)
+

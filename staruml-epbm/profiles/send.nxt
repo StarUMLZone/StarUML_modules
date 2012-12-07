@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		//(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set typeName '<<Send event>>')
+		(set space 4)
+		(set unit (/ width 6))
+		(set x1 left)
+		(set y1 top)
+		(set x2 (- (+ left width) unit))
+		(set y2 top)
+		(set x3 right)
+		(set y3 (+ top (/ height 2)))
+		(set x4 x2)
+		(set y4 bottom)
+		(set x5 x1)
+		(set y5 bottom)
+			
+		///////////////////////////////////////////////////////
+		// draw iconic
+		//		
+		(setdefaultstyle)
+		(polygon (pt x1 y1) (pt x2 y2) (pt x3 y3) (pt x4 y4) (pt x5 y5))
+		
+		///////////////////////////////////////////////////////
+		// draw name part
+		//
+		//(textout (+ left (/ (- width (textwidth typeName)) 2)) (+ top space) typeName)
+		
+		//draw in the middle, bold, big size, font Unicode	
+		//(setfontface 'VNI-Times')
+		(if (> (textwidth name) (- x2 left)) 
+			(sequence
+				(set nameRight (- x2 space))
+				(set nameLeft (+ left space))
+			)
+			(sequence
+				(set nameRight (- x2 (/ (- x2 left (textwidth name))2)))
+				(set nameLeft (+ left (/ (- x2 left (textwidth name))2)))
+			)			
+		)
+		(set nameTop (+ top space))
+		(set nameBottom (- bottom space))
+		(textbound nameLeft nameTop nameRight nameBottom space name true)
+		(setdefaultstyle)
+	)
+)
+

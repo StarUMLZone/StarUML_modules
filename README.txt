@@ -47,3 +47,9 @@ Contributed by Sam Supakkul (ssupakkul@ieee.org)
 Nov. 21, 2007
 http://staruml.sourceforge.net/en/modules.php
 
+
+-------------------------------------------------------------------
+staruml-epbm
+-------------------------------------------------------------------
+Contributed by Pham Ngoc Viet Phuong (phuongphamnv@gmail.com)
+http://staruml.sourceforge.net/en/modules.php

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROFILE version="1.0">
+	<HEADER>
+		<NAME>EPBM</NAME>
+		<DISPLAYNAME>Eriksson-Penker Business Extensions</DISPLAYNAME>
+		<DESCRIPTION>Eriksson-Penker Business Extensions uses standard UML and some extensions for Business Modeling</DESCRIPTION>
+		<AUTOINCLUDE>True</AUTOINCLUDE>
+	</HEADER>
+	<BODY>
+		<STEREOTYPELIST>
+			<STEREOTYPE>
+				<NAME>Process (stereotype)</NAME>
+				<DESCRIPTION>A business process</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLSubactivityState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Process.wmf</ICON>
+				<SMALLICON>process.bmp</SMALLICON>
+				<NOTATION>process.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>AtomicProcess (stereotype)</NAME>
+				<DESCRIPTION>A atomic business process</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Atomicprocess.wmf</ICON>
+				<SMALLICON>atomicprocess.bmp</SMALLICON>
+				<NOTATION>atomicprocess.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Goal (stereotype)</NAME>
+				<DESCRIPTION>A business goal</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Resource.wmf</ICON>
+				<SMALLICON>resource.bmp</SMALLICON>
+				<NOTATION>goal.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Problem (stereotype)</NAME>
+				<DESCRIPTION>A business problem</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Note.wmf</ICON>
+				<SMALLICON>note.bmp</SMALLICON>
+				<NOTATION>problem.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Problemlink (stereotype)</NAME>
+				<DESCRIPTION>A business problem link</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLTransition</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON></SMALLICON>
+				<NOTATION>problemlink.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Information (stereotype)</NAME>
+				<DESCRIPTION>An information resource</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Information.wmf</ICON>
+				<SMALLICON>information.bmp</SMALLICON>
+				<NOTATION>information.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Abstract (stereotype)</NAME>
+				<DESCRIPTION>An abstract resource</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Resource.wmf</ICON>
+				<SMALLICON>resource.bmp</SMALLICON>
+				<NOTATION>abstract.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>People (stereotype)</NAME>
+				<DESCRIPTION>A people resource</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Resource.wmf</ICON>
+				<SMALLICON>resource.bmp</SMALLICON>
+				<NOTATION>people.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Physical (stereotype)</NAME>
+				<DESCRIPTION>A physical resource</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Resource.wmf</ICON>
+				<SMALLICON>resource.bmp</SMALLICON>
+				<NOTATION>physical.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>SendEvent (stereotype)</NAME>
+				<DESCRIPTION>A sent event</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLSignalSendState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Send.wmf</ICON>
+				<SMALLICON>send.bmp</SMALLICON>
+				<NOTATION>send.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ReceiveEvent (stereotype)</NAME>
+				<DESCRIPTION>A received event</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLSignalAcceptState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Receive.wmf</ICON>
+				<SMALLICON>receive.bmp</SMALLICON>
+				<NOTATION>receive.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Decision (stereotype)</NAME>
+				<DESCRIPTION>A received event</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPseudostate</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Decision.wmf</ICON>
+				<SMALLICON>decision.bmp</SMALLICON>
+				<NOTATION>decision.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ObjectWritten (stereotype)</NAME>
+				<DESCRIPTION>A written object</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">ObjectWritten.wmf</ICON>
+				<SMALLICON>objectwritten.bmp</SMALLICON>
+				<NOTATION>objectwritten.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ObjectRead (stereotype)</NAME>
+				<DESCRIPTION>A read object</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLObjectFlowState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">ObjectRead.wmf</ICON>
+				<SMALLICON>objectread.bmp</SMALLICON>
+				<NOTATION>objectread.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>SwimlaneH (stereotype)</NAME>
+				<DESCRIPTION>A horizontal swimlane</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPartition</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">SwimlaneH.wmf</ICON>
+				<SMALLICON>swimlaneh.bmp</SMALLICON>
+				<NOTATION>swimlaneh.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>SwimlaneV (stereotype)</NAME>
+				<DESCRIPTION>A vertical swimlane</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPartition</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">SwimlaneV.wmf</ICON>
+				<SMALLICON>swimlanev.bmp</SMALLICON>
+				<NOTATION>swimlanev.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Assemblyline (stereotype)</NAME>
+				<DESCRIPTION>An assembly line</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Assemblyline.wmf</ICON>
+				<SMALLICON>assemblyline.bmp</SMALLICON>
+				<NOTATION>assemblyline.nxt</NOTATION>
+			</STEREOTYPE>
+		</STEREOTYPELIST>
+	
+		<ELEMENTPROTOTYPELIST>
+			<ELEMENTPROTOTYPE>
+				<NAME>Process (palette)</NAME>
+				<DISPLAYNAME>Process</DISPLAYNAME>
+				<ICON>Process1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>SubactivityState</BASEELEMENT>
+				<STEREOTYPENAME>Process (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>AtomicProcess (palette)</NAME>
+				<DISPLAYNAME>Atomic process</DISPLAYNAME>
+				<ICON>atomicprocess1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>AtomicProcess (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Goal (palette)</NAME>
+				<DISPLAYNAME>Goal</DISPLAYNAME>
+				<ICON>resource1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>Goal (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Problem (palette)</NAME>
+				<DISPLAYNAME>Problem</DISPLAYNAME>
+				<ICON>note1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>Problem (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Problemlink (palette)</NAME>
+				<DISPLAYNAME>Problem connector</DISPLAYNAME>
+				<ICON>notelink1.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Transition</BASEELEMENT>
+				<STEREOTYPENAME>Problemlink (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Information (palette)</NAME>
+				<DISPLAYNAME>Information resource</DISPLAYNAME>
+				<ICON>information1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>Information (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Abstract (palette)</NAME>
+				<DISPLAYNAME>Abstract resource</DISPLAYNAME>
+				<ICON>resource1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>Abstract (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>People (palette)</NAME>
+				<DISPLAYNAME>People resource</DISPLAYNAME>
+				<ICON>resource1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>People (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Physical (palette)</NAME>
+				<DISPLAYNAME>Physical resource</DISPLAYNAME>
+				<ICON>resource1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>Physical (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Transition (palette)</NAME>
+				<DISPLAYNAME>Flow</DISPLAYNAME>
+				<ICON>flow1.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>Transition</BASEELEMENT>
+				<STEREOTYPENAME></STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SendEvent (palette)</NAME>
+				<DISPLAYNAME>Send event</DISPLAYNAME>
+				<ICON>send1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>SignalSendState</BASEELEMENT>
+				<STEREOTYPENAME>SendEvent (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ReceiveEvent (palette)</NAME>
+				<DISPLAYNAME>Receive event</DISPLAYNAME>
+				<ICON>receive1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>SignalAcceptState</BASEELEMENT>
+				<STEREOTYPENAME>ReceiveEvent (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Decision (palette)</NAME>
+				<DISPLAYNAME>Decision</DISPLAYNAME>
+				<ICON>decision1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="0">Pseudostate</BASEELEMENT>
+				<STEREOTYPENAME>Decision (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Synchronization (palette)</NAME>
+				<DISPLAYNAME>Synchronization</DISPLAYNAME>
+				<ICON>sync1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="2">Pseudostate</BASEELEMENT>
+				<STEREOTYPENAME></STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Initial (palette)</NAME>
+				<DISPLAYNAME>Initial event</DISPLAYNAME>
+				<ICON>initial1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="1">Pseudostate</BASEELEMENT>
+				<STEREOTYPENAME></STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Final (palette)</NAME>
+				<DISPLAYNAME>Final event</DISPLAYNAME>
+				<ICON>final1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>FinalState</BASEELEMENT>
+				<STEREOTYPENAME></STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Assemblyline (palette)</NAME>
+				<DISPLAYNAME>Assembly line</DISPLAYNAME>
+				<ICON>assemblyline1.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPENAME>Assemblyline (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ObjectWritten (palette)</NAME>
+				<DISPLAYNAME>Object written</DISPLAYNAME>
+				<ICON>objectwritten1.bmp</ICON>
+				<DRAGTYPE></DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>ObjectWritten (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ObjectRead (palette)</NAME>
+				<DISPLAYNAME>Object read</DISPLAYNAME>
+				<ICON>objectread1.bmp</ICON>
+				<DRAGTYPE></DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPENAME>ObjectRead (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SwimlaneH (palette)</NAME>
+				<DISPLAYNAME>Swimlane (horizon)</DISPLAYNAME>
+				<ICON>swimlaneh1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="1">Swimlane</BASEELEMENT>
+				<STEREOTYPENAME>SwimlaneH (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>SwimlaneV (palette)</NAME>
+				<DISPLAYNAME>Swimlane (vertical)</DISPLAYNAME>
+				<ICON>swimlanev1.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT argument="0">Swimlane</BASEELEMENT>
+				<STEREOTYPENAME>SwimlaneV (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+		</ELEMENTPROTOTYPELIST>
+
+		<PALETTELIST>
+			<PALETTE>
+				<NAME>Eriksson-Penker Business Extensions (Palette)</NAME>
+				<DISPLAYNAME>EPBE</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>Process (palette)</PALETTEITEM>
+					<PALETTEITEM>AtomicProcess (palette)</PALETTEITEM>
+					<PALETTEITEM>Goal (palette)</PALETTEITEM>
+					<PALETTEITEM>Problem (palette)</PALETTEITEM>
+					<PALETTEITEM>Problemlink (palette)</PALETTEITEM>
+					<PALETTEITEM>Information (palette)</PALETTEITEM>
+					<PALETTEITEM>Abstract (palette)</PALETTEITEM>
+					<PALETTEITEM>People (palette)</PALETTEITEM>
+					<PALETTEITEM>Physical (palette)</PALETTEITEM>
+					<PALETTEITEM>Decision (palette)</PALETTEITEM>
+					<PALETTEITEM>SendEvent (palette)</PALETTEITEM>
+					<PALETTEITEM>ReceiveEvent (palette)</PALETTEITEM>
+					<PALETTEITEM>Transition (palette)</PALETTEITEM>
+					<PALETTEITEM>Synchronization (palette)</PALETTEITEM>
+					<PALETTEITEM>Initial (palette)</PALETTEITEM>
+					<PALETTEITEM>Final (palette)</PALETTEITEM>
+					<PALETTEITEM>Assemblyline (palette)</PALETTEITEM>
+					<PALETTEITEM>ObjectWritten (palette)</PALETTEITEM>
+					<PALETTEITEM>ObjectRead (palette)</PALETTEITEM>
+					<PALETTEITEM>SwimlaneH (palette)</PALETTEITEM>
+					<PALETTEITEM>SwimlaneV (palette)</PALETTEITEM>
+					<!--
+					//<PALETTEITEM>Resource</PALETTEITEM>
+					//<PALETTEITEM>Abstract</PALETTEITEM>
+					//...
+				-->
+				</PALETTEITEMLIST>
+			</PALETTE>
+		</PALETTELIST>
+		
+		<DIAGRAMTYPELIST>
+			<DIAGRAMTYPE>
+				<NAME>Business Process Diagram</NAME>
+				<DISPLAYNAME>Business Process Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>ActivityDiagram</BASEDIAGRAM>
+				<ICON>EPBMDiagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>Eriksson-Penker Business Extensions (Palette)</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+		</DIAGRAMTYPELIST>
+		
+	</BODY>
+</PROFILE>
