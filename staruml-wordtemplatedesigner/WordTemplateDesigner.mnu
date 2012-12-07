@@ -1,0 +1,21 @@
+<?xml version="1.0"	encoding="UTF-8"?>
+<ADDINMENU addInID="StarUML.WordTemplateDesigner">
+	<HEADER>
+		<NAME>WordTemplateDesigner module for StarUML</NAME>
+		<VERSION>1.0.0</VERSION>
+		<DESCRIPTION>The WordTemplateDesigner extension	module for StarUML</DESCRIPTION>
+		<COMPANY>Plastic Software, Inc.</COMPANY>
+		<COPYRIGHT>Copyright (C) 2006 Plastic Software,	Inc. All rights	reserved.</COPYRIGHT>
+	</HEADER>
+	<BODY>
+		<MAINMENU>
+			<MAINITEM
+				caption="Word Template Designer" 
+				beginGroup="TRUE" 
+				availableWhen="PROJECT_OPENED"
+				script="WordTemplateDesigner.exe">
+			</MAINITEM>
+		</MAINMENU>
+	</BODY>
+</ADDINMENU>
+

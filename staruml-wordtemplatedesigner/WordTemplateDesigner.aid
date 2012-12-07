@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADDIN>
+    <NAME>LGHF</NAME>
+    <DISPLAYNAME>WordTemplateDesigner Add-In</DISPLAYNAME>
+    <COMPANY>Plastic Software, Inc.</COMPANY>
+    <COPYRIGHT>Copyright 2006 Plastic Software, Inc. All rights reserved.</COPYRIGHT>
+    <ICONFILE>WordTemplateDesigner.ico</ICONFILE>
+    <ISACTIVE>True</ISACTIVE>
+    <MENUFILE>WordTemplateDesigner.mnu</MENUFILE>
+    <VERSION>1.0.0.0</VERSION>
+</ADDIN>
