@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<APPROACH version="1.0"> 
+  <HEADER>
+    <NAME>SPEM</NAME>
+    <DISPLAYNAME>SPEM Approach</DISPLAYNAME>
+    <DESCRIPTION>Approach for OMG Software Engineering Metamodel Specification</DESCRIPTION>
+  </HEADER>
+  <BODY>
+    <IMPORTPROFILES>
+    </IMPORTPROFILES>
+    <MODELSTRUCTURE>
+      <MODEL name="SPEM Structural Model" stereotypeProfile="SPEMProfile">
+        <DIAGRAM type="Class" diagramTypeProfile="SPEM" diagramTypeName="ClassModel" name="Main" defaultDiagram="True"/>
+      </MODEL>
+      <MODEL name="SPEM Behavioral Model" stereotypeProfile="SPEMProfile">
+        <DIAGRAM type="Class" diagramTypeProfile="SPEM" diagramTypeName="UseCaseModel" name="Main" defaultDiagram="True"/>
+        <DIAGRAM type="Class" diagramTypeProfile="SPEM" diagramTypeName="ActivityModel" name="Main" defaultDiagram="True"/>        
+      </MODEL>      
+    </MODELSTRUCTURE>
+  </BODY>
+</APPROACH>
+

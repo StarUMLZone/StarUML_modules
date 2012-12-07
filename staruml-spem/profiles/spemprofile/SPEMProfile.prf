@@ -1,0 +1,839 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROFILE version="1.0">
+	<HEADER>
+		<NAME>SPEM</NAME>
+		<DISPLAYNAME>SPEM Profile</DISPLAYNAME>
+		<DESCRIPTION>SPEM Profile</DESCRIPTION>
+		<AUTOINCLUDE>True</AUTOINCLUDE>
+	</HEADER>
+	<BODY>
+		<STEREOTYPELIST>
+                        <STEREOTYPE>
+				<NAME>performs</NAME>
+				<DESCRIPTION>.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+			</STEREOTYPE>  
+                
+                        <STEREOTYPE>
+				<NAME>WorkProduct</NAME>
+				<DESCRIPTION>Work Products are in most cases tangible work products consumed, produced, or modified by Tasks. They may serve as a basis for defining reusable assets. Roles use Work Products to perform Tasks and produce Work Products in the course of performing Tasks.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="40">WorkProduct.wmf</ICON>
+				<SMALLICON>workproduct.bmp</SMALLICON>
+			</STEREOTYPE>  
+                        
+                        <STEREOTYPE>
+				<NAME>TaskDefinition</NAME>
+				<DESCRIPTION>A Task Definition describes an assignable unit of work.  Every Task Definition is assigned to specific Role Definitions.  The granularity of a Task Definition is generally a few hours to a few days. It usually affects one or only a small number of work products. A Task Definition is used as an element of defining a process</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+					<BASECLASS>UMLOperation</BASECLASS>
+					<BASECLASS>UMLActionState</BASECLASS>
+					<BASECLASS>UMLUseCase</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="45" minHeight="29">TaskDefinition.wmf</ICON>
+				<SMALLICON>taskdefinition.bmp</SMALLICON>
+			</STEREOTYPE> 
+                        
+                        <STEREOTYPE>
+				<NAME>Phase</NAME>
+				<DESCRIPTION>Phase represents a significant period in a project, ending with major management checkpoint, milestone, or set of Deliverables. It is included in the model as a predefined special Activity, because of its significance in defining breakdowns. </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+					<BASECLASS>UMLOperation</BASECLASS>
+					<BASECLASS>UMLActionState</BASECLASS>
+					<BASECLASS>UMLUseCase</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="40">PhaseKind.wmf</ICON>
+				<SMALLICON>phasekind.bmp</SMALLICON>
+			</STEREOTYPE>                                        
+                        
+                        <STEREOTYPE>
+				<NAME>WorkDefinition</NAME>
+				<DESCRIPTION>Activity represents a grouping of nested Breakdown Elements such as other Activity instances, Task Uses, Role Uses, Milestones, etc. It is not just a "high-level" grouping of work such as Work Definitions as in other similar meta-models.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLOperation</BASECLASS>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLActionState</BASECLASS>
+					<BASECLASS>UMLUseCase</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="50" minHeight="37">WorkDefinition.wmf</ICON>
+				<SMALLICON>workdefinition.bmp</SMALLICON>
+			</STEREOTYPE>                                        
+                        <STEREOTYPE>
+				<NAME>Step</NAME>
+				<DESCRIPTION>A Step describes a meaningful and consistent part of the overall work described for a Task Definition. The collection of Steps defined for a Task Definition represents all the work that should be done to achieve the overall development goal of the Task Definition. </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActionState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="41" minHeight="50">Step.wmf</ICON>
+				<SMALLICON>step.bmp</SMALLICON>
+			</STEREOTYPE>                                        
+                        <STEREOTYPE>
+				<NAME>Guidance</NAME>
+				<DESCRIPTION>Guidance is a Describable Element that provides additional information related to Describable Elements. The particular Guidance should be classified with Kinds (Section 8.2) that indicates a specific type of guidance for which perhaps a specific structure and type of content is assumed. Examples for Kinds for Guidance are Guidelines, Templates, Checklists, Tool Mentors, Estimates, Supporting Materials, Reports, Concepts, etc.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+                                        <BASECLASS>UMLObjectFlow</BASECLASS>                                        
+				</BASECLASSES>
+				<ICON minWidth="41" minHeight="50">Guidance.wmf</ICON>
+				<SMALLICON>guidance.bmp</SMALLICON>
+			</STEREOTYPE>                             
+
+                        <STEREOTYPE>
+				<NAME>RoleUse</NAME>
+				<DESCRIPTION>A Role Use is a special Breakdown Element that either represents a performer of an Activity or a participant of the Activity. If it is a performer, the Role Use and Activity need to be related via a Process Performer Map. </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+					<BASECLASS>UMLActor</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="37" minHeight="45">RoleUse.wmf</ICON>
+				<SMALLICON>roleuse.bmp</SMALLICON>
+			</STEREOTYPE>                             
+                        <STEREOTYPE>
+				<NAME>RoleDefinition</NAME>
+				<DESCRIPTION>A Role Definition defines a set of related skills, competencies, and responsibilities of an individual or a set of individuals.  Roles are not individuals or resources. Individual members of the development organization will wear different hats, or perform different roles.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+					<BASECLASS>UMLActor</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="31" minHeight="46">RoleDefinition.wmf</ICON>
+				<SMALLICON>roledefinition.bmp</SMALLICON>
+			</STEREOTYPE>       
+                        <STEREOTYPE>
+				<NAME>Package</NAME>
+				<DESCRIPTION>A process package can only contain Process Elements. </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPackage</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="35">Package.wmf</ICON>
+				<SMALLICON>package.bmp</SMALLICON>
+			</STEREOTYPE>       
+                        <STEREOTYPE>
+				<NAME>Iteration</NAME>
+				<DESCRIPTION>Iteration groups a set of nested Activities that are repeated more than once. It represents an important structuring element to organize work in repetitive cycles. </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="35">Iteration.wmf</ICON>
+				<SMALLICON>iteration.bmp</SMALLICON>
+			</STEREOTYPE>       
+                        
+                        
+                        <STEREOTYPE>
+				<NAME>Process</NAME>
+				<DESCRIPTION>A Process is a special Activity that describes a structure for particular types of development projects or parts of them.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="46" minHeight="34">Process.wmf</ICON>
+				<SMALLICON>process.bmp</SMALLICON>
+			</STEREOTYPE>                
+                        <STEREOTYPE>
+				<NAME>Artifact</NAME>
+				<DESCRIPTION>Artifact Definition is a Work Product Definition that provides a description and definition for tangible work product types. Artifacts may be composed of other artifacts. For example, a model artifact can be composed of model elements, which are also artifacts.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+                                        <BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="30" minHeight="40">WorkProduct.wmf</ICON>
+				<SMALLICON>workproduct.bmp</SMALLICON>
+			</STEREOTYPE>                
+                        <STEREOTYPE>
+				<NAME>Deliverable</NAME>
+				<DESCRIPTION>A Deliverable Definition is a Work Product Definition that provides a description and definition for packaging other Work Products, and may be delivered to an internal or external party. Therefore, a Deliverable aggregates other Work Products.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+                                        <BASECLASS>UMLObject</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="25">Deliverable.wmf</ICON>
+				<SMALLICON>deliverable.bmp</SMALLICON>
+			</STEREOTYPE>                
+                        
+                        <STEREOTYPE>
+				<NAME>ProcessComponent</NAME>
+				<DESCRIPTION>A Process Component is a special Process Package that applies the principles of encapsulation. A Process Component contains exactly one Process represented by an Activity, and defines a set of Work Product Ports that define the inputs and outputs for a Process Component. </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLPackage</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="45" minHeight="38">ProcessComponent.wmf</ICON>
+				<SMALLICON>processcomponent.bmp</SMALLICON>
+			</STEREOTYPE>
+                        <STEREOTYPE>
+				<NAME>WorkProductUse</NAME>
+				<DESCRIPTION>A Work Product Use represents a Work Product Definition in the context of one specific Activity. Every breakdown structure can define different relationships of Work Product Uses to Task Uses and Role Uses. Therefore, one Work Product Definition can be represented by many Work Product Uses each within the context of an Activity with its own set of relationships.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClassifier</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="35" minHeight="40">WorkProductUse.wmf</ICON>
+				<SMALLICON>workproductuse.bmp</SMALLICON>
+			</STEREOTYPE>
+                        <STEREOTYPE>
+				<NAME>DeliveryProcess</NAME>
+				<DESCRIPTION>A Delivery Process is a special Process describing a complete and integrated approach for performing a specific project type. It describes a complete project lifecycle end-to-end and shall be used as a reference for running projects with similar characteristics as defined for the process.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClassifier</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="45" minHeight="41">DeliveryProcess.wmf</ICON>
+				<SMALLICON>DeliveryProcess.bmp</SMALLICON>
+			</STEREOTYPE>
+                        <STEREOTYPE>
+				<NAME>ProcessPattern</NAME>
+				<DESCRIPTION>A Process Pattern is a special Process that describes a reusable cluster of Activities in a general process area that provides a consistent development approach to common problems. Examples of Process Patterns include "use case-based requirements management," "develop components," "validate build," or "ongoing management and support."</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClassifier</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="51" minHeight="37">ProcessPattern.wmf</ICON>
+				<SMALLICON>ProcessPattern.bmp</SMALLICON>
+			</STEREOTYPE>                       
+                        <STEREOTYPE>
+				<NAME>ProcessPlanningTemplate</NAME>
+				<DESCRIPTION>A Process Planning Template is a special Process that is prepared for instantiation by a project planning tool. Typically, it is created based on a Process such as a Delivery Process as a whole (e.g., in case of a waterfall-based development approach) or in parts (e.g., in case of an iterative development approach). </DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClassifier</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="47" minHeight="45">ProcessPlanningTemplate.wmf</ICON>
+				<SMALLICON>ProcessPlanningTemplate.bmp</SMALLICON>
+			</STEREOTYPE>                       
+                        <STEREOTYPE>
+				<NAME>Outcome</NAME>
+				<DESCRIPTION>Outcome Definition is a Work Product Definition that provides a description and definition for non-tangible work products. An outcome describes intangible work products that are a result or state. Outcomes may also be used to describe work products that are not formally defined. A key differentiator of outcomes versus artifacts is that outcomes are not candidates for harvesting as reusable assets.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="37" minHeight="40">Outcome.wmf</ICON>
+				<SMALLICON>Outcome.bmp</SMALLICON>
+			</STEREOTYPE>                           
+                        <STEREOTYPE>
+				<NAME>CompositeRole</NAME>
+				<DESCRIPTION>A Composite Role is a special Role Use that relates to more than one Role Definition. It represents an aggregation of Roles Definition references for an Activity with the main purpose of simplification, i.e., reducing the number of roles defined in method content for a process.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLActor</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="42" minHeight="42">CompositeRole.wmf</ICON>
+				<SMALLICON>CompositeRole.bmp</SMALLICON>
+			</STEREOTYPE>                           
+          
+                        <STEREOTYPE>
+				<NAME>Metric</NAME>
+				<DESCRIPTION>A Metric is a special Describable Element that contains one or more constraints that provide measurements for any Describable Element.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="41" minHeight="50">Guidance.wmf</ICON>
+				<SMALLICON>guidance.bmp</SMALLICON>
+			</STEREOTYPE>                             
+
+                        <STEREOTYPE>
+				<NAME>Milestone</NAME>
+				<DESCRIPTION>A Milestone is a Work Breakdown Element that represents a significant event for a development project.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+					<BASECLASS>UMLObjectFlow</BASECLASS>
+					<BASECLASS>UMLState</BASECLASS>
+				</BASECLASSES>
+				<ICON minWidth="40" minHeight="43">Milestone.wmf</ICON>
+				<SMALLICON>Milestone.bmp</SMALLICON>
+			</STEREOTYPE>     
+                        <STEREOTYPE>
+				<NAME>ToolDefinition</NAME>
+				<DESCRIPTION>A Tool Definition is a special Method Content Element that can be used to specify a tools participation in a Task Definition.</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+					<BASECLASS>UMLObject</BASECLASS>                                        
+				</BASECLASSES>
+				<ICON minWidth="38" minHeight="40">ToolDefinition.wmf</ICON>
+				<SMALLICON>ToolDefinition.bmp</SMALLICON>
+			</STEREOTYPE>                           
+
+</STEREOTYPELIST>
+
+		<TAGDEFINITIONSETLIST>
+                        <TAGDEFINITIONSET>
+				<NAME>MetricSpecification</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION>
+						<NAME>expression</NAME>
+						<TAGTYPE>Real</TAGTYPE>
+						<DEFAULTDATAVALUE>0</DEFAULTDATAVALUE>                                                
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>                        
+		</TAGDEFINITIONSETLIST>
+
+		<DATATYPELIST>
+			<DATATYPE>
+				<NAME>Integer</NAME>
+			</DATATYPE>
+			<DATATYPE>
+				<NAME>Float</NAME>
+			</DATATYPE>
+			<DATATYPE>
+				<NAME>Boolean</NAME>
+			</DATATYPE>
+			<DATATYPE>
+				<NAME>String</NAME>
+			</DATATYPE>
+		</DATATYPELIST>
+
+		<ELEMENTPROTOTYPELIST>
+			<ELEMENTPROTOTYPE>
+				<NAME>WorkProduct</NAME>
+				<DISPLAYNAME>Work Product</DISPLAYNAME>
+				<ICON>WorkProduct.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>WorkProduct</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>WorkProductObjectFlow</NAME>
+				<DISPLAYNAME>Work Product</DISPLAYNAME>
+				<ICON>WorkProduct.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>WorkProduct</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+                        
+			
+
+                        
+                        
+                        <ELEMENTPROTOTYPE>
+				<NAME>TaskDefinitionActionState</NAME>
+				<DISPLAYNAME>Task Definition</DISPLAYNAME>
+				<ICON>TaskDefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>                                
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>TaskDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>TaskDefinitionUseCase</NAME>
+				<DISPLAYNAME>Task Definition</DISPLAYNAME>
+				<ICON>TaskDefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>UseCase</BASEELEMENT>                                
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>TaskDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>TaskDefinitionClass</NAME>
+				<DISPLAYNAME>Task Definition</DISPLAYNAME>
+				<ICON>TaskDefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>                                
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>TaskDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+
+			<ELEMENTPROTOTYPE>
+				<NAME>Guidance</NAME>
+				<DISPLAYNAME>Guidance</DISPLAYNAME>
+				<ICON>Guidance.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Guidance</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>Iteration</NAME>
+				<DISPLAYNAME>Iteration</DISPLAYNAME>
+				<ICON>Iteration.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Iteration</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+
+			<ELEMENTPROTOTYPE>
+				<NAME>Package</NAME>
+				<DISPLAYNAME>Package</DISPLAYNAME>
+				<ICON>Package.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Package</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Package</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>RoleUseUseCase</NAME>
+				<DISPLAYNAME>Role Use</DISPLAYNAME>
+				<ICON>RoleUse.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Actor</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>RoleUse</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>RoleUseClass</NAME>
+				<DISPLAYNAME>Role Use</DISPLAYNAME>
+				<ICON>RoleUse.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>RoleUse</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>RoleDefinitionUseCase</NAME>
+				<DISPLAYNAME>Role Definition</DISPLAYNAME>
+				<ICON>RoleDefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Actor</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>RoleDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>RoleDefinitionClass</NAME>
+				<DISPLAYNAME>Role Definition</DISPLAYNAME>
+				<ICON>RoleDefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>RoleDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                       
+
+			<ELEMENTPROTOTYPE>
+				<NAME>PhaseUseCase</NAME>
+				<DISPLAYNAME>Phase</DISPLAYNAME>
+				<ICON>PhaseKind.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>UseCase</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Phase</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>PhaseClass</NAME>
+				<DISPLAYNAME>Phase</DISPLAYNAME>
+				<ICON>PhaseKind.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Phase</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>PhaseActionState</NAME>
+				<DISPLAYNAME>Phase</DISPLAYNAME>
+				<ICON>PhaseKind.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Phase</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>WorkDefinitionClass</NAME>
+				<DISPLAYNAME>Work Definition</DISPLAYNAME>
+				<ICON>workdefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>WorkDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+
+
+			<ELEMENTPROTOTYPE>
+				<NAME>WorkDefinitionActionState</NAME>
+				<DISPLAYNAME>Work Definition</DISPLAYNAME>
+				<ICON>workdefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>WorkDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+
+			<ELEMENTPROTOTYPE>
+				<NAME>Step</NAME>
+				<DISPLAYNAME>Step</DISPLAYNAME>
+				<ICON>Step.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ActionState</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Step</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>Process</NAME>
+				<DISPLAYNAME>Process</DISPLAYNAME>
+				<ICON>Process.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Process</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>Artifact</NAME>
+				<DISPLAYNAME>Artifact</DISPLAYNAME>
+				<ICON>workproduct.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Artifact</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>Deliverable</NAME>
+				<DISPLAYNAME>Deliverable</DISPLAYNAME>
+				<ICON>Deliverable.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Deliverable</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>ProcessComponent</NAME>
+				<DISPLAYNAME>ProcessComponent</DISPLAYNAME>
+				<ICON>ProcessComponent.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Package</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>ProcessComponent</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+
+			<ELEMENTPROTOTYPE>
+				<NAME>WorkProductUse</NAME>
+				<DISPLAYNAME>WorkProductUse</DISPLAYNAME>
+				<ICON>WorkProductUse.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>WorkProductUse</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>DeliveryProcess</NAME>
+				<DISPLAYNAME>DeliveryProcess</DISPLAYNAME>
+				<ICON>DeliveryProcess.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>DeliveryProcess</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>ProcessPattern</NAME>
+				<DISPLAYNAME>ProcessPattern</DISPLAYNAME>
+				<ICON>ProcessPattern.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>ProcessPattern</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>ProcessPlanningTemplate</NAME>
+				<DISPLAYNAME>ProcessPlanningTemplate</DISPLAYNAME>
+				<ICON>ProcessPlanningTemplate.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>ProcessPlanningTemplate</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>Outcome</NAME>
+				<DISPLAYNAME>Outcome</DISPLAYNAME>
+				<ICON>Outcome.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Outcome</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>CompositeRole</NAME>
+				<DISPLAYNAME>CompositeRole</DISPLAYNAME>
+				<ICON>CompositeRole.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>CompositeRole</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>MetricClass</NAME>
+				<DISPLAYNAME>Metric</DISPLAYNAME>
+				<ICON>guidance.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Metric</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+                        
+			<ELEMENTPROTOTYPE>
+				<NAME>MetricObjectFlow</NAME>
+				<DISPLAYNAME>Metric</DISPLAYNAME>
+				<ICON>guidance.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Metric</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>ToolDefinition</NAME>
+				<DISPLAYNAME>ToolDefinition</DISPLAYNAME>
+				<ICON>ToolDefinition.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>ToolDefinition</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+ 			<ELEMENTPROTOTYPE>
+				<NAME>MilestoneClass</NAME>
+				<DISPLAYNAME>Milestone</DISPLAYNAME>
+				<ICON>Milestone.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Milestone</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+			<ELEMENTPROTOTYPE>
+				<NAME>MilestoneObjectFlow</NAME>
+				<DISPLAYNAME>Milestone</DISPLAYNAME>
+				<ICON>Milestone.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>ObjectFlowState</BASEELEMENT>
+				<STEREOTYPEDISPLAY>sdkIcon</STEREOTYPEDISPLAY>
+				<STEREOTYPENAME>Milestone</STEREOTYPENAME>
+				<SHOWEXTENDEDNOTATION>False</SHOWEXTENDEDNOTATION>
+			</ELEMENTPROTOTYPE>
+
+                </ELEMENTPROTOTYPELIST>
+
+
+		<PALETTELIST>
+			<PALETTE>
+				<NAME>SPEMClass</NAME>
+				<DISPLAYNAME>SPEM Class</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>WorkProduct</PALETTEITEM>
+					<PALETTEITEM>TaskDefinitionClass</PALETTEITEM>
+					<PALETTEITEM>WorkDefinitionClass</PALETTEITEM>
+					<PALETTEITEM>RoleDefinitionClass</PALETTEITEM>
+					<PALETTEITEM>RoleUseClass</PALETTEITEM>
+					<PALETTEITEM>Guidance</PALETTEITEM>
+					<PALETTEITEM>PhaseClass</PALETTEITEM>
+					<PALETTEITEM>Iteration</PALETTEITEM>
+					<PALETTEITEM>Process</PALETTEITEM>
+					<PALETTEITEM>Artifact</PALETTEITEM>
+					<PALETTEITEM>ToolDefinition</PALETTEITEM>
+					<PALETTEITEM>MetricClass</PALETTEITEM>
+					<PALETTEITEM>Deliverable</PALETTEITEM>
+					<PALETTEITEM>MilestoneClass</PALETTEITEM>                                        
+					<PALETTEITEM>Package</PALETTEITEM>                                        
+					<PALETTEITEM>ProcessComponent</PALETTEITEM>                                        
+					<PALETTEITEM>WorkProductUse</PALETTEITEM>                                        
+					<PALETTEITEM>DeliveryProcess</PALETTEITEM>                                        
+					<PALETTEITEM>ProcessPattern</PALETTEITEM>                                        
+					<PALETTEITEM>ProcessPlanningTemplate</PALETTEITEM>                                        
+					<PALETTEITEM>Outcome</PALETTEITEM>                                        
+					<PALETTEITEM>CompositeRole</PALETTEITEM>                                        
+				</PALETTEITEMLIST>
+			</PALETTE>
+			<PALETTE>
+                                <NAME>SPEMActionState</NAME>
+                                <DISPLAYNAME>SPEM Activity</DISPLAYNAME>
+                                <PALETTEITEMLIST>
+                                    <PALETTEITEM>TaskDefinitionActionState</PALETTEITEM>
+                                    <PALETTEITEM>WorkProductObjectFlow</PALETTEITEM>
+                                    <PALETTEITEM>MetricObjectFlow</PALETTEITEM>
+                                    <PALETTEITEM>PhaseActionState</PALETTEITEM>                                        
+                                    <PALETTEITEM>WorkDefinitionActionState</PALETTEITEM>                                        
+                                    <PALETTEITEM>MilestoneObjectFlow</PALETTEITEM>                                        
+                                    <PALETTEITEM>Step</PALETTEITEM>                                        
+                                    <PALETTEITEM>Transition</PALETTEITEM>                                        
+                                </PALETTEITEMLIST>
+			</PALETTE>
+                        
+			<PALETTE>
+                                <NAME>SPEMUseCase</NAME>
+                                <DISPLAYNAME>SPEM Use Case</DISPLAYNAME>
+                                <PALETTEITEMLIST>
+                                    <PALETTEITEM>TaskDefinitionUseCase</PALETTEITEM>
+                                    <PALETTEITEM>PhaseUseCase</PALETTEITEM>
+                                    <PALETTEITEM>RoleDefinitionUseCase</PALETTEITEM>
+                                    <PALETTEITEM>RoleUseUseCase</PALETTEITEM>
+                                    <PALETTEITEM>Association</PALETTEITEM>
+                                </PALETTEITEMLIST>
+			</PALETTE>
+                        
+                        
+                        
+
+
+		</PALETTELIST>
+
+		<DIAGRAMTYPELIST>
+			<DIAGRAMTYPE>
+				<NAME>UseCaseModel</NAME>
+				<DISPLAYNAME>Use Case Model</DISPLAYNAME>
+				<BASEDIAGRAM>UseCaseDiagram</BASEDIAGRAM>
+				<ICON>StructuralModel.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>SPEMUseCase</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>UseCase</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>                
+			<DIAGRAMTYPE>
+				<NAME>ClassModel</NAME>
+				<DISPLAYNAME>Class Model</DISPLAYNAME>
+				<BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+				<ICON>StructuralModel.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>SPEMClass</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Class</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+			<DIAGRAMTYPE>
+				<NAME>ActivityModel</NAME>
+				<DISPLAYNAME>Activity Model</DISPLAYNAME>
+				<BASEDIAGRAM>ActivityDiagram</BASEDIAGRAM>
+				<ICON>StructuralModel.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>SPEMActionState</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Activity</AVAILABLEPALETTE>
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+                        
+		</DIAGRAMTYPELIST>
+		<MODELPROTOTYPELIST>
+			<MODELPROTOTYPE>
+			    <NAME>Use Case Model</NAME>
+			    <DISPLAYNAME>Use Case Model</DISPLAYNAME>
+			    <ICON>useCaseModel.bmp</ICON>
+			    <BASEMODEL>Model</BASEMODEL>
+			    <STEREOTYPENAME>useCaseModel</STEREOTYPENAME>
+			    <CONTAINERMODELLIST>
+			        <CONTAINERMODEL type="UMLProject"/>
+			    </CONTAINERMODELLIST>
+			</MODELPROTOTYPE>
+			<MODELPROTOTYPE>
+			    <NAME>Analysis Model</NAME>
+			    <DISPLAYNAME>Analysis Model</DISPLAYNAME>
+			    <ICON>analysisModel.bmp</ICON>
+			    <BASEMODEL>Model</BASEMODEL>
+			    <STEREOTYPENAME>analysisModel</STEREOTYPENAME>
+			    <CONTAINERMODELLIST>
+			        <CONTAINERMODEL type="UMLProject"/>
+			    </CONTAINERMODELLIST>
+			</MODELPROTOTYPE>
+			<MODELPROTOTYPE>
+			    <NAME>Design Model</NAME>
+			    <DISPLAYNAME>Design Model</DISPLAYNAME>
+			    <ICON>designModel.bmp</ICON>
+			    <BASEMODEL>Model</BASEMODEL>
+			    <STEREOTYPENAME>designModel</STEREOTYPENAME>
+			    <CONTAINERMODELLIST>
+			        <CONTAINERMODEL type="UMLProject"/>
+			    </CONTAINERMODELLIST>
+			</MODELPROTOTYPE>
+			<MODELPROTOTYPE>
+			    <NAME>Implementation Model</NAME>
+			    <DISPLAYNAME>Implementation Model</DISPLAYNAME>
+			    <ICON>implementationModel.bmp</ICON>
+			    <BASEMODEL>Model</BASEMODEL>
+			    <STEREOTYPENAME>implementationModel</STEREOTYPENAME>
+			    <CONTAINERMODELLIST>
+			        <CONTAINERMODEL type="UMLProject"/>
+			    </CONTAINERMODELLIST>
+			</MODELPROTOTYPE>
+			<MODELPROTOTYPE>
+			    <NAME>Deployment Model</NAME>
+			    <DISPLAYNAME>Deployment Model</DISPLAYNAME>
+			    <ICON>deploymentModel.bmp</ICON>
+			    <BASEMODEL>Model</BASEMODEL>
+			    <STEREOTYPENAME>deploymentModel</STEREOTYPENAME>
+			    <CONTAINERMODELLIST>
+			        <CONTAINERMODEL type="UMLProject"/>
+			    </CONTAINERMODELLIST>
+			</MODELPROTOTYPE>
+		</MODELPROTOTYPELIST>
+                
+
+	</BODY>
+</PROFILE>
