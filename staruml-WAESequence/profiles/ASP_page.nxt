@@ -1,0 +1,53 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a course about systems analysis and design of 
+//the University of Natural Sciences (Hochiminh city). This version is a beta 
+//version. If you have any problem, please contact me at phuongphamnv@gmail.com
+//All your contributions to make this module as well as StarUML will be 
+//appreciated.
+// Pham Ngoc Viet Phuong
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set typeName '<<ASP_page>>')
+		(set space 4)   
+		(set x1 left)
+		(set y1 top)
+		(set x2 (+ x1 55))
+		(set y2 (+ y1 106))
+		(set y3 (+ y1 height))
+		(set distancia (- bottom y2))
+		(drawbitmap x1 y1 'ASP_page.bmp' true)
+
+		(for i 1 (/ distancia 3) 
+			(if (<= y2 y3)
+				(sequence
+					(line x2 y2 x2 (+ y2 3))
+					(set y2 (+ y2 6))
+				)
+				(set i (/ distancia 3))
+			)
+		)
+
+		(setdefaultstyle)
+		// draw name part
+		(set widthname (textwidth name))
+		(set xname (/ (- width widthname) 2))
+		(textbound (+ left xname) (+ top 40) right bottom space name true)		
+	
+	)
+)
+

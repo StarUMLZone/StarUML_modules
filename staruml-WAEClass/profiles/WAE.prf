@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PROFILE version="1.0">
+	<HEADER>
+		<NAME>WAE</NAME>
+		<DISPLAYNAME>WAE Diagram</DISPLAYNAME>
+		<DESCRIPTION>WAE Diagram uses standard UML and some extensions for Web Application Modeling</DESCRIPTION>
+		<AUTOINCLUDE>True</AUTOINCLUDE>
+	</HEADER>
+	<BODY>
+		<STEREOTYPELIST>
+			<STEREOTYPE>
+				<NAME>server page (stereotype)</NAME>
+				<DESCRIPTION>Web page that has scripts executed by the server</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">server_page.bmp</ICON>
+				<SMALLICON>server_page_icon.bmp</SMALLICON>
+				<NOTATION>server_page.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>client page (stereotype)</NAME>
+				<DESCRIPTION>HTML-formatted Web page and is a mix of data, presentation, and even logic</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>client page</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">client_page.bmp</ICON>
+				<SMALLICON>client_page_icon.bmp</SMALLICON>
+				<NOTATION>client_page.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>form(stereotype)</NAME>
+				<DESCRIPTION>collection of input fields that are part of a client page</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>form</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">client_page.bmp</ICON>
+				<SMALLICON>form_icon.bmp</SMALLICON>
+				<NOTATION>form.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>frameset(stereotype)</NAME>
+				<DESCRIPTION>container of multiple Web pages</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>frameset</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">frameset.bmp</ICON>
+				<SMALLICON>frameset_icon.bmp</SMALLICON>
+				<NOTATION>frameset.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>target(stereotype)</NAME>
+				<DESCRIPTION>named compartment in a browser window in which Web pages can be rendered</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">target.bmp</ICON>
+				<SMALLICON>target_icon.bmp</SMALLICON>
+				<NOTATION>target.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>client script Object(stereotype)</NAME>
+				<DESCRIPTION>a separate collection of client-side scripts that exist in a separate file and are included by a separate request on the part of the client browser</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">clientScript_Object.bmp</ICON>
+				<SMALLICON>clientScript_Object_icon.bmp</SMALLICON>
+				<NOTATION>clientScript_Object.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Web page(stereotype)</NAME>
+				<DESCRIPTION>a page component that may or may not contain client or server scripts</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>Web page</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Web_page.bmp</ICON>
+				<SMALLICON>Web_page_icon.bmp</SMALLICON>
+				<NOTATION>Web_page.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>ASP page(stereotype)</NAME>
+				<DESCRIPTION>Web page that implement ASP server-side</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>ASP page</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">ASP_page.bmp</ICON>
+				<SMALLICON>ASP_page_icon.bmp</SMALLICON>
+				<NOTATION>ASP_page.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>JSP page(stereotype)</NAME>
+				<DESCRIPTION>Web page that implement JSP server-side</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>JSP page</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">JSP_page.bmp</ICON>
+				<SMALLICON>JSP_page_icon.bmp</SMALLICON>
+				<NOTATION>JSP_page.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Servlet(stereotype)</NAME>
+				<DESCRIPTION>a Java servlet component</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>Servlet</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Servlet.bmp</ICON>
+				<SMALLICON>JSP_page_icon.bmp</SMALLICON>
+				<NOTATION>Servlet.nxt</NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>Script library(stereotype)</NAME>
+				<DESCRIPTION>the component that provides a library of subroutines or functions that can be included by other Web page components</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>Script library</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40">Script_library.bmp</ICON>
+				<SMALLICON>Script_library_icon.bmp</SMALLICON>
+				<NOTATION>Script_library.nxt</NOTATION>
+			</STEREOTYPE>		
+			<STEREOTYPE>
+				<NAME>link (stereotype)</NAME>
+				<DESCRIPTION>a pointer from a client page to another page</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>link</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON>link_icon.bmp</SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>targeted link (stereotype)</NAME>
+				<DESCRIPTION>a link whose associated page is rendered in another target</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON>link_icon.bmp</SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>submit(stereotype)</NAME>
+				<DESCRIPTION>association between a form and a server page</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>submit</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON>link_icon.bmp</SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>redirect(stereotype)</NAME>
+				<DESCRIPTION>unidirectional association whit another Web page, can be directed both from and to client and server pages</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>redirect</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON>link_icon.bmp</SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>IIOP(stereotype)</NAME>
+				<DESCRIPTION>Internet Inter-ORB Protocol. Is a special type of relationship between objects on the client and objects on the server</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON>link_icon.bmp</SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>frame content(stereotype)</NAME>
+				<DESCRIPTION>an aggregation association that expresses a frame's containment of another page or target</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>frame content</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON>frame_content.bmp</SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>input element(stereotype)</NAME>
+				<DESCRIPTION>attribute of a form object that maps directly to the imput tag in a HTML form</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>input element</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON></SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>select element(stereotype)</NAME>
+				<DESCRIPTION>input control used in form. This control allows de user to select one or more items from a list</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>select element</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON></SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>text area element(stereotype)</NAME>
+				<DESCRIPTION>input control used in form, that allows multiple-line input</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET>text area element</RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON></SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>
+			<STEREOTYPE>
+				<NAME>RMI(stereotype)</NAME>
+				<DESCRIPTION>Remote Method Invocation. Is a mechanism for Java applets and JavaBeans to send messages to other JavaBeans on different machine</DESCRIPTION>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<PARENT></PARENT>
+				<RELATEDTAGDEFINITIONSET></RELATEDTAGDEFINITIONSET>
+				<ICON minWidth="40" minHeight="40"></ICON>
+				<SMALLICON></SMALLICON>
+				<NOTATION></NOTATION>
+			</STEREOTYPE>	
+
+		</STEREOTYPELIST>
+
+
+		<TAGDEFINITIONSETLIST>
+		
+			<TAGDEFINITIONSET>
+				<NAME>client page</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>TitleTag</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>BaseTag</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>BodyTag</NAME>
+						<TAGTYPE referenceType="UMLAttribute">Collection</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>form</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>FormName</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>frameset</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLClass</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Rows</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Cols</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>link</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Parameters</NAME>
+						<TAGTYPE referenceType="UMLAttributeLink">Collection</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>targeted link</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Parameters</NAME>
+						<TAGTYPE referenceType="UMLAttributeLink">Collection</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Target Name</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>frame content</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Row</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Col</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>submit</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Parameters</NAME>
+						<TAGTYPE referenceType="UMLAttributeLink">Collection</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>redirect</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAssociation</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Delay</NAME>
+						<TAGTYPE>Real</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>input element</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Type</NAME>
+						<TAGTYPE>Enumeration</TAGTYPE>
+						<LITERALS>
+							<LITERAL>text</LITERAL>
+							<LITERAL>number</LITERAL>
+							<LITERAL>password</LITERAL>
+							<LITERAL>checkbox</LITERAL>
+							<LITERAL>radio</LITERAL>
+							<LITERAL>submit</LITERAL>
+							<LITERAL>reset</LITERAL>
+						</LITERALS>	
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Size</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Maxlength</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>select element</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Size</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Multiple</NAME>
+						<TAGTYPE>Boolean</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>text area element</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLAttribute</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Rows</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+					<TAGDEFINITION lock="False">
+						<NAME>Cols</NAME>
+						<TAGTYPE>Integer</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>Web page</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Path</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>ASP page</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Path</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>JSP page</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Path</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>Servlet</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Path</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+			<TAGDEFINITIONSET>
+				<NAME>Script Library</NAME>
+				<BASECLASSES>
+					<BASECLASS>UMLComponent</BASECLASS>
+				</BASECLASSES>
+				<TAGDEFINITIONLIST>
+					<TAGDEFINITION lock="False">
+						<NAME>Path</NAME>
+						<TAGTYPE>String</TAGTYPE>
+					</TAGDEFINITION>
+				</TAGDEFINITIONLIST>
+			</TAGDEFINITIONSET>
+
+		</TAGDEFINITIONSETLIST>
+
+	
+		<ELEMENTPROTOTYPELIST>
+			<ELEMENTPROTOTYPE>
+				<NAME>server page (palette)</NAME>
+				<DISPLAYNAME>server page</DISPLAYNAME>
+				<ICON>server_page_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>server page (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>client page (palette)</NAME>
+				<DISPLAYNAME>client page</DISPLAYNAME>
+				<ICON>client_page_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>client page (stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>form(palette)</NAME>
+				<DISPLAYNAME>form</DISPLAYNAME>
+				<ICON>form_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>form(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>frameset(palette)</NAME>
+				<DISPLAYNAME>frameset</DISPLAYNAME>
+				<ICON>frameset_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>frameset(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>target(palette)</NAME>
+				<DISPLAYNAME>target</DISPLAYNAME>
+				<ICON>target_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>target(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>client script Object(palette)</NAME>
+				<DISPLAYNAME>client script Object</DISPLAYNAME>
+				<ICON>clientScript_Object_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Class</BASEELEMENT>
+				<STEREOTYPENAME>client script Object(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Web page(palette)</NAME>
+				<DISPLAYNAME>Web page</DISPLAYNAME>
+				<ICON>Web_page_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Component</BASEELEMENT>
+				<STEREOTYPENAME>Web page(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>ASP page(palette)</NAME>
+				<DISPLAYNAME>ASP page</DISPLAYNAME>
+				<ICON>ASP_page_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Component</BASEELEMENT>
+				<STEREOTYPENAME>ASP page(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>JSP page(palette)</NAME>
+				<DISPLAYNAME>JSP page</DISPLAYNAME>
+				<ICON>JSP_page_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Component</BASEELEMENT>
+				<STEREOTYPENAME>JSP page(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Servlet(palette)</NAME>
+				<DISPLAYNAME>Servlet</DISPLAYNAME>
+				<ICON>Servlet_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Component</BASEELEMENT>
+				<STEREOTYPENAME>Servlet(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>Script library(palette)</NAME>
+				<DISPLAYNAME>Script library</DISPLAYNAME>
+				<ICON>Script_library_icon.bmp</ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Component</BASEELEMENT>
+				<STEREOTYPENAME>Script library(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>link(palette)</NAME>
+				<DISPLAYNAME>link</DISPLAYNAME>
+				<ICON>link_icon.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Association</BASEELEMENT>
+				<STEREOTYPENAME>link(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>targeted link(palette)</NAME>
+				<DISPLAYNAME>targeted link</DISPLAYNAME>
+				<ICON>link_icon.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Association</BASEELEMENT>
+				<STEREOTYPENAME>targeted link(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>build(palette)</NAME>
+				<DISPLAYNAME>build</DISPLAYNAME>
+				<ICON>link_icon.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Association</BASEELEMENT>
+				<STEREOTYPENAME>build(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>redirect(palette)</NAME>
+				<DISPLAYNAME>redirect</DISPLAYNAME>
+				<ICON>link_icon.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Association</BASEELEMENT>
+				<STEREOTYPENAME>redirect(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>IIOP(palette)</NAME>
+				<DISPLAYNAME>IIOP</DISPLAYNAME>
+				<ICON>link_icon.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="1">Association</BASEELEMENT>
+				<STEREOTYPENAME>IIOP(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>frame content(palette)</NAME>
+				<DISPLAYNAME>frame content</DISPLAYNAME>
+				<ICON>frame_content.bmp</ICON>
+				<DRAGTYPE>Line</DRAGTYPE>
+				<BASEELEMENT argument="2">Association</BASEELEMENT>
+				<STEREOTYPENAME>frame content(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>input element(palette)</NAME>
+				<DISPLAYNAME>input element</DISPLAYNAME>
+				<ICON></ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Attribute</BASEELEMENT>
+				<STEREOTYPENAME>input element(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>select element(palette)</NAME>
+				<DISPLAYNAME>select element</DISPLAYNAME>
+				<ICON></ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Attribute</BASEELEMENT>
+				<STEREOTYPENAME>select element(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>text area element(palette)</NAME>
+				<DISPLAYNAME>text area element</DISPLAYNAME>
+				<ICON></ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Attribute</BASEELEMENT>
+				<STEREOTYPENAME>text area element(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+			<ELEMENTPROTOTYPE>
+				<NAME>RMI(palette)</NAME>
+				<DISPLAYNAME>RMI</DISPLAYNAME>
+				<ICON></ICON>
+				<DRAGTYPE>Rect</DRAGTYPE>
+				<BASEELEMENT>Attribute</BASEELEMENT>
+				<STEREOTYPENAME>RMI(stereotype)</STEREOTYPENAME>							
+				<SHOWEXTENDEDNOTATION>True</SHOWEXTENDEDNOTATION>			
+			</ELEMENTPROTOTYPE>
+
+		</ELEMENTPROTOTYPELIST>
+
+		<PALETTELIST>
+			<PALETTE>
+				<NAME>WAE Diagram(Palette)</NAME>
+				<DISPLAYNAME>WAE</DISPLAYNAME>
+				<PALETTEITEMLIST>
+					<PALETTEITEM>server page (palette)</PALETTEITEM>
+					<PALETTEITEM>client page (palette)</PALETTEITEM>
+					<PALETTEITEM>form(palette)</PALETTEITEM>
+					<PALETTEITEM>frameset(palette)</PALETTEITEM>
+					<PALETTEITEM>target(palette)</PALETTEITEM>
+					<PALETTEITEM>client script Object(palette)</PALETTEITEM>
+					<PALETTEITEM>Web page(palette)</PALETTEITEM>
+					<PALETTEITEM>ASP page(palette)</PALETTEITEM>
+					<PALETTEITEM>JSP page(palette)</PALETTEITEM>
+					<PALETTEITEM>Servlet(palette)</PALETTEITEM>
+					<PALETTEITEM>Script library(palette)</PALETTEITEM>
+					<PALETTEITEM>link(palette)</PALETTEITEM>
+					<PALETTEITEM>targeted link(palette)</PALETTEITEM>
+					<PALETTEITEM>build(palette)</PALETTEITEM>
+					<PALETTEITEM>redirect(palette)</PALETTEITEM>
+					<PALETTEITEM>IIOP(palette)</PALETTEITEM>
+					<PALETTEITEM>frame content(palette)</PALETTEITEM>
+				</PALETTEITEMLIST>
+			</PALETTE>
+		</PALETTELIST>
+		
+		<DIAGRAMTYPELIST>
+			<DIAGRAMTYPE>
+				<NAME>WAE Diagram</NAME>
+				<DISPLAYNAME>WAE Diagram</DISPLAYNAME>
+				<BASEDIAGRAM>ClassDiagram</BASEDIAGRAM>
+				<ICON>WAEDiagram.bmp</ICON>
+				<AVAILABLEPALETTELIST>
+					<AVAILABLEPALETTE>WAE Diagram(Palette)</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Class</AVAILABLEPALETTE>
+					<AVAILABLEPALETTE>Component</AVAILABLEPALETTE>
+
+				</AVAILABLEPALETTELIST>
+			</DIAGRAMTYPE>
+		</DIAGRAMTYPELIST>
+		
+	</BODY>
+</PROFILE>

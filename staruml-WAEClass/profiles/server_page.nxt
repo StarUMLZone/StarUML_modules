@@ -1,0 +1,41 @@
+////////////////////////////////////////////////////////////////////////////////
+//                                                                              
+//This module is made from a draft degree about systems analysis and design of 
+//the University Simón Bolívar(Caracas - Venezuela). This version is a beta 
+//version. If you have any problem, please contact me at oras14@gmail.com
+//
+//Orlando Rafael Alfonzo Subero 
+////////////////////////////////////////////////////////////////////////////////
+(notation
+	(onarrange
+		(mofsetattr view 'StereotypeDisplay' 'sdkNone')
+		//(mofsetattr view 'SuppressOperations' true)
+		//(mofsetattr view 'ShowProperty' false)
+		//(mofsetattr view 'ShowOperationSignature' false)
+		//(mofsetattr view 'ShowCompartmentStereotype' true)
+		//(mofsetattr view 'ShowCompartmentVisibility' false)
+		(arrangeObject view)
+	)
+
+	(ondraw
+		// variable initialize
+		(set name (mofattr model 'Name'))
+		//(set typeName (mofattr model 'Stereotype'))
+		(set typeName '<<server page>>')
+		(set space 4)   
+		(set unit (/ width 6)) 
+		(set x1 left)
+		(set y1 top)
+		(drawbitmap x1 y1 'server_page.bmp' true)
+		(set x2 (+ left (* unit 2)))
+		(set y2 (+ top (* unit 5)))
+
+		(setdefaultstyle)
+
+		(set widthname (textwidth name))
+		(set xname (/ (- width widthname) 2))
+		(textbound (+ left xname) (+ top 40) right bottom space name true)		
+
+	)
+)
+

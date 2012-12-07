@@ -53,3 +53,11 @@ staruml-epbm
 -------------------------------------------------------------------
 Contributed by Pham Ngoc Viet Phuong (phuongphamnv@gmail.com)
 http://staruml.sourceforge.net/en/modules.php
+
+
+-------------------------------------------------------------------
+staruml-WAEClass
+staruml-WAESequence
+-------------------------------------------------------------------
+Contributed by Orlando Alfonzo and Kenyer Dominguez
+http://staruml.sourceforge.net/en/modules.php
