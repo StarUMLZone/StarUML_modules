@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////
+// Notation extension for HELP operationalization.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+(notation
+  (onarrange
+    (sequence
+      (mofsetattr (mofref view 'NameLabel') 'Visible' true)
+      (mofsetattr (mofref view 'NameLabel') 'Text' '-?')
+      (mofsetattr (mofref view 'NameLabel') 'FontColor' 'clRed')
+      (mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+    )
+  )
+  (ondraw
+
+    ////////////////////////////////////////////////////////////////////
+    // draw line
+    //
+
+    (setdefaultstyle)
+    (setpenstyle 'psSolid')
+    (setpencolor 'clRed')
+    (polyline points)
+    (setbrushstyle 'psSolid')
+
+	(drawEdge 'head' 'esStickArrow')
+    
+    (drawobject (mofref view 'NameLabel'))
+    
+  )
+)

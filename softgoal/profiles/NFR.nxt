@@ -1,0 +1,24 @@
+////////////////////////////////////////////////////////////////////////////////
+// Notation extension for NFR softgoal
+// experiment
+////////////////////////////////////////////////////////////////////////////////
+
+(notation
+  (onarrange
+		(set top (mofattr view 'Top'))
+		(set left (mofattr view 'Left'))
+  )
+  (ondraw
+
+	// draw the icon
+	//(drawbitmap left top NFRsoftgoal.bmp false)
+	
+	(drawbitmap left top 'NFRSoftgoal.bmp' 'False')
+
+
+	
+	// write name with criticality mark ! or !!
+
+
+  )
+)

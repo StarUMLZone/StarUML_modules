@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<APPROACH version="1.0"> 
+  <HEADER>
+    <NAME>NFR-framework</NAME>
+    <DISPLAYNAME>The NFR Framework Approach</DISPLAYNAME>
+    <DESCRIPTION>An approach to model NFRs</DESCRIPTION>
+  </HEADER>
+  <BODY>
+    <IMPORTPROFILES>
+      <PROFILE>Softgoal</PROFILE>
+    </IMPORTPROFILES>
+    <MODELSTRUCTURE>
+      <MODEL name="Softgoal Model" defaultDiagram="True">
+		<DIAGRAM diagramTypeProfile="Softgoal" diagramTypeName="SIG" name="SIG" defaultDiagram="True"/>
+      </MODEL>
+    </MODELSTRUCTURE>
+  </BODY>
+</APPROACH>
+

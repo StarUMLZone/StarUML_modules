@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////////////////////////////
+// Notation extension for NonDegree operationalization.
+//
+////////////////////////////////////////////////////////////////////////////////
+
+(notation
+  (onarrange
+    (sequence
+      (mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+    )
+  )
+  (ondraw
+
+    ////////////////////////////////////////////////////////////////////
+    // draw line
+    //
+
+    (setdefaultstyle)
+    (setpenstyle 'psSolid')
+    (setpencolor 'clBlack')
+    (polyline points)
+    (setbrushstyle 'psSolid')
+
+	(drawobject (mofref view 'NameLabel'))
+	(drawEdge 'head' 'esStickArrow')
+    
+  )
+)

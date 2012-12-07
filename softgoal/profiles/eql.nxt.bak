@@ -1,0 +1,40 @@
+////////////////////////////////////////////////////////////////////////////////
+// Notation extension for OR decomposition.
+//
+//  8/31/06 ssupakkul Initial version. 
+//  A proof of concept version. The plan is to try drawing a
+//  straight line across the offspring, the try drawing an arc using "arc" command.
+//  This version only draws a double-bar on the association line
+//	instead of line/arc across the offspring because it seems the "mofref"
+//  command can only access model elements immediately associated with the current
+//  element (i.e. association). Indirect access to parent goal and back to 
+//  offspring goals does not seem possible at this point.
+//  access. 
+////////////////////////////////////////////////////////////////////////////////
+
+(notation
+  (onarrange
+    (sequence
+      (mofsetattr (mofref view 'NameLabel') 'Visible' true)
+      (mofsetattr (mofref view 'NameLabel') 'Text' 'eql')
+      (mofsetattr (mofref view 'NameLabel') 'FontColor' 'clBlack')
+      (mofsetattr (mofref view 'StereotypeLabel') 'Visible' false)
+    )
+  )
+  (ondraw
+
+    ////////////////////////////////////////////////////////////////////
+    // draw line
+    //
+
+    (setdefaultstyle)
+    (setpenstyle 'psSolid')
+    (setpencolor 'clBlack')
+    (polyline points)
+
+	(drawEdge 'head' 'esStickArrow')
+    
+    (drawobject (mofref view 'NameLabel'))
+
+  )
+)

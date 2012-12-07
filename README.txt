@@ -22,7 +22,7 @@ staruml-erd
 staruml-wordtemplatedesigner
 -------------------------------------------------------------------
 Contributed by Plastic Software Inc.
-
+http://staruml.sourceforge.net/en/modules.php
 
 -------------------------------------------------------------------
 staruml-spem
@@ -39,3 +39,11 @@ Contributed by Radovan Cervenka(rce@whitestein.com), Whitestein Technologies
 Jan. 18, 2007
 http://staruml.sourceforge.net/en/modules.php
 http://www.whitestein.com/resources/library/#methodology
+
+-------------------------------------------------------------------
+softgoal
+-------------------------------------------------------------------
+Contributed by Sam Supakkul (ssupakkul@ieee.org)
+Nov. 21, 2007
+http://staruml.sourceforge.net/en/modules.php
+
